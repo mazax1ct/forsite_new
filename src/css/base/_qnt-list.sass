@@ -1,0 +1,47 @@
+.qnt-list
+  align-items: flex-start
+  display: flex
+  flex-wrap: wrap
+  margin-left: -6px
+
+  &__item
+    margin-bottom: 3px
+    margin-left: 6px
+
+    &::before
+      display: none
+
+  &__input
+    position: absolute
+    height: 1px
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    width: 1px
+
+    &:focus + .qnt-list__button
+      outline: 1px dotted #000
+
+    &:checked + .qnt-list__button
+      background-color: #223F73
+      border-color: #223F73
+      color: #fff
+
+  &__button
+    align-items: center
+    border: 2px solid #D8D8D8
+    color: #000
+    cursor: pointer
+    display: flex
+    font-size: 14px
+    justify-content: center
+    height: 40px
+    line-height: 18px
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s
+    text-decoration: none
+    width: 40px
+
+    &:hover,
+    &:focus
+      background-color: #223F73
+      border-color: #223F73
+      color: #fff

@@ -1,0 +1,129 @@
+.input-label
+  display: block
+  position: relative
+
+  &__label
+    color: rgba(#000, 0.5)
+    font-size: 14px
+    font-weight: 300
+    line-height: 18px
+    left: 0
+    overflow: hidden
+    pointer-events: none
+    position: absolute
+    padding-left: 20px
+    padding-right: 20px
+    top: 50%
+    text-overflow: ellipsis
+    transform: translateY(-50%)
+    transition: all 0.3s
+    white-space: nowrap
+    width: 100%
+
+  .input
+    &:focus,
+    &.focus
+      & + .input-label__label
+        color: rgba(#414141, 0.5)
+        font-size: 8px
+        top: 25%
+        text-transform: uppercase
+
+  .textarea
+    & + .input-label__label
+      top: 24px
+      transform: none
+
+    &:focus,
+    &.focus
+      & + .input-label__label
+        color: rgba(#414141, 0.5)
+        font-size: 8px
+        top: 6px
+        text-transform: uppercase
+
+  &.filled
+    .input
+      background-color: #fff
+      border-color: #223D72
+
+      & +.input-label__label
+        color: rgba(#414141, 0.5)
+        font-size: 8px
+        top: 25%
+        text-transform: uppercase
+
+    .textarea
+      background-color: #fff
+      border-color: #223D72
+
+      & + .input-label__label
+        color: rgba(#414141, 0.5)
+        font-size: 8px
+        top: 6px
+        transform: none
+        text-transform: uppercase
+
+.input,
+.textarea
+  background-color: #F5F5F5
+  border: 2px solid #F5F5F5
+  border-radius: 3px
+  box-shadow: none !important
+  color: #000
+  font-size: 14px
+  font-weight: 300
+  line-height: 18px
+  transition: border-color 0.3s, background-color 0.3s
+  width: 100%
+
+  &:focus
+    border-color: #223D72
+    background-color: #fff
+
+  &.error
+    border-color: #B12931 !important
+
+    &:focus
+      border-color: #B12931 !important
+
+  &:disabled
+    background-color: #EDEDED
+    border-color: #EDEDED
+
+    & + .input-label__label
+      opacity: 0.3
+
+.input
+  min-height: 60px
+  padding: 24px 18px 14px
+
+.textarea
+  height: 100px
+  padding: 24px 18px 14px
+  resize: none
+
+/*placeholder*/
+.input::-webkit-input-placeholder
+  color: rgba(#000, 0.5)
+  opacity: 1
+
+.input::-moz-placeholder
+  color: rgba(#000, 0.5)
+  opacity: 1
+
+.input:-ms-input-placeholder
+  color: rgba(#000, 0.5)
+  opacity: 1
+
+.textarea::-webkit-input-placeholder
+  color: rgba(#000, 0.5)
+  opacity: 1
+
+.textarea::-moz-placeholder
+  color: rgba(#000, 0.5)
+  opacity: 1
+
+.textarea:-ms-input-placeholder
+  color: rgba(#000, 0.5)
+  opacity: 1

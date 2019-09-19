@@ -1,0 +1,177 @@
+body
+  color: #000
+  font-family: 'Stem', Arial, sans-serif
+  font-size: 15px
+  font-weight: 300
+  line-height: 23px
+
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6
+  font-weight: 500
+  margin-top: 0
+
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6
+  margin-bottom: 15px
+
+h1,.h1
+  font-size: 24px
+  line-height: 32px
+  margin-bottom: 25px
+
+  @media(min-width: 1350px)
+    font-size: 42px
+    line-height: 44px
+    margin-bottom: 45px
+
+h2,.h2
+  font-size: 20px
+  line-height: 28px
+
+  @media(min-width: 1350px)
+    font-size: 32px
+    line-height: 38px
+    margin-bottom: 40px
+
+h3,.h3
+  font-size: 18px
+  line-height: 22px
+
+  @media(min-width: 1350px)
+    font-size: 22px
+    line-height: 26px
+
+h4,.h4
+  font-size: 18px
+  line-height: 22px
+
+  @media(min-width: 1350px)
+    font-size: 20px
+    line-height: 24px
+
+h5,.h5,
+h6,.h6
+  font-size: 15px
+  line-height: 23px
+
+  @media(min-width: 1350px)
+    font-size: 18px
+    line-height: 22px
+
+p,
+ul,
+ol,
+table,
+.table-responsive
+  margin-top: 0
+  margin-bottom: 15px
+
+  &:last-child
+    margin-bottom: 0
+
+ol,
+ul
+  font-size: 14px
+  line-height: 20px
+  list-style: none
+  padding: 0
+
+  @media(min-width: 1350px)
+    font-size: 16px
+    line-height: 23px
+
+  li
+    margin-bottom: 5px
+
+    &:last-child
+      margin-bottom: 0
+
+ul
+  li
+    &::before
+      align-items: center
+      justify-content: center
+      height: 1em
+      content: '•'
+      display: inline-flex
+      vertical-align: middle
+      width: 1em
+ol
+  counter-reset: list
+
+  li
+    padding-left: 35px
+    position: relative
+
+    &::before
+      color: rgba(#000, 0.4)
+      content: counter(list) '.'
+      counter-increment: list
+      left: 0
+      position: absolute
+      top: 0
+
+table
+  border-collapse: collapse
+  font-size: 15px
+  line-height: 24px
+  max-width: 100%
+  text-align: left
+  width: 100%
+
+  td
+    padding: 8px 20px
+    vertical-align: top
+
+  thead
+
+    th
+      border: none
+      border-bottom: 3px solid #223D72
+      font-size: 18px
+      font-weight: 500
+      line-height: 22px
+      padding: 8px 20px 22px
+      vertical-align: top
+
+      &:not(:last-child)
+        position: relative
+
+        &::after
+          background-color: #fff
+          bottom: -3px
+          content: ''
+          height: 3px
+          left: auto
+          position: absolute
+          right: -3px
+          top: auto
+          width: 3px
+
+  td,
+  th
+    &:not(:last-child)
+      border-right: 3px solid #fff
+
+  tbody
+    tr
+      &:nth-child(odd)
+        background-color: #F7F7F7
+
+    th
+      color: rgba(#000,0.3)
+      font-weight: 300
+      padding: 8px 20px
+      vertical-align: top
+
+img
+  height: auto
+  max-width: 100%
+  vertical-align: top
