@@ -18,4 +18,18 @@ $(document).ready(function () {
       $(this).parent('.input-label').removeClass('filled');
     }
   });
+
+  //открваем мобильное меню
+  $('.js-menu-open').click(function () {
+    $('.body').addClass('overflow');
+    $('.mobile-menu').addClass('is-open');
+    return false;
+  });
+
+  //закрываем мобильное меню
+  $('.js-menu-close').click(function () {
+    $('.mobile-menu').removeClass('is-open');
+    $('.body').removeClass('overflow');
+    return false;
+  });
 });

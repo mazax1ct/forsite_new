@@ -5,6 +5,11 @@ body
   font-weight: 300
   line-height: 23px
 
+a
+  color: #223D72
+  font-weight: 400
+  text-decoration: underline
+
 h1,.h1,
 h2,.h2,
 h3,.h3,
@@ -65,11 +70,112 @@ h6,.h6
     font-size: 18px
     line-height: 22px
 
+.fs_14
+  font-size: 14px
+  line-height: 20px
+
+.fs_16
+  font-size: 16px
+  line-height: 23px
+
+.note-block
+  border: 2px solid #324C7C
+  border-radius: 2px
+  color: #324C7C
+  font-size: 14px
+  font-weight: 400
+  line-height: 20px
+  padding: 10px 20px
+
+  p
+    margin-bottom: 5px
+
+    &:last-child
+      margin-bottom: 0
+
+.blockquote
+  background-color: #F7F7F7
+  border-radius: 2px
+  margin-left: -15px
+  margin-right: -15px
+  max-width: 810px
+  padding-top: 55px
+  padding-right: 15px
+  padding-bottom: 32px
+  padding-left: 93px
+
+  @media(min-width: 810px)
+    margin-left: 0
+    margin-right: 0
+    padding-left: 106px
+    padding-right: 90px
+    padding-bottom: 55px
+    padding-top: 65px
+
+  @media(min-width: 1350px)
+    margin-top: 65px
+    margin-bottom: 50px
+
+  &__text
+    margin-bottom: 20px
+    position: relative
+
+    @media(min-width: 1350px)
+      line-height: 24px
+      margin-bottom: 25px
+
+    &::before
+      background-image: url("data:image/svg+xml,%3Csvg width='52' height='28' viewBox='0 0 52 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 11.5C0 17.8513 5.14873 23 11.5 23C13.3189 23 15.0392 22.5777 16.5681 21.8259L23 28V11.5V11L22.9897 11.0095C22.7328 4.88577 17.687 0 11.5 0C5.14873 0 0 5.14873 0 11.5ZM40.5 23C34.1487 23 29 17.8513 29 11.5C29 5.14873 34.1487 0 40.5 0C46.687 0 51.7328 4.88577 51.9897 11.0095L52 11V11.5V28L45.5681 21.8259C44.0392 22.5777 42.3189 23 40.5 23Z' fill='%23223D72'/%3E%3C/svg%3E%0A")
+      background-position: 0 0
+      background-repeat: no-repeat
+      content: ''
+      height: 28px
+      left: -80px
+      position: absolute
+      top: 5px
+      width: 52px
+
+      @media(min-width: 810px)
+        background-size: 41px 22px
+        height: 22px
+        left: -74px
+        width: 41px
+
+  &__author
+    align-items: flex-start
+    display: flex
+    font-style: normal
+
+  &__author-avatar
+    border-radius: 50%
+    height: 51px
+    min-width: 51px
+    margin-right: 20px
+    overflow: hidden
+    width: 51px
+
+    img
+      border-radius: 50%
+
+  &__author-name
+    display: block
+    font-size: 18px
+    font-weight: 500
+    line-height: 22px
+    margin-bottom: 5px
+
+  &__author-about
+    color: rgba(#414141, 0.5)
+    display: block
+    font-size: 12px
+    font-weight: 300
+    line-height: 16px
 p,
 ul,
 ol,
 table,
-.table-responsive
+.table-responsive,
+.note-block
   margin-top: 0
   margin-bottom: 15px
 
@@ -117,6 +223,17 @@ ol
       left: 0
       position: absolute
       top: 0
+
+.unstyled-list
+  li
+    padding-left: 0
+
+    &::before
+      display: none
+
+.table-responsive
+  min-height: 1px
+  overflow-x: auto
 
 table
   border-collapse: collapse
@@ -175,3 +292,27 @@ img
   height: auto
   max-width: 100%
   vertical-align: top
+
+.back-link
+  align-items: center
+  color: #333
+  display: inline-flex
+  font-size: 15px
+  font-weight: 300
+  line-height: 22px
+  text-decoration: none
+
+  &__icon
+    fill: #EBEBEB
+    stroke: #EBEBEB
+    height: 52px
+    margin-right: 16px
+    min-width: 52px
+    transition: fill 0.3s, stroke 0.3s
+    width: 52px
+
+  &:hover,
+  &:focus
+    .back-link__icon
+      fill: #223D72
+      stroke: #223D72

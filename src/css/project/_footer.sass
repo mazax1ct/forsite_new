@@ -1,9 +1,153 @@
 .footer
   background-color: #1F242E
   color: #D7DEEC
-  padding-top: 30px
-  padding-bottom: 30px
+  flex-shrink: 0
+  padding-top: 40px
+  padding-bottom: 15px
 
-  @media (min-width: 768px)
-    height: 505px
+  @media (min-width: 992px)
     padding-top: 72px
+    padding-bottom: 70px
+
+  &__top
+    margin-bottom: 30px
+
+    @media(min-width: 600px)
+      display: flex
+      justify-content: space-between
+
+    @media(min-width: 992px)
+      margin-bottom: 5px
+
+  &__left
+    @media(max-width: 599px)
+      display: flex
+      margin-bottom: 35px
+
+    @media(min-width: 600px)
+      min-width: 195px
+      width: 220px
+
+    @media(min-width: 1350px)
+      width: 250px
+
+  &__logo
+    min-height: 45px
+    min-width: 90px
+    margin-right: 24px
+    width: 90px
+
+    @media(min-width: 600px)
+      margin-bottom: 45px
+      min-height: 70px
+      margin-right: 0
+      width: 140px
+
+  &__slogan
+    color: rgba(#D7DEEC, 0.4)
+    font-size: 11px
+    line-height: 12px
+    max-width: 195px
+
+    @media(min-width: 600px)
+      line-height: 16px
+
+  &__center
+    display: flex
+    justify-content: space-between
+    flex-grow: 1
+
+    @media(max-width: 991px)
+      display: none
+
+  &__center-column
+    flex-grow: 1
+    max-width: 300px
+    padding-right: 30px
+
+  &__right
+    @media(min-width: 600px)
+      min-width: 220px
+
+  &__phone
+    color: #fff
+    font-size: 25px
+    font-weight: 500
+    margin-bottom: 5px
+
+    @media(min-width: 600px)
+      margin-bottom: 15px
+
+  &__phone-link
+    color: #fff
+    font-weight: 500
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      text-decoration: underline
+
+  &__address
+    color: rgba(#D7DEEC, 0.4)
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    margin-bottom: 35px
+
+    @media(min-width: 600px)
+      margin-bottom: 55px
+
+  &__email
+    color: #fff
+    font-size: 14px
+    font-weight: 700
+
+  &__email-link
+    color: #fff
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      text-decoration: underline
+
+  &__bottom
+    @media(max-width: 991px)
+      border-top: 1px solid #282E3B
+      padding-top: 5px
+
+  &__copyright
+    color: rgba(#D7DEEC, 0.4)
+    font-size: 11px
+    line-height: 16px
+
+.footer-menu
+  line-height: 17px
+  margin-bottom: 45px
+
+  &:last-child
+    margin-bottom: 0
+
+  &__item
+    padding-left: 0
+
+    &::before
+      display: none
+
+  &__link
+    color: rgba(#D7DEEC, 0.4)
+    display: inline-block
+    font-size: 14px
+    font-weight: 300
+    line-height: 17px
+    padding-top: 3px
+    padding-bottom: 3px
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      text-decoration: underline
+
+  &__title
+    color: #fff
+    font-size: 15px
+    font-weight: 700

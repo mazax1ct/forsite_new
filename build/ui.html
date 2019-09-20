@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>UI</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+  <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="back" viewBox="0 0 54 54">
+      <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M27 53C12.6406 53 1 41.3594 1 27C1 12.6406 12.6406 1 27 1C41.3594 1 53 12.6406 53 27C53 41.3594 41.3594 53 27 53Z" fill="#fff" stroke-width="2" />
+        <rect stroke="none" width="18" height="2" rx="1" transform="matrix(-1 0 0 1 39 25)" />
+        <path stroke="none" fill-rule="evenodd" clip-rule="evenodd" d="M22 22L17 26L22 30" />
+      </g>
+    </symbol>
+    <symbol id="search" viewBox="0 0 512 512">
+      <path d="M136.5,330.5c-25.1-34.4-40.2-76.7-40.2-122.5C96.3,93.3,189.4,0,303.9,0s207.6,93.3,207.6,208s-93.1,208-207.6,208c-45.7,0-87.9-15.1-122.2-40.3L45.7,512L0.5,466.7C0.5,466.7,136.5,330.5,136.5,330.5L136.5,330.5z M303.9,352c79.3,0,143.7-64.6,143.7-144S383.2,64,303.9,64s-143.7,64.6-143.7,144S224.7,352,303.9,352L303.9,352z" />
+    </symbol>
+    <symbol id="user" viewBox="0 0 18 18">
+      <g>
+        <path d="M1.1,18c0-3.5,3.5-6.2,7.9-6.2" />
+        <path d="M16.9,18c0-3.5-3.5-6.2-7.9-6.2" />
+        <path d="M9,9.3L9,9.3c-1.8,0-3.2-1.4-3.2-3.2V4.5c0-1.8,1.4-3.2,3.2-3.2l0,0c1.8,0,3.2,1.5,3.2,3.2v1.6C12.2,7.9,10.8,9.3,9,9.3z" />
+      </g>
+    </symbol>
+    <symbol id="menu-burger" viewBox="0 0 24 11">
+      <g>
+        <rect width="24" height="1" rx="0.5" />
+        <rect y="5" width="24" height="1" rx="0.5" />
+        <rect y="10" width="24" height="1" rx="0.5" />
+      </g>
+    </symbol>
+  
+    <symbol id="menu-close" viewBox="0 0 18 19">
+      <g>
+        <rect x="0.868164" y="0.661133" width="24" height="1" rx="0.5" transform="rotate(45 0.868164 0.661133)" />
+        <rect width="24" height="1" rx="0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 17.1318 0.661133)" />
+      </g>
+    </symbol>
+  </svg>
+
+  <header class="header">
+    <div class="header__inner container">
+      <a class="logo" href="main.html"><img src="images/logo--blue.svg" alt="FORSITE"></a>
+      <button class="search-opener" type="button" title="Поиск">
+        <svg class="search-opener__icon" aria-hidden="true">
+          <use xlink:href="#search" />
+        </svg>
+      </button>
+      <a class="personal-link" href="#">
+        <svg class="personal-link__icon" aria-hidden="true">
+          <use xlink:href="#user" />
+        </svg>
+      </a>
+      <div class="mobile-menu">
+        <div class="mobile-menu__inner">
+          <div class="mobile-menu__top">
+            <div class="mobile-menu__logo"><img src="images/logo--white.svg" alt="FORSITE"></div>
+            <button class="search-opener" type="button" title="Поиск">
+              <svg class="search-opener__icon" aria-hidden="true">
+                <use xlink:href="#search" />
+              </svg>
+            </button>
+            <a class="personal-link" href="#">
+              <svg class="personal-link__icon" aria-hidden="true">
+                <use xlink:href="#user" />
+              </svg>
+            </a>
+          </div>
+          <div class="mobile-menu__center">
+            <ul class="m-menu">
+              <li class="m-menu__item">
+                <a class="m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">О компании</a>
+              </li>
+              <li class="m-menu__item">
+                <a class="m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Типовые решения</a>
+              </li>
+              <li class="m-menu__item">
+                <a class="m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Продукция</a>
+                <ul class="m-submenu">
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Рабочие станции и суперкомпьютеры</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Видео стены и видео контролеры</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Серверы и серверное оборудование</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Дополнительное оборудование</a></li>
+                </ul>
+              </li>
+              <li class="m-menu__item">
+                <a class="m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Наш опыт</a>
+              </li>
+              <li class="m-menu__item">
+                <a class="m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Поддержка</a>
+              </li>
+              <li class="m-menu__item">
+                <a class="m-menu__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mobile-menu__bottom">
+            <a class="mobile-menu__phone" href="tel:+78124261412">+7 (812) 426-14-12</a>
+            <button class="js-menu-close menu-toggler" type="button" title="Закрыть меню">
+              <svg class="menu-toggler__icon menu-toggler__icon--close" aria-hidden="true">
+                <use xlink:href="#menu-close" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <button class="js-menu-open menu-toggler" type="button" title="Открыть меню">
+        <svg class="menu-toggler__icon menu-toggler__icon--burger" aria-hidden="true">
+          <use xlink:href="#menu-burger" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-content">
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Продукция</a></li>
+          <li class="breadcrumbs__item">Графические станции</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Заголовок типа h1</h1>
+      <p>Душа моя озарена <a href="#">неземной радостью</a>, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.</p>
+      <p>Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим
+        художником, как в эти минуты. Когда от милой моей долины поднимается пар и полдневное солнце стоит над непроницаемой чащей темного леса и лишь редкий луч проскальзывает в его святая святых, а я лежу в высокой траве у быстрого ручья и,
+        прильнув к земле, вижу тысячи всевозможных былинок и чувствую, как близок моему сердцу крошечный мирок, что снует между стебельками, наблюдаю эти неисчислимые, непостижимые разновидности червяков и мошек и чувствую близость всемогущего,
+        создавшего нас по своему подобию, веяние вселюбящего, судившего нам парить в вечном блаженстве, когда взор мой туманится и все вокруг меня и небо надо мной запечатлены в моей душе, точно образ возлюбленной, - тогда, дорогой друг, меня
+        часто томит мысль: "Ах! Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога!"</p>
+      <h2>Заголовок типа h2</h2>
+      <p>Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим
+        художником, как в эти минуты. Когда от милой моей долины поднимается пар и полдневное солнце стоит над непроницаемой чащей темного леса и лишь редкий луч проскальзывает в его святая святых, а я лежу в высокой траве у быстрого ручья и,
+        прильнув к земле, вижу тысячи всевозможных былинок и чувствую, как близок моему сердцу крошечный мирок, что снует между стебельками, наблюдаю эти неисчислимые, непостижимые разновидности червяков и мошек и чувствую близость всемогущего,
+        создавшего нас по своему подобию, веяние вселюбящего, судившего нам парить в вечном блаженстве, когда взор мой туманится и все вокруг меня и небо надо мной запечатлены в моей душе, точно образ возлюбленной, - тогда, дорогой друг, меня
+        часто томит мысль: "Ах! Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога!"</p>
+      <h3>Заголовок типа h3</h3>
+      <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее
+        всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни.</p>
+      <p class="note-block" style="max-width: 430px">Просьба предварительно убедиться, что получаемый товар соответствует указанному в документах, содержимое сборных мест и состояние упаковки.</p>
+      <div class="note-block" style="max-width: 430px">
+        <p>Блок с акцентированным текстом на несколько абзацев текста.</p>
+        <p>Просьба предварительно убедиться, что получаемый товар соответствует указанному в документах, содержимое сборных мест и состояние упаковки.</p>
+        <p>Блок с акцентированным текстом на несколько абзацев текста.</p>
+      </div>
+      <blockquote class="blockquote">
+        <div class="blockquote__text">
+          <p>В тестовой лаборатории нашей компании развернуты универсальные демонстрационные стенды на которых Вы можете произвести необходимое функциональное и нагрузочное тестирования на различных конфигурациях оборудования, а так же
+            смоделировать
+            различные сценарии.</p>
+          <p>Если у Вас есть задача, но в данный момент у вас нет понимания какое программно-аппаратное решение будет для Вас оптимальным, предварительное тестирование поможет определиться с выбором правильного решения. Удаленное тестирование
+            проводится на бесплатной основе. Во время тестирования наша техническая поддержка будет бесплатно проводить консультации по работе с взятым на тест оборудованием</p>
+        </div>
+        <cite class="blockquote__author">
+          <span class="blockquote__author-avatar"><img src="images/content/avatar.jpg" alt="Сергей Никитин"></span>
+          <span>
+            <span class="blockquote__author-name">Сергей Никитин</span>
+            <span class="blockquote__author-about">Главный менеджер компании Forsite</span>
+          </span>
+        </cite>
+      </blockquote>
+      <h4>Заголовок типа h4 - маркированный список</h4>
+      <ul>
+        <li>маркированный список</li>
+        <li>маркированный список</li>
+        <li>маркированный список</li>
+      </ul>
+      <h4>Заголовок типа h4 - нумерованный список</h4>
+      <ol>
+        <li>нумерованный список</li>
+        <li>нумерованный список</li>
+        <li>нумерованный список</li>
+      </ol>
+      <form method="post" class="form" action="index.html">
+        <h5>Заголовок типа h5 - поля формы</h5>
+        <p>
+          <label class="input-label">
+            <input class="js-input input error" type="text" name="" value="" />
+            <span class="input-label__label">Электронная почта</span>
+          </label>
+        </p>
+        <p>
+          <label class="input-label">
+            <input class="js-input input" type="text" name="" value="" disabled />
+            <span class="input-label__label">Электронная почта</span>
+          </label>
+        </p>
+        <p>
+          <label class="input-label">
+            <textarea class="js-input textarea"></textarea>
+            <span class="input-label__label">Сообщение</span>
+          </label>
+        </p>
+        <p>
+          <label class="input-label">
+            <textarea class="js-input textarea" disabled></textarea>
+            <span class="input-label__label">Сообщение</span>
+          </label>
+        </p>
+        <h6>Заголовок типа h6 - чекбоксы и радио кнопки</h6>
+        <p>
+          <label class="checkbox-label">
+            <input type="checkbox" />
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-text">Чекбокс</span>
+          </label>
+        </p>
+        <p>
+          <label class="checkbox-label">
+            <input type="checkbox" checked />
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-text">Чекбокс</span>
+          </label>
+        </p>
+        <p>
+          <label class="checkbox-label">
+            <input type="checkbox" disabled />
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-text">Чекбокс</span>
+          </label>
+        </p>
+        <p>
+          <label class="checkbox-label">
+            <input type="checkbox" checked disabled />
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-text">Чекбокс</span>
+          </label>
+        </p>
+        <p>
+          <label class="radio-label">
+            <input id="radio1" type="radio" name="radio" value="1" checked />
+            <span class="radio-icon"></span>
+            <span class="radio-text">Радио</span>
+          </label>
+        </p>
+        <p>
+          <label class="radio-label">
+            <input id="radio2" type="radio" name="radio" value="2" />
+            <span class="radio-icon"></span>
+            <span class="radio-text">Радио</span>
+          </label>
+        </p>
+        <p>
+          <label class="radio-label">
+            <input id="radio2" type="radio" name="radio" value="3" disabled />
+            <span class="radio-icon"></span>
+            <span class="radio-text">Радио</span>
+          </label>
+        </p>
+        <ul class="radio-list">
+          <li class="radio-list__item">
+            <label class="radio-list__label" for="qnt_1">
+              <input id="qnt_1" class="radio-list__input" type="radio" name="qnt" value="1" checked>
+              <span class="radio-list__button">1</span>
+            </label>
+          </li>
+          <li class="radio-list__item">
+            <label class="radio-list__label" for="qnt_2">
+              <input id="qnt_2" class="radio-list__input" type="radio" name="qnt" value="2">
+              <span class="radio-list__button">2</span>
+            </label>
+          </li>
+          <li class="radio-list__item">
+            <label class="radio-list__label" for="qnt_3">
+              <input id="qnt_3" class="radio-list__input" type="radio" name="qnt" value="3">
+              <span class="radio-list__button">3</span>
+            </label>
+          </li>
+          <li class="radio-list__item">
+            <label class="radio-list__label" for="qnt_4">
+              <input id="qnt_4" class="radio-list__input" type="radio" name="qnt" value="4">
+              <span class="radio-list__button">4</span>
+            </label>
+          </li>
+          <li class="radio-list__item">
+            <label class="radio-list__label" for="qnt_5">
+              <input id="qnt_5" class="radio-list__input" type="radio" name="qnt" value="5">
+              <span class="radio-list__button">5</span>
+            </label>
+          </li>
+        </ul>
+        <ul class="checkbox-list">
+          <li class="checkbox-list__item">
+            <label class="checkbox-list__label" for="qnt_1_">
+              <input id="qnt_1_" class="checkbox-list__input" type="checkbox" name="qnt_1" checked>
+              <span class="checkbox-list__button">1</span>
+            </label>
+          </li>
+          <li class="checkbox-list__item">
+            <label class="checkbox-list__label" for="qnt_2_">
+              <input id="qnt_2_" class="checkbox-list__input" type="checkbox" name="qnt_2">
+              <span class="checkbox-list__button">2</span>
+            </label>
+          </li>
+          <li class="checkbox-list__item">
+            <label class="checkbox-list__label" for="qnt_3_">
+              <input id="qnt_3_" class="checkbox-list__input" type="checkbox" name="qnt_3">
+              <span class="checkbox-list__button">3</span>
+            </label>
+          </li>
+          <li class="checkbox-list__item">
+            <label class="checkbox-list__label" for="qnt_4_">
+              <input id="qnt_4_" class="checkbox-list__input" type="checkbox" name="qnt_4">
+              <span class="checkbox-list__button">4</span>
+            </label>
+          </li>
+          <li class="checkbox-list__item">
+            <label class="checkbox-list__label" for="qnt_5_">
+              <input id="qnt_5_" class="checkbox-list__input" type="checkbox" name="qnt_5">
+              <span class="checkbox-list__button">5</span>
+            </label>
+          </li>
+        </ul>
+        <h6>Кнопки</h6>
+        <p>
+          <a class="button disabled" href="javascript:void(0)" tabindex="-1">Я кнопка!</a>
+          <button class="button button--black" type="button">Нет я кнопка!</button>
+          <button class="button button--black button--br_3" type="button">Нет я кнопка!</button>
+          <input class="button button--br_3" type="button" value="Акститесь!">
+        </p>
+        <h6>Селект - выпадающий список</h6>
+        <p>
+          <select class="js-select" data-placeholder="Выпадащик список">
+            <option value="1">Графические станции</option>
+            <option value="2">Суперкомпьютеры и GPU-серверы</option>
+            <option value="3">Вычислительные HPC-кластеры</option>
+            <option value="4">Серверы</option>
+            <option value="5">Видеоконтроллеры</option>
+            <option value="6">Серверы NVIDIA GRID</option>
+          </select>
+        </p>
+      </form>
+      <h2>Таблица</h2>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Заголовок</th>
+              <th>Значение</th>
+            </tr>
+          </thead>
+          <tr>
+            <th>Юридический адрес:</th>
+            <td>190020, г. Санкт-Петербург, ул. Бумажная, д.3, офис 210</td>
+          </tr>
+          <tr>
+            <th>ИНН:</th>
+            <td>7839443729</td>
+          </tr>
+          <tr>
+            <th>КПП:</th>
+            <td>783901001</td>
+          </tr>
+          <tr>
+            <th>ОГРН:</th>
+            <td>1117847187260</td>
+          </tr>
+          <tr>
+            <th>Р/сч.:</th>
+            <td>40702810932030000921 в филиале «Санкт-Петербургский» АО «АЛЬФА-БАНК»</td>
+          </tr>
+          <tr>
+            <th>БИК:</th>
+            <td>044030786</td>
+          </tr>
+          <tr>
+            <th>Кор/сч.:</th>
+            <td>30101810600000000786</td>
+          </tr>
+          <tr>
+            <th>ОКПО:</th>
+            <td>90873737</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>Генеральный директор: Закабунин Алексей Алексеевич</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>Главный бухгалтер: (с 01 октября 2011г.) Рассохо Ольга Юрьевна</td>
+          </tr>
+        </table>
+      </div>
+      <p>
+        <a class="back-link" href="#">
+          <svg class="back-link__icon" aria-hidden="true">
+            <use xlink:href="#back" />
+          </svg>
+          <span class="back-link__text">Вернуться<br> к новостям</span>
+        </a>
+      </p>
+      <h2>Пагинация</h2>
+      <ul class="pager">
+        <li class="pager__item"><a class="pager__link" href="#">1</a></li>
+        <li class="pager__item"><a class="pager__link" href="#">2</a></li>
+        <li class="pager__item"><a class="pager__link is-active" href="#">3</a></li>
+        <li class="pager__item"><a class="pager__link" href="#">4</a></li>
+        <li class="pager__item"><a class="pager__link" href="#">5</a></li>
+        <li class="pager__item"><a class="pager__link" href="#">...</a></li>
+        <li class="pager__item"><a class="pager__link" href="#">10</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__left">
+          <div class="footer__logo"><img src="images/logo--white.svg" alt="FORSITE"></div>
+          <p class="footer__slogan">Первая в мире линейка суперкомпьютеров, специально разработанная для задач искусственного интеллекта.</p>
+        </div>
+        <div class="footer__center">
+          <div class="footer__center-column">
+            <ul class="footer-menu">
+              <li class="footer-menu__item"><a class="footer-menu__link footer-menu__title" href="#">Продукция</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Графические станции</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Суперкомпьютеры и GPU-серверы</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Вычислительные HPC-кластеры</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Серверы</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Видеоконтроллеры</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Серверы NVIDIA GRID</a></li>
+            </ul>
+          </div>
+          <div class="footer__center-column">
+            <ul class="footer-menu">
+              <li class="footer-menu__item"><a class="footer-menu__link footer-menu__title" href="#">Типовые решения</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Вычисления на GPU (HPC)</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Виртуализации рабочих мест</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Машинное обучение | Deep Learning</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Масштабная визуализация</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Графические решения для САПР</a></li>
+            </ul>
+            <ul class="footer-menu">
+              <li class="footer-menu__item"><a class="footer-menu__link footer-menu__title" href="#">Центр компетенции</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Запрос консультации</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Развернутые демо-решения</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Аренда видеостен и панелей</a></li>
+            </ul>
+          </div>
+          <div class="footer__center-column">
+            <ul class="footer-menu">
+              <li class="footer-menu__item"><a class="footer-menu__link footer-menu__title" href="#">О компании</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Сертификаты</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Участие в торгах</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Реквизиты</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Контакты</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Клиенты</a></li>
+            </ul>
+            <ul class="footer-menu">
+              <li class="footer-menu__item"><a class="footer-menu__link footer-menu__title" href="#">Поддержка</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Сервисный центр</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Доставка</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Гарантийная политика</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Форма RMA</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__right">
+          <p class="footer__phone">
+            <a class="footer__phone-link" href="tel:+78005006993">8 800 500-69-93</a>
+          </p>
+          <p class="footer__address">г. Санкт-Петербург<br> ул. Маршала Говорова, д. 52,<br> БЦ «Алкотел»</p>
+          <p class="footer__email"><a class="footer__email-link" href="mailto:sale@forsite-company.ru">sale@forsite-company.ru</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">2019 © Forsite. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/select2.full.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

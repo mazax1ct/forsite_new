@@ -1,0 +1,127 @@
+.menu-toggler
+  align-items: center
+  background-color: #000
+  border: none
+  border-radius: 50%
+  cursor: pointer
+  display: flex
+  justify-content: center
+  height: 44px
+  margin-left: 20px
+  padding: 0
+  width: 44px
+
+  &__icon
+    fill: #fff
+
+    &--burger
+      height: 11px
+      width: 24px
+
+    &--close
+      height: 18px
+      width: 19px
+
+.mobile-menu
+  background-color: #20396B
+  display: none
+  height: 100%
+  left: 0
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 100
+
+  &.is-open
+    display: block
+
+  &__inner
+    display: flex
+    flex-direction: column
+    height: 100%
+    padding-left: 15px
+    padding-right: 15px
+
+  &__top
+    display: flex
+    padding-top: 18px
+
+    .search-opener__icon
+      fill: #6A85B9
+
+    .personal-link
+      margin-right: 20px
+
+    .personal-link__icon
+      stroke: #6A85B9
+
+  &__logo
+    min-height: 45px
+    margin-right: auto
+    width: 90px
+
+  &__center
+    overflow-y: auto
+    padding-top: 35px
+
+  &__bottom
+    display: flex
+    justify-content: space-between
+    margin-top: auto
+    padding-left: 30px
+    padding-bottom: 20px
+
+  &__phone
+    color: #fff
+    font-size: 18px
+    font-weight: 300
+    line-height: 26px
+    margin-top: 5px
+    text-decoration: none
+
+.m-menu
+  padding-left: 30px
+
+  &__item
+    margin-bottom: 0
+    padding-left: 0
+
+    &::before
+      display: none
+
+  &__link
+    color: #fff
+    display: inline-block
+    font-size: 22px
+    font-weight: 500
+    line-height: 24px
+    padding-top: 9px
+    padding-bottom: 9px
+    text-decoration: none
+
+    &--root
+      background-image: url("data:image/svg+xml,%3Csvg width='4' height='8' viewBox='0 0 4 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0V8L4 4L0 0Z' fill='%236D88BC'/%3E%3C/svg%3E%0A")
+      background-position: 100% 55%
+      background-repeat: no-repeat
+      padding-right: 24px
+
+.m-submenu
+  padding-top: 15px
+  padding-bottom: 15px
+
+  &__item
+    margin-bottom: 0
+    padding-left: 0
+
+    &::before
+      display: none
+
+  &__link
+    color: #fff
+    display: inline-block
+    font-size: 14px
+    font-weight: 300
+    line-height: 20px
+    padding-top: 10px
+    padding-bottom: 10px
+    text-decoration: none

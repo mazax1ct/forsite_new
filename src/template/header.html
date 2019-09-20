@@ -1,5 +1,73 @@
 <header class="header">
-    <div class="container">
-        Шапка 1
+  <div class="header__inner container">
+    <a class="logo" href="main.html"><img src="images/logo--blue.svg" alt="FORSITE"></a>
+    <button class="search-opener" type="button" title="Поиск">
+      <svg class="search-opener__icon" aria-hidden="true">
+        <use xlink:href="#search" />
+      </svg>
+    </button>
+    <a class="personal-link" href="#">
+      <svg class="personal-link__icon" aria-hidden="true">
+        <use xlink:href="#user" />
+      </svg>
+    </a>
+    <div class="mobile-menu">
+      <div class="mobile-menu__inner">
+        <div class="mobile-menu__top">
+          <div class="mobile-menu__logo"><img src="images/logo--white.svg" alt="FORSITE"></div>
+          <button class="search-opener" type="button" title="Поиск">
+            <svg class="search-opener__icon" aria-hidden="true">
+              <use xlink:href="#search" />
+            </svg>
+          </button>
+          <a class="personal-link" href="#">
+            <svg class="personal-link__icon" aria-hidden="true">
+              <use xlink:href="#user" />
+            </svg>
+          </a>
+        </div>
+        <div class="mobile-menu__center">
+          <ul class="m-menu">
+            <li class="m-menu__item">
+              <a class="m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">О компании</a>
+            </li>
+            <li class="m-menu__item">
+              <a class="m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Типовые решения</a>
+            </li>
+            <li class="m-menu__item">
+              <a class="m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Продукция</a>
+              <ul class="m-submenu">
+                <li class="m-submenu__item"><a class="m-submenu__link" href="#">Рабочие станции и суперкомпьютеры</a></li>
+                <li class="m-submenu__item"><a class="m-submenu__link" href="#">Видео стены и видео контролеры</a></li>
+                <li class="m-submenu__item"><a class="m-submenu__link" href="#">Серверы и серверное оборудование</a></li>
+                <li class="m-submenu__item"><a class="m-submenu__link" href="#">Дополнительное оборудование</a></li>
+              </ul>
+            </li>
+            <li class="m-menu__item">
+              <a class="m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Наш опыт</a>
+            </li>
+            <li class="m-menu__item">
+              <a class="m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Поддержка</a>
+            </li>
+            <li class="m-menu__item">
+              <a class="m-menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mobile-menu__bottom">
+          <a class="mobile-menu__phone" href="tel:+78124261412">+7 (812) 426-14-12</a>
+          <button class="js-menu-close menu-toggler" type="button" title="Закрыть меню">
+            <svg class="menu-toggler__icon menu-toggler__icon--close" aria-hidden="true">
+              <use xlink:href="#menu-close" />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
+    <button class="js-menu-open menu-toggler" type="button" title="Открыть меню">
+      <svg class="menu-toggler__icon menu-toggler__icon--burger" aria-hidden="true">
+        <use xlink:href="#menu-burger" />
+      </svg>
+    </button>
+  </div>
 </header>

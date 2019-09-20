@@ -1,4 +1,54 @@
 .header
-  background-color: #ccc
-  padding-top: 30px
-  padding-bottom: 30px
+  background-color: #fff
+  height: 80px
+  left: 0
+  padding-top: 18px
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 10
+
+  @media(min-width: 992px)
+    height: 90px
+
+  &__inner
+    align-items: center
+    display: flex
+
+.logo
+  min-height: 45px
+  margin-right: auto
+  width: 90px
+
+.search-opener
+  align-items: center
+  background: none
+  border: none
+  cursor: pointer
+  display: flex
+  justify-content: center
+  height: 40px
+  padding: 0
+  width: 40px
+
+  &__icon
+    fill: #D1D1D1
+    height: 19px
+    width: 19px
+
+.personal-link
+  align-items: center
+  background: none
+  border: none
+  display: flex
+  justify-content: center
+  height: 40px
+  padding: 0
+  width: 40px
+
+  &__icon
+    fill: none
+    stroke: #D1D1D1
+    stroke-width: 2px
+    height: 18px
+    width: 18px

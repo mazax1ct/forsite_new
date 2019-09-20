@@ -1,0 +1,47 @@
+.breadcrumbs
+  color: rgba(#000, 0.24)
+  margin-bottom: 15px
+
+  @media(min-width: 768px)
+    background-color: #F7F7F7
+    color: rgba(#000, 0.6)
+    margin-bottom: 30px
+    padding-top: 21px
+    padding-bottom: 21px
+
+  @media(min-width: 1350px)
+    margin-bottom: 65px
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+
+    @media(min-width: 768px)
+      justify-content: center
+
+  &__item
+    font-size: 12px
+    line-height: 18px
+    margin-bottom: 0
+    padding-left: 0
+
+    &::before
+      display: none
+
+    &:not(:last-child)
+      &::after
+        content: '|'
+        margin-left: 12px
+        margin-right: 12px
+
+  &__link
+    color: rgba(#000, 0.24)
+    font-weight: 300
+    text-decoration: none
+
+    @media(min-width: 768px)
+      color: rgba(#000, 0.6)
+
+    &:hover,
+    &:focus
+      text-decoration: underline
