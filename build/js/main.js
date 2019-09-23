@@ -1,4 +1,16 @@
+//функция навешивания класса с тенью на шапку
+var resize_scroll = function(e) {
+  var h = $(".header");
+  $(window).scrollTop() > h.height()
+    ? h.addClass("scrolled")
+    : h.removeClass("scrolled");
+};
+
 $(document).ready(function () {
+  //запуск функции навешивания класса с тенью на шапку
+  resize_scroll();
+
+  //кастомный селект
   $('.js-select').select2({
     minimumResultsForSearch: Infinity
   });
@@ -35,6 +47,8 @@ $(document).ready(function () {
       _this.next('.js-m-sub-1').slideToggle(300, function () {
         _this.next('.js-m-sub-1').toggleClass('is-open');
       });
+      _this.removeClass('is-active');
+      _this.parent().removeClass('is-active');
     } else if($('.js-m-sub-1.is-open').length > 0) {
       $('.js-m-sub-1.is-open').slideToggle(300, function () {
         $(this).toggleClass('is-open');
@@ -42,10 +56,16 @@ $(document).ready(function () {
           _this.next('.js-m-sub-1').toggleClass('is-open');
         });
       });
+      $('.js-m-root-1').removeClass('is-active');
+      $('.m-menu__item').removeClass('is-active');
+      _this.addClass('is-active');
+      _this.parent().addClass('is-active');
     } else {
       _this.next('.js-m-sub-1').slideToggle(300, function () {
         _this.next('.js-m-sub-1').toggleClass('is-open');
       });
+      _this.addClass('is-active');
+      _this.parent().addClass('is-active');
     }
     return false;
   });
@@ -75,3 +95,6 @@ $(document).ready(function () {
     return false;
   });
 });
+
+//перезапуск функции навешивания класса с тенью на шапку при скролле и ресайзе
+$(window).on("scroll", resize_scroll).on("resize", resize_scroll);

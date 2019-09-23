@@ -39,6 +39,11 @@
 
   @media(min-width: 992px)
     height: 90px
+    padding-top: 0
+
+  &.scrolled
+    @media(min-width: 992px)
+      box-shadow: 0 0 3px 1px rgba(0,0,0,0.05)
 
   &__inner
     align-items: center
@@ -49,7 +54,19 @@
   margin-right: auto
   position: relative
   width: 90px
-  z-index: 101
+
+  @media(max-width: 991)
+    z-index: 101
+
+  @media(min-width: 992px)
+    left: 50%
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+
+  @media(min-width: 1200px)
+    height: 54px
+    width: 107px
 
   &__image
     &--white
@@ -69,7 +86,9 @@
   padding: 0
   position: relative
   width: 40px
-  z-index: 101
+
+  @media(max-width: 991)
+    z-index: 101
 
   &__icon
     fill: #D1D1D1
@@ -83,11 +102,13 @@
   display: flex
   justify-content: center
   height: 40px
-  margin-right: 20px
   padding: 0
   position: relative
   width: 40px
-  z-index: 101
+
+  @media(max-width: 991px)
+    margin-right: 20px
+    z-index: 101
 
   &__icon
     fill: none

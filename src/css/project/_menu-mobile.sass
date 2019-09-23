@@ -1,3 +1,16 @@
+.main-page
+  .m-menu__link
+    @media(min-width: 992px)
+      color: #fff
+
+    &.is-active
+      @media(min-width: 992px)
+        color: #fff
+
+    &::after
+      @media(min-width: 992px)
+        background-image: url("data:image/svg+xml,%3Csvg width='6' height='3' viewBox='0 0 6 3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffffff' d='M0 0H6L3 3L0 0Z'/%3E%3C/svg%3E%0A")
+
 .menu-toggler
   align-items: center
   background-color: #000
@@ -24,6 +37,9 @@
     .menu-toggler__icon--close
       display: block
 
+  @media(min-width: 992px)
+    display: none
+
   &__icon
     fill: #fff
 
@@ -37,47 +53,42 @@
       width: 19px
 
 .mobile-menu
-  background-color: #20396B
-  display: none
-  height: 100%
-  left: 0
-  position: fixed
-  padding-top: 80px
-  top: 0
-  width: 100%
-  z-index: 100
+  @media(max-width: 991px)
+    background-color: #20396B
+    display: none
+    height: 100%
+    left: 0
+    position: fixed
+    padding-top: 80px
+    top: 0
+    width: 100%
+    z-index: 100
 
   &.is-open
     display: block
 
+  @media(min-width: 992px)
+    display: block
+    flex-grow: 1
+
   &__inner
-    display: flex
-    flex-direction: column
-    height: 100%
-    padding-left: 15px
-    padding-right: 15px
+    @media(max-width: 991px)
+      display: flex
+      flex-direction: column
+      height: 100%
+      padding-left: 15px
+      padding-right: 15px
+
+    @media(min-width: 992px)
+      width: 100%
 
   &__top
-    display: flex
-    padding-top: 18px
+    @media(max-width: 991px)
+      overflow-y: auto
+      padding-top: 15px
 
-    .search-opener__icon
-      fill: #6A85B9
-
-    .personal-link
-      margin-right: 20px
-
-    .personal-link__icon
-      stroke: #6A85B9
-
-  &__logo
-    min-height: 45px
-    margin-right: auto
-    width: 90px
-
-  &__top
-    overflow-y: auto
-    padding-top: 15px
+    @media(min-width: 992px)
+      width: 100%
 
     &--open_submenu
       margin-bottom: 100px
@@ -89,6 +100,9 @@
     padding-left: 30px
     padding-bottom: 35px
 
+    @media(min-width: 992px)
+      display: none
+
   &__phone
     color: #fff
     font-size: 18px
@@ -98,14 +112,38 @@
     text-decoration: none
 
 .m-menu
-  padding-left: 30px
+  @media(max-width: 991px)
+    padding-left: 30px
+
+  @media(min-width: 992px)
+    display: flex
 
   &__item
     margin-bottom: 0
     padding-left: 0
 
+    @media(min-width: 992px)
+      position: relative
+
+    &:nth-child(3)
+      @media(min-width: 992px)
+        margin-right: auto
+
     &::before
       display: none
+
+    &.is-active
+      &::after
+        @media(min-width: 992px)
+          background-color: rgba(0,0,0,0.3)
+          content: ''
+          height: 100%
+          left: 0
+          pointer-events: none
+          position: fixed
+          top: 0
+          width: 100%
+          z-index: 1
 
   &__link
     color: #fff
@@ -117,16 +155,111 @@
     padding-bottom: 9px
     text-decoration: none
 
+    @media(min-width: 992px)
+      align-items: center
+      color: #000
+      display: flex
+      font-size: 11px
+      font-weight: 700
+      height: 90px
+      letter-spacing: 1.29px
+      padding-left: 14px
+      padding-right: 14px
+      padding-top: 0
+      padding-bottom: 0
+      text-transform: uppercase
+
+    @media(min-width: 1200px)
+      padding-left: 34px
+      padding-right: 34px
+
     &--root
-      background-image: url("data:image/svg+xml,%3Csvg width='4' height='8' viewBox='0 0 4 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0V8L4 4L0 0Z' fill='%236D88BC'/%3E%3C/svg%3E%0A")
-      background-position: 100% 55%
-      background-repeat: no-repeat
-      padding-right: 24px
+      @media(max-width: 991px)
+        background-image: url("data:image/svg+xml,%3Csvg width='4' height='8' viewBox='0 0 4 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0V8L4 4L0 0Z' fill='%236D88BC'/%3E%3C/svg%3E%0A")
+        background-position: 100% 55%
+        background-repeat: no-repeat
+        padding-right: 24px
+
+      @media(min-width: 992px)
+        position: relative
+
+      &::after
+        @media(min-width: 992px)
+          background-image: url("data:image/svg+xml,%3Csvg width='6' height='3' viewBox='0 0 6 3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H6L3 3L0 0Z'/%3E%3C/svg%3E")
+          content: ''
+          height: 3px
+          left: auto
+          position: absolute
+          right: 4px
+          top: 50%
+          transform: translateY(-50%)
+          width: 6px
+
+        @media(min-width: 1200px)
+          right: 21px
+
+    &.is-active
+      @media(min-width: 992px)
+        background-color: #20396B
+        color: #fff
+        z-index: 101
+
+      &::after
+        @media(min-width: 992px)
+          background-image: url("data:image/svg+xml,%3Csvg width='6' height='3' viewBox='0 0 6 3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffffff' d='M0 0H6L3 3L0 0Z'/%3E%3C/svg%3E%0A")
+
+.m-submenu-block
+  display: none
+
+  @media(min-width: 992px)
+    background-color: #20396B
+    left: 50%
+    max-width: 1320px
+    position: fixed
+    padding-left: 34px
+    padding-right: 34px
+    top: 90px
+    transform: translateX(-50%)
+    width: 100%
+    z-index: 102
 
 .m-submenu
-  display: none
   padding-top: 15px
   padding-bottom: 15px
+
+  @media(min-width: 992px)
+    padding-top: 25px
+    padding-bottom: 25px
+
+  &--root
+    @media(min-width: 992px)
+      display: flex
+      padding-top: 0
+      padding-bottom: 0
+
+    & > li > a
+      @media(min-width: 992px)
+        display: none
+
+    & > .m-submenu__item
+      @media(min-width: 992px)
+        padding-top: 30px
+        padding-bottom: 25px
+        padding-right: 14px
+
+      @media(min-width: 1200px)
+        padding-right: 34px
+
+      &:last-child
+        padding-right: 0
+
+      &:not(:first-child)
+        @media(min-width: 992px)
+          border-left: 1px solid rgba(#D8D8D8, 0.03)
+          padding-left: 14px
+
+        @media(min-width: 1200px)
+          padding-left: 34px
 
   &__item
     margin-bottom: 0
@@ -143,6 +276,13 @@
     padding-top: 9px
     padding-bottom: 9px
 
+    @media(min-width: 992px)
+      font-size: 15px
+      font-weight: 700
+      letter-spacing: 0.75px
+      padding-top: 0
+      text-transform: uppercase
+
   &__link
     color: #fff
     display: inline-block
@@ -151,12 +291,27 @@
     line-height: 20px
     padding-top: 10px
     padding-bottom: 10px
+    transition: color 0.3s
     text-decoration: none
+
+    @media(min-width: 992px)
+      color: #9DB3DE
+      padding-top: 5px
+      padding-bottom: 4px
+
+    &:hover,
+    &:focus
+      color: #fff
 
 .m-submenu-lvl_2
   display: none
-  margin-top: -15px
   position: relative
+
+  @media(max-width: 991px)
+    margin-top: -15px
+
+  @media(min-width: 992px)
+    display: block
 
   .m-submenu
     display: block
@@ -182,6 +337,9 @@
   position: fixed
   top: auto
   width: 100%
+
+  @media(min-width: 992px)
+    display: none
 
   &__icon
     fill: #6D88BC
