@@ -1,3 +1,32 @@
+.main-page
+  .header
+    background-color: #030303
+
+  .logo__image--blue
+    display: none
+
+  .logo__image--white
+    display: block
+
+  .search-opener__icon
+    fill: rgba(#fff, 0.2)
+
+  .personal-link__icon
+    stroke: rgba(#fff, 0.2)
+
+.m-menu-open
+  .logo__image--blue
+    display: none
+
+  .logo__image--white
+    display: block
+
+  .search-opener__icon
+    fill: #D1D1D1
+
+  .personal-link__icon
+    stroke: #D1D1D1
+
 .header
   background-color: #fff
   height: 80px
@@ -18,7 +47,16 @@
 .logo
   min-height: 45px
   margin-right: auto
+  position: relative
   width: 90px
+  z-index: 101
+
+  &__image
+    &--white
+      display: none
+
+    &--blue
+      display: block
 
 .search-opener
   align-items: center
@@ -29,7 +67,9 @@
   justify-content: center
   height: 40px
   padding: 0
+  position: relative
   width: 40px
+  z-index: 101
 
   &__icon
     fill: #D1D1D1
@@ -43,8 +83,11 @@
   display: flex
   justify-content: center
   height: 40px
+  margin-right: 20px
   padding: 0
+  position: relative
   width: 40px
+  z-index: 101
 
   &__icon
     fill: none

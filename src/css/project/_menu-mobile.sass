@@ -7,9 +7,22 @@
   display: flex
   justify-content: center
   height: 44px
-  margin-left: 20px
   padding: 0
   width: 44px
+
+  &.is-active
+    bottom: 20px
+    left: auto
+    position: fixed
+    right: 15px
+    top: auto
+    z-index: 101
+
+    .menu-toggler__icon--burger
+      display: none
+
+    .menu-toggler__icon--close
+      display: block
 
   &__icon
     fill: #fff
@@ -19,6 +32,7 @@
       width: 24px
 
     &--close
+      display: none
       height: 18px
       width: 19px
 
@@ -28,6 +42,7 @@
   height: 100%
   left: 0
   position: fixed
+  padding-top: 80px
   top: 0
   width: 100%
   z-index: 100
@@ -60,16 +75,19 @@
     margin-right: auto
     width: 90px
 
-  &__center
+  &__top
     overflow-y: auto
-    padding-top: 35px
+    padding-top: 15px
+
+    &--open_submenu
+      margin-bottom: 100px
 
   &__bottom
     display: flex
     justify-content: space-between
     margin-top: auto
     padding-left: 30px
-    padding-bottom: 20px
+    padding-bottom: 35px
 
   &__phone
     color: #fff
@@ -106,6 +124,7 @@
       padding-right: 24px
 
 .m-submenu
+  display: none
   padding-top: 15px
   padding-bottom: 15px
 
@@ -116,6 +135,14 @@
     &::before
       display: none
 
+  &__title
+    color: #fff
+    font-size: 22px
+    font-weight: 500
+    line-height: 24px
+    padding-top: 9px
+    padding-bottom: 9px
+
   &__link
     color: #fff
     display: inline-block
@@ -125,3 +152,39 @@
     padding-top: 10px
     padding-bottom: 10px
     text-decoration: none
+
+.m-submenu-lvl_2
+  display: none
+  margin-top: -15px
+  position: relative
+
+  .m-submenu
+    display: block
+    margin-bottom: 0
+    padding-top: 0
+    padding-bottom: 0
+
+.m-submenu-close
+  align-items: center
+  bottom: 100px
+  background-color: #1B315C
+  border: none
+  color: #fff
+  cursor: pointer
+  display: flex
+  height: 45px
+  font-size: 14px
+  font-weight: 300
+  line-height: 20px
+  left: 0
+  padding-left: 45px
+  padding-right: 0
+  position: fixed
+  top: auto
+  width: 100%
+
+  &__icon
+    fill: #6D88BC
+    height: 8px
+    margin-right: 24px
+    width: 4px

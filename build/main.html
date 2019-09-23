@@ -17,11 +17,11 @@
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 
-<body>
+<body class="main-page">
   <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
     <symbol id="back" viewBox="0 0 54 54">
       <g>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M27 53C12.6406 53 1 41.3594 1 27C1 12.6406 12.6406 1 27 1C41.3594 1 53 12.6406 53 27C53 41.3594 41.3594 53 27 53Z" fill="#fff" stroke-width="2" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M27 53C12.6406 53 1 41.3594 1 27C1 12.6406 12.6406 1 27 1C41.3594 1 53 12.6406 53 27C53 41.3594 41.3594 53 27 53Z" stroke-width="2" />
         <rect stroke="none" width="18" height="2" rx="1" transform="matrix(-1 0 0 1 39 25)" />
         <path stroke="none" fill-rule="evenodd" clip-rule="evenodd" d="M22 22L17 26L22 30" />
       </g>
@@ -43,23 +43,30 @@
         <rect y="10" width="24" height="1" rx="0.5" />
       </g>
     </symbol>
-  
     <symbol id="menu-close" viewBox="0 0 18 19">
       <g>
         <rect x="0.868164" y="0.661133" width="24" height="1" rx="0.5" transform="rotate(45 0.868164 0.661133)" />
         <rect width="24" height="1" rx="0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 17.1318 0.661133)" />
       </g>
     </symbol>
+    <symbol id="small-arrow-left" viewBox="0 0 4 8">
+      <path d="M4 0V8L0 4L4 0Z" />
+    </symbol>
   </svg>
 
   <header class="header">
     <div class="header__inner container">
-      <a class="logo" href="main.html"><img src="images/logo--blue.svg" alt="FORSITE"></a>
-      <button class="search-opener" type="button" title="Поиск">
-        <svg class="search-opener__icon" aria-hidden="true">
-          <use xlink:href="#search" />
-        </svg>
-      </button>
+      <a class="logo" href="main.html">
+        <img class="logo__image logo__image--blue" src="images/logo--blue.svg" alt="FORSITE">
+        <img class="logo__image logo__image--white" src="images/logo--white.svg" alt="FORSITE">
+      </a>
+      <div class="header__search">
+        <button class="search-opener" type="button" title="Поиск">
+          <svg class="search-opener__icon" aria-hidden="true">
+            <use xlink:href="#search" />
+          </svg>
+        </button>
+      </div>
       <a class="personal-link" href="#">
         <svg class="personal-link__icon" aria-hidden="true">
           <use xlink:href="#user" />
@@ -68,40 +75,139 @@
       <div class="mobile-menu">
         <div class="mobile-menu__inner">
           <div class="mobile-menu__top">
-            <div class="mobile-menu__logo"><img src="images/logo--white.svg" alt="FORSITE"></div>
-            <button class="search-opener" type="button" title="Поиск">
-              <svg class="search-opener__icon" aria-hidden="true">
-                <use xlink:href="#search" />
-              </svg>
-            </button>
-            <a class="personal-link" href="#">
-              <svg class="personal-link__icon" aria-hidden="true">
-                <use xlink:href="#user" />
-              </svg>
-            </a>
-          </div>
-          <div class="mobile-menu__center">
             <ul class="m-menu">
               <li class="m-menu__item">
-                <a class="m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">О компании</a>
-              </li>
-              <li class="m-menu__item">
-                <a class="m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Типовые решения</a>
-              </li>
-              <li class="m-menu__item">
-                <a class="m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Продукция</a>
-                <ul class="m-submenu">
-                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Рабочие станции и суперкомпьютеры</a></li>
-                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Видео стены и видео контролеры</a></li>
-                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Серверы и серверное оборудование</a></li>
-                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Дополнительное оборудование</a></li>
+                <a class="js-m-root-1 m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">О компании</a>
+                <ul class="js-m-sub-1 m-submenu">
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Наши преимущества</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Наши партнеры</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Клиенты</a></li>
                 </ul>
               </li>
               <li class="m-menu__item">
-                <a class="m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Наш опыт</a>
+                <a class="js-m-root-1 m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Типовые решения</a>
+                <ul class="js-m-sub-1 m-submenu">
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Видеостены и видеоконтроллеры</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Графические и расчетные станции</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Высокопроизводительные вычисления</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Виртуализация рабочих мест</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Вычислительные кластеры HPC</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Машинное обучение / Deep Learning</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Системы NVIDIA DGX </a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">NVIDIA Data Science WS</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Решения для AI: Forsite ONTAP</a></li>
+                </ul>
               </li>
               <li class="m-menu__item">
-                <a class="m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Поддержка</a>
+                <a class="js-m-root-1 m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Продукция</a>
+                <ul class="js-m-sub-1 m-submenu">
+                  <li class="m-submenu__item">
+                    <a class="js-m-root-2 m-submenu__link" href="#">Рабочие станции и суперкомпьютеры</a>
+                    <div class="js-m-sub-2 m-submenu-lvl_2">
+                      <ul class="m-submenu">
+                        <li class="m-submenu__item m-submenu__title">Рабочие станции и Суперкомпьютеры</li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Графические станции</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Суперкомпьютеры</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Рабочая станция NVIDIA Data Science</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Суперкомпьютеры NVIDIA DGX</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Серверы NVIDIA GRID</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Суперкомпьютер NVIDIA DevBox</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Моноблоки</a></li>
+                      </ul>
+                      <button class="js-m-root-2-close m-submenu-close" type="button">
+                        <svg class="m-submenu-close__icon" aria-hidden="true">
+                          <use xlink:href="#small-arrow-left" />
+                        </svg>
+                        Назад
+                      </button>
+                    </div>
+                  </li>
+                  <li class="m-submenu__item">
+                    <a class="js-m-root-2 m-submenu__link" href="#">Видео стены и видео контролеры</a>
+                    <div class="js-m-sub-2 m-submenu-lvl_2">
+                      <ul class="m-submenu">
+                        <li class="m-submenu__item m-submenu__title">Видеостены и видеоконтроллеры</li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Видеоконтроллеры</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Типовые конфигурации видеостен</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Крепления для видеостен</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Профессиональные панели</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Продукция Matrox</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">ПО для видеостен</a></li>
+                      </ul>
+                      <button class="js-m-root-2-close m-submenu-close" type="button">
+                        <svg class="m-submenu-close__icon" aria-hidden="true">
+                          <use xlink:href="#small-arrow-left" />
+                        </svg>
+                        Назад
+                      </button>
+                    </div>
+                  </li>
+                  <li class="m-submenu__item">
+                    <a class="js-m-root-2 m-submenu__link" href="#">Серверы и серверное оборудование</a>
+                    <div class="js-m-sub-2 m-submenu-lvl_2">
+                      <ul class="m-submenu">
+                        <li class="m-submenu__item m-submenu__title">Серверы и Серверное оборудование</li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#"> Серверы Asus</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#"> Серверы Intel</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#"> Серверы Supermicro</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#"> Серверы Dell</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#"> Серверы HPE</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#"> 4х | 8x процессорные системы</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#"> Системы хранения данных</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#"> СХД QNAP</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#"> Системы высокой плотности</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#"> GPU-серверы</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#"> Промышленные компьютеры</a></li>
+                      </ul>
+                      <button class="js-m-root-2-close m-submenu-close" type="button">
+                        <svg class="m-submenu-close__icon" aria-hidden="true">
+                          <use xlink:href="#small-arrow-left" />
+                        </svg>
+                        Назад
+                      </button>
+                    </div>
+                  </li>
+                  <li class="m-submenu__item">
+                    <a class="js-m-root-2 m-submenu__link" href="#">Дополнительное оборудование</a>
+                    <div class="js-m-sub-2 m-submenu-lvl_2">
+                      <ul class="m-submenu">
+                        <li class="m-submenu__item m-submenu__title">Дополнительное оборудование</li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Сопроцессоры NVIDIA</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Профессиональные видеокарты</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Платы видеозахвата Magewell</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">KVM-консоли</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Серверные корпуса</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">19" рельсы</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Серверные шкафы</a></li>
+                        <li class="m-submenu__item"><a class="m-submenu__link" href="#">Серверные блоки питания</a></li>
+                      </ul>
+                      <button class="js-m-root-2-close m-submenu-close" type="button">
+                        <svg class="m-submenu-close__icon" aria-hidden="true">
+                          <use xlink:href="#small-arrow-left" />
+                        </svg>
+                        Назад
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="m-menu__item">
+                <a class="js-m-root-1 m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Наш опыт</a>
+                <ul class="js-m-sub-1 m-submenu">
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Сертификаты</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Проекты</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Тестовая лаборатория</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Запрос консультации</a></li>
+                </ul>
+              </li>
+              <li class="m-menu__item">
+                <a class="js-m-root-1 m-menu__link m-menu__link--lvl_1 m-menu__link--root" href="#">Поддержка</a>
+                <ul class="js-m-sub-1 m-submenu">
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Сервисный центр</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Доставка</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Участие в торгах</a></li>
+                  <li class="m-submenu__item"><a class="m-submenu__link" href="#">Гарантийная политика</a></li>
+                </ul>
               </li>
               <li class="m-menu__item">
                 <a class="m-menu__link" href="#">Контакты</a>
@@ -110,17 +216,15 @@
           </div>
           <div class="mobile-menu__bottom">
             <a class="mobile-menu__phone" href="tel:+78124261412">+7 (812) 426-14-12</a>
-            <button class="js-menu-close menu-toggler" type="button" title="Закрыть меню">
-              <svg class="menu-toggler__icon menu-toggler__icon--close" aria-hidden="true">
-                <use xlink:href="#menu-close" />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
       <button class="js-menu-open menu-toggler" type="button" title="Открыть меню">
         <svg class="menu-toggler__icon menu-toggler__icon--burger" aria-hidden="true">
           <use xlink:href="#menu-burger" />
+        </svg>
+        <svg class="menu-toggler__icon menu-toggler__icon--close" aria-hidden="true">
+          <use xlink:href="#menu-close" />
         </svg>
       </button>
     </div>
