@@ -1,5 +1,5 @@
 .main-page
-  .m-menu__link
+  .menu__link
     @media(min-width: 992px)
       color: #fff
 
@@ -52,24 +52,31 @@
       height: 18px
       width: 19px
 
-.mobile-menu
-  @media(max-width: 991px)
-    background-color: #20396B
-    display: none
-    height: 100%
-    left: 0
-    position: fixed
-    padding-top: 80px
-    top: 0
-    width: 100%
-    z-index: 100
+.menu-block
+  background-color: #20396B
+  display: none
+  height: 100%
+  left: 0
+  position: fixed
+  padding-top: 80px
+  top: 0
+  width: 100%
+  z-index: 100
 
   &.is-open
     display: block
 
   @media(min-width: 992px)
+    background: none
     display: block
     flex-grow: 1
+    height: auto
+    left: auto
+    position: static
+    padding-top: 0
+    top: auto
+    width: auto
+    z-index: auto
 
   &__inner
     @media(max-width: 991px)
@@ -90,7 +97,7 @@
     @media(min-width: 992px)
       width: 100%
 
-    &--open_submenu
+    &--submenu_open
       margin-bottom: 100px
 
   &__bottom
@@ -111,7 +118,7 @@
     margin-top: 5px
     text-decoration: none
 
-.m-menu
+.menu
   @media(max-width: 991px)
     padding-left: 30px
 
@@ -208,7 +215,7 @@
         @media(min-width: 992px)
           background-image: url("data:image/svg+xml,%3Csvg width='6' height='3' viewBox='0 0 6 3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffffff' d='M0 0H6L3 3L0 0Z'/%3E%3C/svg%3E%0A")
 
-.m-submenu-block
+.submenu-block
   display: none
 
   @media(min-width: 992px)
@@ -223,7 +230,7 @@
     width: 100%
     z-index: 102
 
-.m-submenu
+.submenu
   padding-top: 15px
   padding-bottom: 15px
 
@@ -241,7 +248,7 @@
       @media(min-width: 992px)
         display: none
 
-    & > .m-submenu__item
+    & > .submenu__item
       @media(min-width: 992px)
         padding-top: 30px
         padding-bottom: 25px
@@ -303,7 +310,7 @@
     &:focus
       color: #fff
 
-.m-submenu-lvl_2
+.submenu-block-2
   display: none
   position: relative
 
@@ -313,13 +320,13 @@
   @media(min-width: 992px)
     display: block
 
-  .m-submenu
+  .submenu
     display: block
     margin-bottom: 0
     padding-top: 0
     padding-bottom: 0
 
-.m-submenu-close
+.submenu-close
   align-items: center
   bottom: 100px
   background-color: #1B315C

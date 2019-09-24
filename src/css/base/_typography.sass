@@ -113,8 +113,8 @@ h6,.h6
     padding-top: 65px
 
   @media(min-width: 1350px)
-    margin-top: 65px
-    margin-bottom: 50px
+    margin-top: 60px
+    margin-bottom: 60px
 
   &__text
     margin-bottom: 20px
@@ -170,12 +170,65 @@ h6,.h6
     font-size: 12px
     font-weight: 300
     line-height: 16px
+
+.image-block
+  margin-left: -15px
+  margin-right: -15px
+  margin-top: 15px
+  margin-bottom: 15px
+  max-width: 850px
+
+  @media(min-width: 850px)
+    margin-left: 0
+    margin-right: 0
+
+  @media(min-width: 1350px)
+    margin-top: 60px
+    margin-bottom: 60px
+
+  &__image
+    margin-bottom: 10px
+    text-align: center
+
+  &__caption
+    color: #808080
+    font-size: 12px
+    font-weight: 300
+    line-height: 16px
+    padding-left: 15px
+    padding-right: 15px
+
+.floated-image
+  @media(min-width: 768px)
+    margin-left: -110px
+    margin-right: -110px
+    max-width: 810px
+
+  &__image
+    display: block
+    margin-bottom: 15px
+    padding-left: 15px
+    padding-right: 15px
+    text-align: center
+
+    @media(min-width: 768px)
+      float: left
+      margin-right: 30px
+      margin-bottom: 15px
+      padding-left: 0
+      padding-right: 0
+      width: 230px
+
+    @media(min-width: 850px)
+      margin-right: 55px
+
 p,
 ul,
 ol,
 table,
 .table-responsive,
-.note-block
+.note-block,
+.floated-image
   margin-top: 0
   margin-bottom: 15px
 
