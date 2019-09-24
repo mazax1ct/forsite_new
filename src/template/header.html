@@ -162,11 +162,44 @@
       </div>
     </div>
     <div class="header__search">
-      <button class="search-opener" type="button" title="Поиск">
+      <button class="js-search-open search-opener" type="button" title="Поиск">
         <svg class="search-opener__icon" aria-hidden="true">
           <use xlink:href="#search" />
         </svg>
       </button>
+      <div class="search">
+        <div class="search__inner">
+          <button class="js-search-close search__close" type="submit" title="Закрыть">
+            <svg class="search__close-icon" aria-hidden="true">
+              <use xlink:href="#menu-close" />
+            </svg>
+          </button>
+          <form action="search.html">
+            <div class="search__form">
+              <label class="search__label" for="search">
+                <input id="search" class="search__input" type="text" name="search" value="" placeholder="Поиск по сайту" autocomplete="off">
+              </label>
+            </div>
+          </form>
+          <div class="search__results">
+            <a class="search__result" href="javascript:void(0)"><b>Граф</b>ика</a>
+            <a class="search__result" href="javascript:void(0)"><b>Граф</b>ическая станция</a>
+            <a class="search__result" href="javascript:void(0)"><b>Граф</b>ическая станция Forsite</a>
+          </div>
+          <p class="search__results-title">Товары</p>
+          <div class="search__products">
+            <a class="search__product" href="javascript:void(0)">
+              <span class="search__product-image"><img src="images/content/search-img.jpg" alt=""></span>
+              <span class="search__product-text"><b>Граф</b>ическая станция Forsite800D</span>
+            </a>
+            <a class="search__product" href="javascript:void(0)">
+              <span class="search__product-image"><img src="images/content/search-img.jpg" alt=""></span>
+              <span class="search__product-text"><b>Граф</b>ическая станция Forsite800D</span>
+            </a>
+          </div>
+          <a class="search__results-link" href="search.html">Смотреть все результаты</a>
+        </div>
+      </div>
     </div>
     <a class="personal-link" href="#">
       <svg class="personal-link__icon" aria-hidden="true">

@@ -6,6 +6,21 @@ var resize_scroll = function(e) {
     : h.removeClass("scrolled");
 };
 
+//функция рендеринга наполнения селекта с иконками
+function formatState (state) {
+  if (!state.id) {
+    return state.text;
+  }
+
+  var $state = $(
+    '<span><svg class="sorting-icon" aria-hidden="true"><use xlink:href="#'+ state.element.className +'" /></svg><span class="text">'+ state.text +'</span></span>'
+  );
+
+  $state.find(".text").text(state.text);
+
+  return $state;
+};
+
 $(document).ready(function () {
   //запуск функции навешивания класса с тенью на шапку
   resize_scroll();
@@ -13,6 +28,15 @@ $(document).ready(function () {
   //кастомный селект
   $('.js-select').select2({
     minimumResultsForSearch: Infinity
+  });
+
+  //кастомный селект с иконками
+  $(".js-select2").select2({
+    containerCssClass: 'sorting-select',
+    dropdownCssClass: 'sorting-select',
+    minimumResultsForSearch: Infinity,
+    templateResult: formatState,
+    templateSelection: formatState
   });
 
   //проверка на пустоту поля ввода при загрузке страницы
@@ -35,7 +59,7 @@ $(document).ready(function () {
   $('.js-menu-open').click(function () {
     $(this).toggleClass('is-active');
     $('.header').toggleClass('header--menu_open');
-    $('.body').toggleClass('overflow');
+    $('body').toggleClass('overflow');
     $('.menu-block').toggleClass('is-open');
     return false;
   });
@@ -92,6 +116,26 @@ $(document).ready(function () {
       $('.js-sub-2').hide(); //скрываем меню 3 уровня
       $('.menu-block__top').removeClass('menu-block__top--submenu_open'); //убираем класс с нижним отступом для блока с меню
     }); //показываем пункты меню 1 уровня
+    return false;
+  });
+
+  //открытие блока поиска
+  $('.js-search-open').click(function () {
+    $('.search').addClass('is-open');
+    $('.search__input').focus();
+    return false;
+  });
+
+  //закрытие блока поиска
+  $('.js-search-close').click(function () {
+    $('.search').removeClass('is-open');
+    $('.search__input').val('');
+    return false;
+  });
+
+  //подстановка варианта поиска в инпут
+  $('.js-search-variant').click(function () {
+    $('.search-bar__input').val($(this).html());
     return false;
   });
 });
