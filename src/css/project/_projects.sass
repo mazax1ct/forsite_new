@@ -94,7 +94,11 @@
     display: flex
     font-size: 12px
     flex-wrap: wrap
+    justify-content: space-between
     line-height: 16px
+
+    @media(min-width: 768px)
+      justify-content: flex-start
 
     @media(min-width: 992px)
       order: 3
@@ -116,14 +120,14 @@
       margin-right: 60px
 
     &:last-child
+      margin-bottom: 20px
+      margin-right: 0
+
+      @media(min-width: 992px)
+        margin-bottom: 0
+
       @media(max-width: 767px)
         margin-right: 0
-
-    &:nth-child(2)
-      @media(min-width: 768px)
-        margin-right: 0
-        order: 3
-        padding: 0
 
   &__feature-label
     color: rgba(#333, 0.3)
@@ -216,12 +220,13 @@
     flex-wrap: wrap
     justify-content: space-between
     line-height: 16px
-    margin-bottom: 5px
 
     @media(min-width: 768px)
       justify-content: flex-start
 
     @media(min-width: 850px)
+      font-size: 15px
+      line-height: 22px
       margin-bottom: 40px
       margin-left: -110px
       margin-right: -110px
