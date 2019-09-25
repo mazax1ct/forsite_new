@@ -1,0 +1,89 @@
+.clients
+  @media(min-width: 1200px)
+    margin-bottom: 15px
+    
+  &__row
+    @media(min-width: 600px)
+      display: flex
+      flex-wrap: wrap
+      margin-left: -15px
+      margin-right: -15px
+
+    &:not(:first-child)
+      @media(min-width: 1200px)
+        padding-top: 45px
+
+  &__item
+    margin-bottom: 40px
+
+    @media(min-width: 600px)
+      padding-left: 15px
+      padding-right: 15px
+      width: 50%
+
+    @media(min-width: 1200px)
+      width: 25%
+
+    @media(min-width: 1200px)
+      margin-bottom: 65px
+
+    &:last-child
+      .client__image
+        @media(min-width: 1200px)
+          border-right: 1px solid #EAEAEA
+
+  hr
+    border: 0
+    border-bottom: 1px solid #EAEAEA
+    display: none
+    margin: 0
+
+    @media(min-width: 1200px)
+      display: block
+
+.client
+  &__image
+    align-items: center
+    border-left: 1px solid #EAEAEA
+    display: flex
+    justify-content: center
+    min-height: 102px
+    margin-bottom: 10px
+
+    @media(min-width: 768px)
+      margin-bottom: 20px
+
+    img
+      flex-shrink: 0
+
+  &__info
+    @media(min-width: 992px)
+      padding-left: 10px
+      padding-right: 10px
+
+    @media(min-width: 1200px)
+      padding-left: 15px
+      padding-right: 15px
+
+  &__title
+    font-size: 22px
+    line-height: 26px
+    margin-bottom: 15px
+
+  &__about
+    color: rgba(#414141, 0.5)
+    font-size: 12px
+    line-height: 16px
+
+  &__site
+    font-size: 14px
+    font-weight: 700
+    line-height: 18px
+
+  &__site-link
+    font-weight: 700
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      text-decoration: underline

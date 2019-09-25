@@ -11,13 +11,10 @@ function formatState (state) {
   if (!state.id) {
     return state.text;
   }
-
   var $state = $(
     '<span><svg class="sorting-icon" aria-hidden="true"><use xlink:href="#'+ state.element.className +'" /></svg><span class="text">'+ state.text +'</span></span>'
   );
-
   $state.find(".text").text(state.text);
-
   return $state;
 };
 
@@ -38,6 +35,29 @@ $(document).ready(function () {
     templateResult: formatState,
     templateSelection: formatState
   });
+
+  //слайдер картинок
+  if ($('.js-slider').length) {
+    $('.js-slider').slick({
+      auto: false,
+      mobileFirst: true,
+      slidesToShow: 1,
+      infinite: true,
+      arrows: false,
+      prevArrow: '<button type="button" class="slick-prev slick-arrow" title="Назад"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#slider-arrow-left"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next slick-arrow" title="Вперед"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#slider-arrow-right"/></svg></button>',
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 849,
+          settings: {
+            dots: false,
+            arrows: true
+          }
+        }
+      ]
+    });
+  }
 
   //проверка на пустоту поля ввода при загрузке страницы
   $('.js-input').each(function() {

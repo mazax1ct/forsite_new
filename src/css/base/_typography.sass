@@ -301,7 +301,6 @@ table
     vertical-align: top
 
   thead
-
     th
       border: none
       border-bottom: 3px solid #223D72
@@ -369,3 +368,61 @@ img
     .back-link__icon
       fill: #223D72
       stroke: #223D72
+
+.two-images
+  margin-top: 30px
+  margin-bottom: 30px
+
+  @media(min-width: 768px)
+    display: flex
+    margin-left: -8px
+    margin-right: -8px
+
+  @media(min-width: 850px)
+    margin-left: -110px
+    margin-right: -110px
+
+  @media(min-width: 1200px)
+    margin-left: -150px
+    margin-right: -150px
+
+  @media(min-width: 1350px)
+    margin-top: 50px
+
+  &__item
+    margin-bottom: 20px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      padding-left: 8px
+      padding-right: 8px
+
+    &:last-child
+      margin-bottom: 0
+
+.news-detail,
+.project-detail
+  .image-block,
+  .blockquote
+    @media(min-width: 850px)
+      margin-left: -110px
+      margin-right: -110px
+
+  .image-block__caption
+    @media(min-width: 850px)
+      padding-left: 110px
+      padding-right: 110px
+
+  .blockquote
+    @media(min-width: 850px)
+      padding-left: 110px
+
+  .blockquote__text
+    &::before
+      @media(min-width: 850px)
+        left: -76px
+
+  .slider
+    @media(min-width: 850px)
+      margin-left: -110px
+      margin-right: -110px
