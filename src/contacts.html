@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>Контактная информация</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  //= template/favicon.html
+
+  //= template/style.html
+</head>
+
+<body>
+  //= template/sprite.html
+
+  //= template/header.html
+
+  <div class="page-content">
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+          <li class="breadcrumbs__item">Контактная информация</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Контактная информация</h1>
+      <div class="contacts">
+        <div class="contacts__column">
+          <div class="contacts__item">
+            <h3 class="contacts__title">Адрес офиса:</h3>
+            <p>198095, г. Санкт Петербург, ул. Маршала Говорова, д. 52, БЦ «Алкотел»</p>
+          </div>
+          <div class="contacts__item">
+            <h3 class="contacts__title">Адрес офиса:</h3>
+            <p>198216, г. Санкт Петербург, ул. Краснопутиловская, д. 69, БЦ «Цитадель»</p>
+          </div>
+        </div>
+        <div class="contacts__column">
+          <div class="contacts__item">
+            <h3 class="contacts__title">Санкт-Петербург:</h3>
+            <p><a class="contacts__phone" href="tel:+78124261412">+7 (812) 426-14-12</a></p>
+          </div>
+          <div class="contacts__item">
+            <h3 class="contacts__title">Москва:</h3>
+            <p><a class="contacts__phone" href="tel:+74953746944">+7 (495) 374-69-44</a></p>
+          </div>
+          <div class="contacts__item">
+            <h3 class="contacts__title">Россия:</h3>
+            <p><a class="contacts__phone" href="tel:+78005006993">+7 (800) 500-69-93</a></p>
+          </div>
+        </div>
+        <div class="contacts__column">
+          <div class="contacts__item">
+            <h3 class="contacts__title">Часы работы:</h3>
+            <p>
+              Понедельник - Пятница: с&nbsp;10:00&nbsp;до&nbsp;18:00<br>
+              Суббота: Выходной<br>
+              Воскресенье: Выходной
+            </p>
+          </div>
+          <div class="contacts__item">
+            <h3 class="contacts__title">Email:</h3>
+            <p><a class="contacts__link" href="mailto:sale@forsite-company.ru">sale@forsite-company.ru</a></p>
+          </div>
+        </div>
+        <div class="contacts__column">
+          <div class="contacts__item">
+            <h3 class="contacts__title">Распорядок офиса:</h3>
+            <ul>
+              <li>Комплектация и выдача заказов транспортным компаниям производится с <span class="fw_500">10:00 до 18:00</span>.</li>
+              <li>Комплектация и выдача заказов клиентам, забирающим заказы самовывозом, производится с <span class="fw_500">10:00 до 18:00</span>.</li>
+              <li>Оформление документов на выдачу заказов: с <span class="fw_500">10:00 до 17:30</span>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="map" class="map"></div>
+    <div class="container container--small">
+      <div class="contacts-form">
+        <div class="contacts-form__text-block">
+          <h2>Остались вопросы?<br> Мы с радостью на них ответим</h2>
+          <p class="contacts-form__text">Если вы не нашли необходимое Вам оборудование или требуется специальная конфигурация напишите нам...</p>
+        </div>
+        <div class="contacts-form__form-block">
+          <form class="form" action="">
+            <div class="form__row">
+              <div class="form__cell">
+                <label class="input-label">
+                  <input class="js-input input" type="text" name="name" value="" />
+                  <span class="input-label__label">Имя</span>
+                </label>
+              </div>
+              <div class="form__cell">
+                <select class="js-select" data-placeholder="Выберите отдел" style="width: 100%">
+                  <option></option>
+                  <option value="1">Отдел 1</option>
+                  <option value="2">Отдел 2</option>
+                  <option value="3">Отдел 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__cell">
+                <label class="input-label">
+                  <input class="js-input input" type="text" name="phone" value="" />
+                  <span class="input-label__label">Телефон</span>
+                </label>
+              </div>
+              <div class="form__cell">
+                <label class="input-label">
+                  <input class="js-input input" type="text" name="email" value="" />
+                  <span class="input-label__label">Email</span>
+                </label>
+              </div>
+            </div>
+            <div class="form__row">
+              <label class="input-label">
+                <textarea class="js-input textarea"></textarea>
+                <span class="input-label__label">Ваш вопрос</span>
+              </label>
+            </div>
+            <div class="form__button-block">
+              <button class="form__submit button button--br_3" type="submit">Отправить</button>
+              <p class="form__note">Нажимая кнопку «Отправить» вы подтверждаете свое согласие на обработку персональных данных</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="departments-block">
+      <div class="container">
+        <h2>Контакты по отделам</h2>
+        <div class="departments">
+          <div class="departments__item">
+            <p class="department">
+              <span class="department__title">Общие вопросы</span>
+              <a href="mailto:sale@forsite-company.ru">sale@forsite-company.ru</a>
+            </p>
+          </div>
+          <div class="departments__item">
+            <p class="department">
+              <span class="department__title">Отдел: Графические станции</span>
+              <a href="mailto:workstation@forsite-company.ru ">workstation@forsite-company.ru </a>
+            </p>
+          </div>
+          <div class="departments__item">
+            <p class="department">
+              <span class="department__title">Отдел: Высокопроизвод. вычисления</span>
+              <a href="mailto:hpc@forsite-company.ru">hpc@forsite-company.ru</a>
+            </p>
+          </div>
+          <div class="departments__item">
+            <p class="department">
+              <span class="department__title">Отдел: Решения для VR</span>
+              <a href="mailto:vr@forsite-company.ru">vr@forsite-company.ru</a>
+            </p>
+          </div>
+          <div class="departments__item">
+            <p class="department">
+              <span class="department__title">Отдел: Виртуализация</span>
+              <a href="mailto:grid@forsite-company.ru">grid@forsite-company.ru</a>
+            </p>
+          </div>
+          <div class="departments__item">
+            <p class="department">
+              <span class="department__title">Отдел: Серверы и серверное оборудование</span>
+              <a href="mailto:server@forsite-company.ru">server@forsite-company.ru</a>
+            </p>
+          </div>
+          <div class="departments__item">
+            <p class="department">
+              <span class="department__title">Отдел: Видеостены и видеоконтроллеры</span>
+              <a href="mailto:videowall@forsite-company.ru">videowall@forsite-company.ru</a>
+            </p>
+          </div>
+          <div class="departments__item">
+            <p class="department">
+              <span class="department__title">Гарантийный отдел</span>
+              <a href="mailto:warranty@forsite-company.ru">warranty@forsite-company.ru</a>
+            </p>
+          </div>
+          <div class="departments__item">
+            <p class="department">
+              <span class="department__title">Тендерная рассылка</span>
+              <a href="mailto:tender@forsite-company.ru">tender@forsite-company.ru</a>
+            </p>
+          </div>
+          <div class="departments__item">
+            <p class="department">
+              <span class="department__title">Бухгалтерия</span>
+              <a href="mailto:buh@forsite-company.ru">buh@forsite-company.ru</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  //= template/footer.html
+
+  //= template/scripts.html
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfgRF4t3ph-ZJSEXkxIJr-H08zNYQvqb4&callback=initContactsMap" async defer></script>
+  <script>
+    function initContactsMap() {
+      var stylesArray = [{
+          "featureType": "administrative",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+            "color": "#444444"
+          }]
+        },
+        {
+          "featureType": "landscape",
+          "elementType": "all",
+          "stylers": [{
+            "color": "#f2f2f2"
+          }]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "all",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        },
+        {
+          "featureType": "road",
+          "elementType": "all",
+          "stylers": [{
+              "saturation": -100
+            },
+            {
+              "lightness": 45
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "all",
+          "stylers": [{
+            "visibility": "simplified"
+          }]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "labels.icon",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        },
+        {
+          "featureType": "transit",
+          "elementType": "all",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        },
+        {
+          "featureType": "water",
+          "elementType": "all",
+          "stylers": [{
+              "color": "#dedee4"
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        }
+      ];
+
+      var bounds = new google.maps.LatLngBounds();
+
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 10,
+        scrollwheel: false,
+        zoomControl: true,
+        scaleControl: false,
+        mapTypeControl: false,
+        streetViewControl: false,
+        styles: stylesArray
+      });
+
+      var icon = {
+        url: "images/icons/pin.svg",
+        size: new google.maps.Size(50, 62),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(0, 62)
+      };
+
+      var locations = [
+        ['<p>Адрес:<br><br> 198095, г. Санкт Петербург,<br><br> ул. Маршала Говорова, д. 52,<br><br> БЦ «Алкотел»</p>', 59.901342, 30.288938],
+        ['<p>Адрес:<br><br>198216, г. Санкт Петербург,<br><br> ул. Краснопутиловская, д. 69,<br><br> БЦ «Цитадель»</p>', 59.859902, 30.287653]
+      ];
+
+      var infowindow = new google.maps.InfoWindow();
+
+      var marker, i;
+
+      for (i = 0; i < locations.length; i++) {
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map,
+          draggable: false,
+          icon: icon
+        });
+
+        bounds.extend(marker.position);
+
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+          return function() {
+            infowindow.setContent(locations[i][0]);
+            infowindow.open(map, marker);
+          }
+        })(marker, i));
+      }
+
+      map.fitBounds(bounds);
+    }
+  </script>
+</body>
+
+</html>

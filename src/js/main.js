@@ -158,6 +158,36 @@ $(document).ready(function () {
     $('.search-bar__input').val($(this).html());
     return false;
   });
+
+  //открытие фильтра каталога на мобильных
+  $('.js-filter-open').click(function () {
+    $('body').addClass('overflow');
+    $('.catalog-section__filter').addClass('is-open');
+    return false;
+  });
+
+  //закрытие фильтра каталога на мобильных
+  $('.js-filter-close').click(function () {
+    $('body').removeClass('overflow');
+    $('.catalog-section__filter').removeClass('is-open');
+    return false;
+  });
+
+  //открытие/закрытие секции фильтра каталога
+  $('.js-filter-section-toggle').click(function () {
+    $(this).toggleClass('is-active');
+    $(this).next('.catalog-filter__section-list').slideToggle(300, function () {
+      $(this).toggleClass('is-open');
+    });
+    return false;
+  });
+
+  //переключение вида каталога
+  $('.js-catalog-view').click(function () {
+    $('.js-catalog-view').toggleClass('is-active');
+    $('.catalog-list').toggleClass('list');
+    return false;
+  });
 });
 
 //перезапуск функции навешивания класса с тенью на шапку при скролле и ресайзе

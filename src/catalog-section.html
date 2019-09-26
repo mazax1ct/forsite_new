@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>Раздел каталога продцкции</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  //= template/favicon.html
+
+  //= template/style.html
+</head>
+
+<body>
+  //= template/sprite.html
+
+  //= template/header.html
+
+  <div class="page-content">
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Продукция</a></li>
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Серверы и Серверное оборудование</a></li>
+          <li class="breadcrumbs__item">Серверы ASUS</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="title-block">
+        <h1>Серверы ASUS</h1>
+        <div class="catalog-sorting">
+          <span class="catalog-sorting__label">Сортировка:</span>
+          <select class="js-select2" style="width: 220px">
+            <option class="asc">По названию А-Я</option>
+            <option class="desc">По названию Я-А</option>
+            <option class="asc">По цене 0-9</option>
+            <option class="desc">По цене 9-0</option>
+          </select>
+          <button class="js-filter-open filter-opener" type="button">
+            <svg class="filter-opener__icon" aria-hidden="true">
+              <use xlink:href="#filter" />
+            </svg>
+            Фильтр
+          </button>
+          <div class="catalog-view">
+            <button class="js-catalog-view catalog-view__button" type="button" title="Список">
+              <svg class="catalog-view__button-icon catalog-view__button-icon--list" aria-hidden="true">
+                <use xlink:href="#list" />
+              </svg>
+            </button>
+            <button class="js-catalog-view catalog-view__button is-active" type="button" title="Плитка">
+              <svg class="catalog-view__button-icon catalog-view__button-icon--tile" aria-hidden="true">
+                <use xlink:href="#tile" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="catalog-section">
+        <div class="catalog-section__filter">
+          <h2 class="catalog-section__filter-title">Фильтр</h2>
+          <button class="catalog-section__filter-close" type="button">
+            <svg class="js-filter-close catalog-section__filter-close-icon" aria-hidden="true">
+              <use xlink:href="#menu-close" />
+            </svg>
+          </button>
+          <div class="catalog-filter">
+            <form action="">
+              <div class="catalog-filter__section">
+                <h3 class="js-filter-section-toggle catalog-filter__section-title">
+                  Количество узлов
+                </h3>
+                <div class="catalog-filter__section-list">
+                  <ul class="checkbox-list">
+                    <li class="checkbox-list__item">
+                      <label class="checkbox-list__label" for="qnt_1_">
+                        <input id="qnt_1_" class="checkbox-list__input" type="checkbox" name="qnt_1" checked>
+                        <span class="checkbox-list__button">1</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item">
+                      <label class="checkbox-list__label" for="qnt_2_">
+                        <input id="qnt_2_" class="checkbox-list__input" type="checkbox" name="qnt_2">
+                        <span class="checkbox-list__button">2</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item">
+                      <label class="checkbox-list__label" for="qnt_3_">
+                        <input id="qnt_3_" class="checkbox-list__input" type="checkbox" name="qnt_3">
+                        <span class="checkbox-list__button">3</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item">
+                      <label class="checkbox-list__label" for="qnt_4_">
+                        <input id="qnt_4_" class="checkbox-list__input" type="checkbox" name="qnt_4">
+                        <span class="checkbox-list__button">4</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item">
+                      <label class="checkbox-list__label" for="qnt_5_">
+                        <input id="qnt_5_" class="checkbox-list__input" type="checkbox" name="qnt_5">
+                        <span class="checkbox-list__button">5</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="catalog-filter__section">
+                <h3 class="js-filter-section-toggle catalog-filter__section-title">
+                  Производители
+                </h3>
+                <div class="catalog-filter__section-list">
+                  <label class="checkbox-label" for="ch_1">
+                    <input id="ch_1" type="checkbox" name="n_1" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">Серверы ASUS</span>
+                  </label>
+                  <label class="checkbox-label" for="ch_2">
+                    <input id="ch_2" type="checkbox" name="n_2" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">Серверы Intel</span>
+                  </label>
+                  <label class="checkbox-label" for="ch_3">
+                    <input id="ch_3" type="checkbox" name="n_3" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">Supermicro</span>
+                  </label>
+                  <label class="checkbox-label" for="ch_4">
+                    <input id="ch_4" type="checkbox" name="n_4" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">DELL</span>
+                  </label>
+                  <label class="checkbox-label" for="ch_5">
+                    <input id="ch_5" type="checkbox" name="n_5" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">GPU-серверы</span>
+                  </label>
+                </div>
+              </div>
+              <div class="catalog-filter__section">
+                <h3 class="js-filter-section-toggle catalog-filter__section-title is-active">
+                  ПРОЦЕССОРЫ
+                </h3>
+                <div class="catalog-filter__section-list is-open">
+                  <label class="checkbox-label" for="ch_6">
+                    <input id="ch_6" type="checkbox" name="p_1" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">Xeon E5</span>
+                  </label>
+                  <label class="checkbox-label" for="ch_7">
+                    <input id="ch_7" type="checkbox" name="p_2" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">Xeon E3</span>
+                  </label>
+                  <label class="checkbox-label" for="ch_8">
+                    <input id="ch_8" type="checkbox" name="p_3" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">6-ядерный Intel Xeon Bronze 3104 1.7GHz, 8.25M, TDP 85W, LGA3647</span>
+                  </label>
+                  <label class="checkbox-label" for="ch_9">
+                    <input id="ch_9" type="checkbox" name="p_4" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">12-ядерный Intel Xeon Gold 6126 2.6-3.7GHz, 19.25M, TDP 125W, LGA3647</span>
+                  </label>
+                  <label class="checkbox-label" for="ch_10">
+                    <input id="ch_10" type="checkbox" name="p_5" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">12-ядерный Intel Xeon Gold 6136 </span>
+                  </label>
+                </div>
+              </div>
+              <div class="catalog-filter__section">
+                <h3 class="js-filter-section-toggle catalog-filter__section-title">
+                  Системная плата
+                </h3>
+                <div class="catalog-filter__section-list">
+                  <label class="checkbox-label" for="ch_11">
+                    <input id="ch_11" type="checkbox" name="s_1" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">Intel C612 (2)</span>
+                  </label>
+                  <label class="checkbox-label" for="ch_12">
+                    <input id="ch_12" type="checkbox" name="s_2" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">C621 (2)</span>
+                  </label>
+                </div>
+              </div>
+              <div class="catalog-filter__section">
+                <h3 class="js-filter-section-toggle catalog-filter__section-title is-active">
+                  Максимальный объем памяти
+                </h3>
+                <div class="catalog-filter__section-list is-open">
+                  <label class="checkbox-label" for="ch_13">
+                    <input id="ch_13" type="checkbox" name="r_1" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">64Gb</span>
+                  </label>
+                  <label class="checkbox-label" for="ch_14">
+                    <input id="ch_14" type="checkbox" name="r_2" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">1024Gb</span>
+                  </label>
+                  <label class="checkbox-label" for="ch_15">
+                    <input id="ch_15" type="checkbox" name="r_3" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">1536Gb</span>
+                  </label>
+                  <label class="checkbox-label" for="ch_16">
+                    <input id="ch_16" type="checkbox" name="r_4" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">2048Gb</span>
+                  </label>
+                </div>
+              </div>
+              <button class="catalog-filter__submit button button--black">Применить</button>
+              <button class="catalog-filter__reset" type="reset">Очистить все фильтры</button>
+            </form>
+          </div>
+        </div>
+        <div class="catalog-section__list">
+          <div class="catalog-list">
+            <div class="catalog-list__item">
+              <div class="catalog-item">
+                <a class="catalog-item__link" href="#">
+                  <span class="catalog-item__image-block">
+                    <img class="catalog-item__image" src="images/content/catalog/img_1.jpg" alt="Сервер INTEL 1U R1304SPOSHBN">
+                  </span>
+                  <span class="catalog-item__title">Сервер INTEL 1U R1304SPOSHBN</span>
+                </a>
+                <div class="catalog-item__info">
+                  <p>Платформа: 2U, 4xСокет 2011-3, 24x3.5" с Горячей-заменой, БП 1000W резервирование 1+1 (48 x DDR4)</p>
+                  <p>CPU: Xeon E5-4610v4 1.8GHz 10C/20T x4</p>
+                  <p>DDR: 16GB DDR4 2400Mhz ECC REG x4</p>
+                  <p>Жесткие диски SAS: Не выбрано</p>
+                  <p>OS: Не выбрано</p>
+                </div>
+                <p class="catalog-item__buttons">
+                  <a class="catalog-item__more-button button button--br_3" href="#">Подробнее</a>
+                  <a class="catalog-item__config-button" href="#">
+                    <svg class="catalog-item__config-icon" aria-hidden="true">
+                      <use xlink:href="#config" />
+                    </svg>
+                    Конфигуратор
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="catalog-list__item">
+              <div class="catalog-item">
+                <a class="catalog-item__link" href="#">
+                  <span class="catalog-item__image-block">
+                    <img class="catalog-item__image" src="images/content/catalog/img_2.jpg" alt="Сервер FORSITE 2U HPC 4000">
+                  </span>
+                  <span class="catalog-item__title">Сервер FORSITE 2U HPC 4000</span>
+                </a>
+                <div class="catalog-item__info">
+                  <p>Платформа: 2U, 4xСокет 2011-3, 24x3.5" с Горячей-заменой, БП 1000W резервирование 1+1 (48 x DDR4)</p>
+                  <p>CPU: Xeon E5-4610v4 1.8GHz 10C/20T x4</p>
+                  <p>DDR: 16GB DDR4 2400Mhz ECC REG x4</p>
+                </div>
+                <p class="catalog-item__buttons">
+                  <a class="catalog-item__more-button button button--br_3" href="#">Подробнее</a>
+                  <a class="catalog-item__config-button" href="#">
+                    <svg class="catalog-item__config-icon" aria-hidden="true">
+                      <use xlink:href="#config" />
+                    </svg>
+                    Конфигуратор
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="catalog-list__item">
+              <div class="catalog-item">
+                <a class="catalog-item__link" href="#">
+                  <span class="catalog-item__image-block">
+                    <img class="catalog-item__image" src="images/content/catalog/img_3.jpg" alt="Сервер INTEL 1U R1304SPOSHBN">
+                  </span>
+                  <span class="catalog-item__title">Сервер INTEL 1U R1304SPOSHBN</span>
+                </a>
+                <div class="catalog-item__info">
+                  <p>Платформа: 2U, 4xСокет 2011-3, 24x3.5" с Горячей-заменой, БП 1000W резервирование 1+1 (48 x DDR4)</p>
+                  <p>CPU: Xeon E5-4610v4 1.8GHz 10C/20T x4</p>
+                  <p>DDR: 16GB DDR4 2400Mhz ECC REG x4</p>
+                  <p>Жесткие диски SAS: Не выбрано</p>
+                  <p>OS: Не выбрано</p>
+                </div>
+                <p class="catalog-item__buttons">
+                  <a class="catalog-item__more-button button button--br_3" href="#">Подробнее</a>
+                  <a class="catalog-item__config-button" href="#">
+                    <svg class="catalog-item__config-icon" aria-hidden="true">
+                      <use xlink:href="#config" />
+                    </svg>
+                    Конфигуратор
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="catalog-list__item">
+              <div class="catalog-item">
+                <a class="catalog-item__link" href="#">
+                  <span class="catalog-item__image-block">
+                    <img class="catalog-item__image" src="images/content/catalog/img_1.jpg" alt="Сервер INTEL 1U R1304SPOSHBN">
+                  </span>
+                  <span class="catalog-item__title">Сервер INTEL 1U R1304SPOSHBN</span>
+                </a>
+                <div class="catalog-item__info">
+                  <p>Платформа: 2U, 4xСокет 2011-3, 24x3.5" с Горячей-заменой, БП 1000W резервирование 1+1 (48 x DDR4)</p>
+                  <p>CPU: Xeon E5-4610v4 1.8GHz 10C/20T x4</p>
+                  <p>DDR: 16GB DDR4 2400Mhz ECC REG x4</p>
+                  <p>Жесткие диски SAS: Не выбрано</p>
+                  <p>OS: Не выбрано</p>
+                </div>
+                <p class="catalog-item__buttons">
+                  <a class="catalog-item__more-button button button--br_3" href="#">Подробнее</a>
+                  <a class="catalog-item__config-button" href="#">
+                    <svg class="catalog-item__config-icon" aria-hidden="true">
+                      <use xlink:href="#config" />
+                    </svg>
+                    Конфигуратор
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="catalog-list__item">
+              <div class="catalog-item">
+                <a class="catalog-item__link" href="#">
+                  <span class="catalog-item__image-block">
+                    <img class="catalog-item__image" src="images/content/catalog/img_2.jpg" alt="Сервер FORSITE 2U HPC 4000">
+                  </span>
+                  <span class="catalog-item__title">Сервер FORSITE 2U HPC 4000</span>
+                </a>
+                <div class="catalog-item__info">
+                  <p>Платформа: 2U, 4xСокет 2011-3, 24x3.5" с Горячей-заменой, БП 1000W резервирование 1+1 (48 x DDR4)</p>
+                  <p>CPU: Xeon E5-4610v4 1.8GHz 10C/20T x4</p>
+                  <p>DDR: 16GB DDR4 2400Mhz ECC REG x4</p>
+                </div>
+                <p class="catalog-item__buttons">
+                  <a class="catalog-item__more-button button button--br_3" href="#">Подробнее</a>
+                  <a class="catalog-item__config-button" href="#">
+                    <svg class="catalog-item__config-icon" aria-hidden="true">
+                      <use xlink:href="#config" />
+                    </svg>
+                    Конфигуратор
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="catalog-list__item">
+              <div class="catalog-item">
+                <a class="catalog-item__link" href="#">
+                  <span class="catalog-item__image-block">
+                    <img class="catalog-item__image" src="images/content/catalog/img_3.jpg" alt="Сервер INTEL 1U R1304SPOSHBN">
+                  </span>
+                  <span class="catalog-item__title">Сервер INTEL 1U R1304SPOSHBN</span>
+                </a>
+                <div class="catalog-item__info">
+                  <p>Платформа: 2U, 4xСокет 2011-3, 24x3.5" с Горячей-заменой, БП 1000W резервирование 1+1 (48 x DDR4)</p>
+                  <p>CPU: Xeon E5-4610v4 1.8GHz 10C/20T x4</p>
+                  <p>DDR: 16GB DDR4 2400Mhz ECC REG x4</p>
+                  <p>Жесткие диски SAS: Не выбрано</p>
+                  <p>OS: Не выбрано</p>
+                </div>
+                <p class="catalog-item__buttons">
+                  <a class="catalog-item__more-button button button--br_3" href="#">Подробнее</a>
+                  <a class="catalog-item__config-button" href="#">
+                    <svg class="catalog-item__config-icon" aria-hidden="true">
+                      <use xlink:href="#config" />
+                    </svg>
+                    Конфигуратор
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="catalog-list__item">
+              <div class="catalog-item">
+                <a class="catalog-item__link" href="#">
+                  <span class="catalog-item__image-block">
+                    <img class="catalog-item__image" src="images/content/catalog/img_1.jpg" alt="Сервер INTEL 1U R1304SPOSHBN">
+                  </span>
+                  <span class="catalog-item__title">Сервер INTEL 1U R1304SPOSHBN</span>
+                </a>
+                <div class="catalog-item__info">
+                  <p>Платформа: 2U, 4xСокет 2011-3, 24x3.5" с Горячей-заменой, БП 1000W резервирование 1+1 (48 x DDR4)</p>
+                  <p>CPU: Xeon E5-4610v4 1.8GHz 10C/20T x4</p>
+                  <p>DDR: 16GB DDR4 2400Mhz ECC REG x4</p>
+                  <p>Жесткие диски SAS: Не выбрано</p>
+                  <p>OS: Не выбрано</p>
+                </div>
+                <p class="catalog-item__buttons">
+                  <a class="catalog-item__more-button button button--br_3" href="#">Подробнее</a>
+                  <a class="catalog-item__config-button" href="#">
+                    <svg class="catalog-item__config-icon" aria-hidden="true">
+                      <use xlink:href="#config" />
+                    </svg>
+                    Конфигуратор
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="catalog-list__item">
+              <div class="catalog-item">
+                <a class="catalog-item__link" href="#">
+                  <span class="catalog-item__image-block">
+                    <img class="catalog-item__image" src="images/content/catalog/img_2.jpg" alt="Сервер FORSITE 2U HPC 4000">
+                  </span>
+                  <span class="catalog-item__title">Сервер FORSITE 2U HPC 4000</span>
+                </a>
+                <div class="catalog-item__info">
+                  <p>Платформа: 2U, 4xСокет 2011-3, 24x3.5" с Горячей-заменой, БП 1000W резервирование 1+1 (48 x DDR4)</p>
+                  <p>CPU: Xeon E5-4610v4 1.8GHz 10C/20T x4</p>
+                  <p>DDR: 16GB DDR4 2400Mhz ECC REG x4</p>
+                </div>
+                <p class="catalog-item__buttons">
+                  <a class="catalog-item__more-button button button--br_3" href="#">Подробнее</a>
+                  <a class="catalog-item__config-button" href="#">
+                    <svg class="catalog-item__config-icon" aria-hidden="true">
+                      <use xlink:href="#config" />
+                    </svg>
+                    Конфигуратор
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="catalog-list__item">
+              <div class="catalog-item">
+                <a class="catalog-item__link" href="#">
+                  <span class="catalog-item__image-block">
+                    <img class="catalog-item__image" src="images/content/catalog/img_3.jpg" alt="Сервер INTEL 1U R1304SPOSHBN">
+                  </span>
+                  <span class="catalog-item__title">Сервер INTEL 1U R1304SPOSHBN</span>
+                </a>
+                <div class="catalog-item__info">
+                  <p>Платформа: 2U, 4xСокет 2011-3, 24x3.5" с Горячей-заменой, БП 1000W резервирование 1+1 (48 x DDR4)</p>
+                  <p>CPU: Xeon E5-4610v4 1.8GHz 10C/20T x4</p>
+                  <p>DDR: 16GB DDR4 2400Mhz ECC REG x4</p>
+                  <p>Жесткие диски SAS: Не выбрано</p>
+                  <p>OS: Не выбрано</p>
+                </div>
+                <p class="catalog-item__buttons">
+                  <a class="catalog-item__more-button button button--br_3" href="#">Подробнее</a>
+                  <a class="catalog-item__config-button" href="#">
+                    <svg class="catalog-item__config-icon" aria-hidden="true">
+                      <use xlink:href="#config" />
+                    </svg>
+                    Конфигуратор
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="catalog-list__item">
+              <div class="catalog-item">
+                <a class="catalog-item__link" href="#">
+                  <span class="catalog-item__image-block">
+                    <img class="catalog-item__image" src="images/content/catalog/img_1.jpg" alt="Сервер INTEL 1U R1304SPOSHBN">
+                  </span>
+                  <span class="catalog-item__title">Сервер INTEL 1U R1304SPOSHBN</span>
+                </a>
+                <div class="catalog-item__info">
+                  <p>Платформа: 2U, 4xСокет 2011-3, 24x3.5" с Горячей-заменой, БП 1000W резервирование 1+1 (48 x DDR4)</p>
+                  <p>CPU: Xeon E5-4610v4 1.8GHz 10C/20T x4</p>
+                  <p>DDR: 16GB DDR4 2400Mhz ECC REG x4</p>
+                  <p>Жесткие диски SAS: Не выбрано</p>
+                  <p>OS: Не выбрано</p>
+                </div>
+                <p class="catalog-item__buttons">
+                  <a class="catalog-item__more-button button button--br_3" href="#">Подробнее</a>
+                  <a class="catalog-item__config-button" href="#">
+                    <svg class="catalog-item__config-icon" aria-hidden="true">
+                      <use xlink:href="#config" />
+                    </svg>
+                    Конфигуратор
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="catalog-list__item">
+              <div class="catalog-item">
+                <a class="catalog-item__link" href="#">
+                  <span class="catalog-item__image-block">
+                    <img class="catalog-item__image" src="images/content/catalog/img_2.jpg" alt="Сервер FORSITE 2U HPC 4000">
+                  </span>
+                  <span class="catalog-item__title">Сервер FORSITE 2U HPC 4000</span>
+                </a>
+                <div class="catalog-item__info">
+                  <p>Платформа: 2U, 4xСокет 2011-3, 24x3.5" с Горячей-заменой, БП 1000W резервирование 1+1 (48 x DDR4)</p>
+                  <p>CPU: Xeon E5-4610v4 1.8GHz 10C/20T x4</p>
+                  <p>DDR: 16GB DDR4 2400Mhz ECC REG x4</p>
+                </div>
+                <p class="catalog-item__buttons">
+                  <a class="catalog-item__more-button button button--br_3" href="#">Подробнее</a>
+                  <a class="catalog-item__config-button" href="#">
+                    <svg class="catalog-item__config-icon" aria-hidden="true">
+                      <use xlink:href="#config" />
+                    </svg>
+                    Конфигуратор
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="catalog-list__item">
+              <div class="catalog-item">
+                <a class="catalog-item__link" href="#">
+                  <span class="catalog-item__image-block">
+                    <img class="catalog-item__image" src="images/content/catalog/img_3.jpg" alt="Сервер INTEL 1U R1304SPOSHBN">
+                  </span>
+                  <span class="catalog-item__title">Сервер INTEL 1U R1304SPOSHBN</span>
+                </a>
+                <div class="catalog-item__info">
+                  <p>Платформа: 2U, 4xСокет 2011-3, 24x3.5" с Горячей-заменой, БП 1000W резервирование 1+1 (48 x DDR4)</p>
+                  <p>CPU: Xeon E5-4610v4 1.8GHz 10C/20T x4</p>
+                  <p>DDR: 16GB DDR4 2400Mhz ECC REG x4</p>
+                  <p>Жесткие диски SAS: Не выбрано</p>
+                  <p>OS: Не выбрано</p>
+                </div>
+                <p class="catalog-item__buttons">
+                  <a class="catalog-item__more-button button button--br_3" href="#">Подробнее</a>
+                  <a class="catalog-item__config-button" href="#">
+                    <svg class="catalog-item__config-icon" aria-hidden="true">
+                      <use xlink:href="#config" />
+                    </svg>
+                    Конфигуратор
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-section__pagination">
+            <ul class="pager">
+              <li class="pager__item"><a class="pager__link" href="#">1</a></li>
+              <li class="pager__item"><a class="pager__link" href="#">2</a></li>
+              <li class="pager__item"><a class="pager__link is-active" href="#">3</a></li>
+              <li class="pager__item"><a class="pager__link" href="#">4</a></li>
+              <li class="pager__item"><a class="pager__link" href="#">...</a></li>
+              <li class="pager__item"><a class="pager__link" href="#">10</a></li>
+            </ul>
+            <p class="catalog-section__count">Показано 12 из 92</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  //= template/footer.html
+
+  //= template/scripts.html
+</body>
+
+</html>
