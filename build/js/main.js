@@ -212,6 +212,17 @@ $(document).ready(function () {
       }
     }
   }
+
+  //слайдер размера видеостены
+  if ($(".js-range-slider").length) {
+    $(".js-range-slider").ionRangeSlider({
+      min: 1,
+      max: 5,
+      from: 1,
+      to: 5,
+      grid: true
+    });
+  }
 });
 
 //перезапуск функции навешивания класса с тенью на шапку при скролле и ресайзе

@@ -1,0 +1,144 @@
+.calc
+  &__section
+    border-bottom: 2px solid #F2F2F2
+    padding-top: 20px
+    padding-bottom: 30px
+
+    @media(min-width: 768px)
+      border-bottom: none
+      padding-left: 25px
+      padding-right: 25px
+      padding-top: 35px
+      padding-bottom: 35px
+
+    @media(min-width: 992px)
+      padding-left: 50px
+      padding-right: 50px
+
+    &:nth-child(odd)
+      @media(min-width: 768px)
+        background-color: rgba(#F5F5F5, 0.34)
+
+    &:last-child
+      border-bottom: none
+      padding-bottom: 0
+
+      .calc__row
+        @media(min-width: 768px)
+          display: block
+
+        @media(min-width: 992px)
+          display: flex
+
+      .calc__block
+        @media(min-width: 768px)
+          margin-bottom: 25px
+          width: 100%
+
+        @media(min-width: 992px)
+          margin-bottom: 0
+          width: 50%
+
+        &:last-child
+          margin-bottom: 0
+
+  &__row
+    @media(min-width: 768px)
+      align-items: flex-start
+      display: flex
+
+    &--align_center
+      @media(min-width: 768px)
+        align-items: center
+
+  &__block
+    margin-bottom: 15px
+
+    &:last-child
+      margin-bottom: 0
+
+    &:first-child
+      @media(min-width: 768px)
+        padding-right: 25px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      width: 50%
+
+    & > .input-label,
+    & > .select2
+      @media(min-width: 768px)
+        max-width: 330px
+
+  &__title
+    font-size: 18px
+    line-height: 22px
+    margin-bottom: 10px
+
+    @media(min-width: 992px)
+      position: relative
+      padding-left: 55px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__title-num
+    color: rgba(#000, 0.1)
+
+    @media(min-width: 992px)
+      left: 0
+      position: absolute
+      top: 0
+
+  &__note
+    color: rgba(#000, 0.45)
+    font-size: 14px
+    line-height: 20px
+
+    @media(min-width: 992px)
+      margin-left: 55px
+
+  &__inline-checkbox
+    .checkbox-label
+      @media(max-width: 767px)
+        display: inline-block
+        margin-right: 30px
+        margin-bottom: 0
+        vertical-align: top
+
+  .form
+    @media(min-width: 1350px)
+      margin-right: 40px
+
+.calc-sizes
+  display: flex
+
+  &__block
+    width: 50%
+
+    &:first-child
+      padding-right: 12px
+      position: relative
+
+      @media(min-width: 1200px)
+        padding-right: 40px
+
+      &::after
+        color: rgba(#000, 0.1)
+        content: 'X'
+        font-size: 30px
+        left: auto
+        position: absolute
+        right: -9px
+        top: 60%
+        transform: translateY(-50%)
+
+    &:last-child
+      padding-left: 12px
+
+      @media(min-width: 1200px)
+        padding-left: 40px
+
+  &__title
+    font-size: 14px
+    line-height: 20px

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>Заявка на расчет видеостены</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  //= template/favicon.html
+
+  //= template/style.html
+  <link rel="stylesheet" href="css_include_once/ion.RangeSlider.css" />
+  <link rel="stylesheet" href="css_include_once/dropzone.css" />
+</head>
+
+<body>
+  //= template/sprite.html
+
+  //= template/header.html
+
+  <div class="page-content">
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+          <li class="breadcrumbs__item">Заявка на расчет видеостены</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Заявка на расчет видеостены</h1>
+      <div class="calc">
+        <form action="">
+          <div class="calc__section">
+            <div class="calc__row">
+              <div class="calc__block">
+                <h2 class="calc__title"><span class="calc__title-num">01.</span> Общее количество панелей видеостены:*</h2>
+                <p class="calc__note">или длину и высоту места для видеостены</p>
+              </div>
+              <div class="calc__block">
+                <div class="calc-sizes">
+                  <div class="calc-sizes__block">
+                    <p class="calc-size__title">Ширина</p>
+                    <input type="text" class="js-range-slider" name="width" value="" />
+                  </div>
+                  <div class="calc-sizes__block">
+                    <p class="calc-size__title">Высота</p>
+                    <input type="text" class="js-range-slider" name="height" value="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calc__section">
+            <div class="calc__row calc__row--align_center">
+              <div class="calc__block">
+                <h2 class="calc__title"><span class="calc__title-num">02.</span> Планируемое размещение видеодеостены:*</h2>
+              </div>
+              <div class="calc__block">
+                <select class="js-select" style="width: 100%">
+                  <option value="1">Напольное</option>
+                  <option value="2">Настенное</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="calc__section">
+            <div class="calc__row">
+              <div class="calc__block">
+                <h2 class="calc__title"><span class="calc__title-num">03.</span> Диагональ панели:</h2>
+                <p class="calc__note">Возможен выбор нескольких вариантов<br> для предоставления нескольких предложений</p>
+              </div>
+              <div class="calc__block">
+                <div class="calc__inline-checkbox">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="diag" value="46" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">46"</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="diag" value="55" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">55"</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calc__section">
+            <div class="calc__row">
+              <div class="calc__block">
+                <h2 class="calc__title"><span class="calc__title-num">04.</span> Стык между панелями:</h2>
+                <p class="calc__note">Возможен выбор нескольких вариантов<br> для предоставления нескольких предложений</p>
+              </div>
+              <div class="calc__block">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="stik" value="2" />
+                  <span class="checkbox-icon"></span>
+                  <span class="checkbox-text">до 2.0 мм</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="stik" value="3.5" />
+                  <span class="checkbox-icon"></span>
+                  <span class="checkbox-text">3.5 мм</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="stik" value="4.9" />
+                  <span class="checkbox-icon"></span>
+                  <span class="checkbox-text">4.9-5.7 мм</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="stik" value="11" />
+                  <span class="checkbox-icon"></span>
+                  <span class="checkbox-text">11 мм</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="stik" value="15" />
+                  <span class="checkbox-icon"></span>
+                  <span class="checkbox-text">15 мм</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="calc__section">
+            <div class="calc__row">
+              <div class="calc__block">
+                <h2 class="calc__title"><span class="calc__title-num">05.</span> Яркость панелей:</h2>
+                <p class="calc__note">Возможен выбор нескольких вариантов<br> для предоставления нескольких предложений</p>
+              </div>
+              <div class="calc__block">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="bright" value="1" />
+                  <span class="checkbox-icon"></span>
+                  <span class="checkbox-text">Стандартная яркость (400-450 кд/м2)</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="bright" value="2" />
+                  <span class="checkbox-icon"></span>
+                  <span class="checkbox-text">Увеличенная яркость (700-750 кд/м2)</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="bright" value="3" />
+                  <span class="checkbox-icon"></span>
+                  <span class="checkbox-text">Максимальная яркость (от 1500 кд/м2)<br> для витрин выходящих на улицу</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="calc__section">
+            <div class="calc__row calc__row--align_center">
+              <div class="calc__block">
+                <h2 class="calc__title"><span class="calc__title-num">06.</span> Высота до потолка в помещении:</h2>
+              </div>
+              <div class="calc__block">
+                <label class="input-label">
+                  <input class="input input--placeholder" type="text" name="potolok" value="" placeholder="Пример: 3м" />
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="calc__section">
+            <div class="calc__row calc__row--align_center">
+              <div class="calc__block">
+                <h2 class="calc__title"><span class="calc__title-num">07.</span> Расстояние от пола до нижнего края видеостены:</h2>
+              </div>
+              <div class="calc__block">
+                <label class="input-label">
+                  <input class="input input--placeholder" type="text" name="stena" value="" placeholder="Пример: 3м" />
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="calc__section">
+            <div class="calc__row">
+              <div class="calc__block">
+                <h2 class="calc__title"><span class="calc__title-num">08.</span> Сценарии отображения информации:*</h2>
+              </div>
+              <div class="calc__block">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="scene" value="1" />
+                  <span class="checkbox-icon"></span>
+                  <span class="checkbox-text">Полиэкран (объединение всех мониторов в один виртуальный)</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="scene" value="2" />
+                  <span class="checkbox-icon"></span>
+                  <span class="checkbox-text">Многоэкранный (каждый монитор для отдельной картинки)</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="scene" value="3" />
+                  <span class="checkbox-icon"></span>
+                  <span class="checkbox-text">Будут использованы оба режима</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="calc__section">
+            <div class="calc__row">
+              <div class="calc__block">
+                <h2 class="calc__title"><span class="calc__title-num">09.</span> Режим эксплуатации видеостены:*</h2>
+              </div>
+              <div class="calc__block">
+                <label class="radio-label">
+                  <input type="radio" name="power" value="1" checked />
+                  <span class="radio-icon"></span>
+                  <span class="radio-text">Постоянно [24\7]</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="power" value="2" />
+                  <span class="radio-icon"></span>
+                  <span class="radio-text">В течение рабочего дня</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="calc__section">
+            <div class="calc__row">
+              <div class="calc__block">
+                <h2 class="calc__title"><span class="calc__title-num">10.</span> Характеристики отображаемого контента:*</h2>
+              </div>
+              <div class="calc__block">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="content" value="1" />
+                  <span class="checkbox-icon"></span>
+                  <span class="checkbox-text">2D-контент: Фото HTML / Видео / IP камеры / Схемы / Мнемосхемы / Презентации</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="content" value="2" />
+                  <span class="checkbox-icon"></span>
+                  <span class="checkbox-text">3D-графика: 3D-стерео / САПР-приложения / Промышленная визуализация</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="calc__section">
+            <div class="calc__row">
+              <div class="calc__block">
+                <h2 class="calc__title"><span class="calc__title-num">11.</span> Количество и тип источников информации:</h2>
+                <p class="calc__note" style="max-width: 385px">Пример: 5 IP камер и 1 рабочая станция подключаются к видеоконтроллеру</p>
+              </div>
+              <div class="calc__block">
+                <label class="input-label">
+                  <input class="input input--placeholder" type="text" name="ist" value="" />
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="calc__section">
+            <div class="calc__row">
+              <div class="calc__block">
+                <h2 class="calc__title"><span class="calc__title-num">12.</span> Заполните контактную информацию:</h2>
+              </div>
+              <div class="calc__block">
+                <div class="form">
+                  <div class="form__row">
+                    <div class="form__cell">
+                      <label class="input-label">
+                        <input class="js-input input" type="text" name="name" value="" />
+                        <span class="input-label__label">Имя</span>
+                      </label>
+                    </div>
+                    <div class="form__cell">
+                      <label class="input-label">
+                        <input class="js-input input" type="text" name="company" value="" />
+                        <span class="input-label__label">Организация</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__cell">
+                      <label class="input-label">
+                        <input class="js-input input" type="text" name="phone" value="" />
+                        <span class="input-label__label">Телефон</span>
+                      </label>
+                    </div>
+                    <div class="form__cell">
+                      <label class="input-label">
+                        <input class="js-input input" type="text" name="email" value="" />
+                        <span class="input-label__label">Email</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__cell">
+                      <label class="input-label">
+                        <input class="js-input input" type="text" name="days" value="" />
+                        <span class="input-label__label">Сроки реализации</span>
+                      </label>
+                    </div>
+                    <div class="form__cell">
+                      <div id="dropzone" class="dropzone">
+                        <div class="fallback">
+                          <input name="file" type="file" multiple />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <label class="input-label">
+                      <textarea class="js-input textarea"></textarea>
+                      <span class="input-label__label">Дополнительная информация</span>
+                    </label>
+                  </div>
+                  <div class="form__button-block">
+                    <button class="form__submit button button--br_3" type="submit">Отправить запрос</button>
+                    <p class="form__note">Нажимая кнопку «Отправить» вы подтверждаете свое согласие на обработку персональных данных</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  //= template/footer.html
+
+  //= template/scripts.html
+  <script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
+  <script type="text/javascript" src="js/dropzone.min.js"></script>
+  <script>
+    $("#dropzone").dropzone({
+      url: "/file/post",
+      dictDefaultMessage: "Вы можете приложить файлы"
+    });
+  </script>
+</body>
+
+</html>

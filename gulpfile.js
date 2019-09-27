@@ -19,6 +19,7 @@ var path = {
     html: "build/",
     js: "build/js/",
     css: "build/css/",
+    style_include_once: "build/css_include_once/",
     img: "build/images/",
     fonts: "build/fonts/"
   },
@@ -26,6 +27,7 @@ var path = {
     html: "src/*.html",
     js: "src/js/*.js",
     style: "src/css/style.sass",
+    style_include_once: "src/css_include_once/**/*.*",
     img: "src/images/**/*.*",
     fonts: "src/fonts/**/*.*"
   },
@@ -33,6 +35,7 @@ var path = {
     html: "src/**/*.html",
     js: "src/js/**/*.js",
     style: "src/css/**/*.*",
+    style_include_once: "src/css_include_once/**/*.*",
     img: "src/images/**/*.*",
     fonts: "src/fonts/**/*.*"
   },
@@ -89,6 +92,13 @@ gulp.task("style:build", function() {
     .pipe(reload({ stream: true }));
 });
 
+gulp.task("style_include_once:build", function() {
+  gulp
+    .src(path.src.style_include_once)
+    .pipe(gulp.dest(path.build.style_include_once))
+    .pipe(reload({ stream: true }));
+});
+
 gulp.task("image:build", function() {
   gulp
     .src(path.src.img)
@@ -111,6 +121,7 @@ gulp.task("fonts:build", function() {
 gulp.task("build", [
   "html:build",
   "style:build",
+  "style_include_once:build",
   "js:build",
   "image:build",
   "fonts:build"
@@ -122,6 +133,9 @@ gulp.task("watch", function() {
   });
   watch([path.watch.style], function(event, cb) {
     gulp.start("style:build");
+  });
+  watch([path.watch.style_include_once], function(event, cb) {
+    gulp.start("style_include_once:build");
   });
   watch([path.watch.js], function(event, cb) {
     gulp.start("js:build");
