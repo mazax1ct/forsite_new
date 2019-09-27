@@ -188,7 +188,69 @@ $(document).ready(function () {
     $('.catalog-list').toggleClass('list');
     return false;
   });
+
+  //запуск плавающего левого меню в разделе доставки
+  if ($("#delivery-nav").length) {
+    if ($("body").width() >= 768) {
+      $(".js-sticky-block").trigger("sticky_kit:detach");
+      setTimeout(function() {
+        $(".js-sticky-block").stick_in_parent({
+          offset_top: 120
+        });
+
+        //навигация по якорям
+        $("#delivery-nav").ddscrollSpy({
+          scrolltopoffset: -120
+        });
+      }, 100);
+    }
+
+    //если блок для контента пустой, открепляем плавающее левое меню
+    if ($(".js-content-with-sticky").length) {
+      if ($('.js-content-with-sticky').html().trim() === '') {
+        $(".js-sticky-block").trigger("sticky_kit:detach");
+      }
+    }
+  }
 });
 
 //перезапуск функции навешивания класса с тенью на шапку при скролле и ресайзе
 $(window).on("scroll", resize_scroll).on("resize", resize_scroll);
+
+//открепляем и перезапускаем прилипающий блок при резайзе
+$(window).resize(function() {
+  if ($("#delivery-nav").length) {
+    if ($("body").width() >= 768) {
+      $(".js-sticky-block").trigger("sticky_kit:detach");
+      setTimeout(function() {
+        $(".js-sticky-block").stick_in_parent({
+          offset_top: 120
+        });
+
+        //навигация по якорям в новости
+        $("#delivery-nav").ddscrollSpy({
+          scrolltopoffset: -120
+        });
+      }, 100);
+    }
+  }
+});
+
+//открепляем и перезапускаем прилипающий блок при повороте устройства
+$(window).on("orientationchange", function(event) {
+  if ($("#delivery-nav").length) {
+    if ($("body").width() >= 768) {
+      $(".js-sticky-block").trigger("sticky_kit:detach");
+      setTimeout(function() {
+        $(".js-sticky-block").stick_in_parent({
+          offset_top: 120
+        });
+
+        //навигация по якорям в новости
+        $("#delivery-nav").ddscrollSpy({
+          scrolltopoffset: -120
+        });
+      }, 100);
+    }
+  }
+});
