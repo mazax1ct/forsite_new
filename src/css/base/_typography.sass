@@ -37,6 +37,9 @@ h1,.h1
     line-height: 44px
     margin-bottom: 45px
 
+  &:last-child
+    margin-bottom: 0
+
 h2,.h2
   font-size: 20px
   line-height: 28px
@@ -527,6 +530,56 @@ img
 
     &:last-child
       margin-bottom: 0
+
+.text-block
+  font-size: 14px
+  line-height: 20px
+  padding-top: 30px
+  padding-bottom: 55px
+
+  @media(min-width: 1350px)
+    font-size: 16px
+    line-height: 24px
+    padding-top: 100px
+    padding-bottom: 100px
+
+  &--big_text
+    @media(min-width: 1350px)
+      font-size: 18px
+      line-height: 26px
+
+  &:last-child
+    margin-bottom: -40px
+
+    @media(min-width: 1350px)
+      margin-bottom: -60px
+
+  &__row
+    @media(min-width: 768px)
+      display: flex
+
+  &__column
+    margin-bottom: 25px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      width: 50%
+
+    &:first-child
+      @media(min-width: 768px)
+        padding-right: 15px
+
+      @media(min-width: 1200px)
+        padding-right: 25px
+
+    &:last-child
+      margin-bottom: 0
+
+      @media(min-width: 768px)
+        padding-left: 15px
+
+      @media(min-width: 768px)
+        padding-left: 25px
 
 .news-detail,
 .project-detail

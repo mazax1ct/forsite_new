@@ -1,0 +1,78 @@
+.stations-block
+  padding-top: 40px
+  padding-bottom: 40px
+
+  @media(min-width: 1350px)
+    padding-top: 80px
+    padding-bottom: 80px
+
+.stations-list
+  @media(min-width: 992px)
+    display: flex
+    flex-wrap: wrap
+    margin-left: -15px
+    margin-right: -15px
+
+  &__item
+    margin-bottom: 20px
+
+    @media(min-width: 992px)
+      margin-bottom: 30px
+      padding-left: 15px
+      padding-right: 15px
+      width: 50%
+
+    &:last-child
+      margin-bottom: 0
+
+    &:nth-last-child(2),
+    &:nth-last-child(1)
+      @media(min-width: 992px)
+        margin-bottom: 0
+
+.station
+  border: 1px solid #F2F2F2
+  color: #414141
+  font-size: 12px
+  line-height: 16px
+  padding: 25px 30px 45px
+
+  @media(min-width: 768px)
+    display: flex
+    padding-top: 35px
+
+  &__image
+    margin-bottom: 30px
+    padding-left: 30px
+    padding-right: 30px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      min-width: 280px
+      padding-left: 15px
+      padding-right: 45px
+      width: 280px
+
+    @media(min-width: 992px) and (max-width: 1349px)
+      min-width: 200px
+      width: 200px
+
+  h5
+    margin-bottom: 10px
+
+  &__button-block
+    margin-bottom: 20px
+
+    @media(min-width: 768px)
+      margin-top: 30px
+
+.features-block
+  padding-top: 50px
+  padding-bottom: 50px
+
+  @media(min-width: 1350px)
+    padding-top: 80px
+    padding-bottom: 110px
+
+  &--grey
+    background-color: #F7F7F7
