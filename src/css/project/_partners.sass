@@ -1,0 +1,124 @@
+.partners-block
+  background-color: #F7F7F7
+  color: rgba(#414141, 0.5)
+  font-size: 12px
+  line-height: 16px
+  margin-top: 40px
+  padding-top: 45px
+  padding-bottom: 60px
+
+  @media(min-width: 1350px)
+    margin-top: 75px
+    padding-top: 65px
+    padding-bottom: 75px
+
+  &:last-child
+    margin-bottom: -40px
+
+    @media(min-width: 1350px)
+      margin-bottom: -60px
+
+.partners
+  display: flex
+  flex-wrap: wrap
+  margin-top: 35px
+
+  &__item
+    display: flex
+    flex-direction: column
+    margin-bottom: 20px
+    position: relative
+    padding-bottom: 20px
+    width: 50%
+
+    @media(min-width: 768px)
+      margin-bottom: 40px
+      padding-bottom: 40px
+      width: 25%
+
+    &:nth-last-child(2),
+    &:nth-last-child(1)
+      margin-bottom: 0
+
+    &:nth-last-child(4),
+    &:nth-last-child(3),
+    &:nth-last-child(2),
+    &:nth-last-child(1)
+      @media(min-width: 768px)
+        margin-bottom: 0
+        padding-bottom: 0
+
+      &::after
+        @media(min-width: 768px)
+          display: none
+
+    &::before
+      display: none
+
+    &::after
+      background-color: rgba(#979797, 0.2)
+      bottom: 0
+      content: ''
+      height: 1px
+      left: 50%
+      position: absolute
+      top: auto
+      transform: translateX(-50%)
+      width: 100px
+
+    &:nth-child(even)
+      .partner
+        &::after
+          display: block
+
+          @media(min-width: 768px)
+            display: none
+
+    &:nth-child(4n+4)
+      .partner
+        &::after
+          @media(min-width: 768px)
+            display: block
+
+.partner
+  align-items: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  height: 100%
+  min-height: 62px
+  position: relative
+  padding-left: 20px
+  padding-right: 20px
+
+  @media(min-width: 600px)
+    padding-left: 40px
+    padding-right: 40px
+
+  @media(min-width: 992px)
+    min-height: 102px
+    padding-left: 50px
+    padding-right: 50px
+
+  @media(min-width: 1350px)
+    padding-left: 60px
+    padding-right: 60px
+
+  &::before,
+  &::after
+    background-color: rgba(#979797, 0.2)
+    content: ''
+    height: 62px
+    position: absolute
+    top: 0
+    width: 1px
+
+    @media(min-width: 992px)
+      height: 102px
+
+  &::before
+    left: 0
+
+  &::after
+    display: none
+    right: 0

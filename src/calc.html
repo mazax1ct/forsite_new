@@ -36,7 +36,7 @@
     <div class="container">
       <h1>Заявка на расчет видеостены</h1>
       <div class="calc">
-        <form action="">
+        <form method="post" action="">
           <div class="calc__section">
             <div class="calc__row">
               <div class="calc__block">
@@ -327,7 +327,7 @@
   <script type="text/javascript" src="js/dropzone.min.js"></script>
   <script>
     $("#dropzone").dropzone({
-      url: "/file/post",
+      url: "/",
       dictDefaultMessage: "Вы можете приложить файлы"
     });
   </script>

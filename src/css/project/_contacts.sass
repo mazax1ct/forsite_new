@@ -95,18 +95,22 @@
 
 .departments-block
   background-color: #F7F7F7
-  margin-bottom: -40px
   padding-top: 50px
   padding-bottom: 40px
 
   @media(min-width: 1350px)
-    margin-bottom: -60px
     padding-top: 65px
     padding-bottom: 60px
 
   h2
     @media(min-width: 1350px)
       padding-left: 120px
+
+  &:last-child
+    margin-bottom: -40px
+
+    @media(min-width: 1350px)
+      margin-bottom: -60px
 
 .departments
   color: rgba(#414141, 0.5)
