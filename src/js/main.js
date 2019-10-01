@@ -223,6 +223,58 @@ $(document).ready(function () {
       grid: true
     });
   }
+
+  //переключение табов
+  $('.js-tab-nav').on('click', function() {
+    $('.js-tab-nav').removeClass("is-active");
+    $(this).addClass("is-active");
+    $('.js-tab').removeClass("is-active");
+    $('.js-tab[data-target=' + $(this).attr("data-target") + ']').addClass("is-active");
+    return false;
+  });
+
+  //запуск плавающего блока ИТОГО
+  if ($("#config-result").length) {
+    if ($("body").width() >= 768) {
+      $(".js-sticky-block").trigger("sticky_kit:detach");
+      setTimeout(function() {
+        $(".js-sticky-block").stick_in_parent({
+          offset_top: 120
+        });
+      }, 100);
+    }
+
+    //если блок для контента пустой, открепляем плавающее блок ИТОГО
+    if ($(".js-content-with-sticky").length) {
+      if ($('.js-content-with-sticky').html().trim() === '') {
+        $(".js-sticky-block").trigger("sticky_kit:detach");
+      }
+    }
+  }
+
+  //запуск плавающего левого меню в конфиге
+  if ($("#config-nav").length) {
+    if ($("body").width() >= 992) {
+      $(".js-sticky-block").trigger("sticky_kit:detach");
+      setTimeout(function() {
+        $(".js-sticky-block").stick_in_parent({
+          offset_top: 120
+        });
+
+        //навигация по якорям
+        $("#config-nav").ddscrollSpy({
+          scrolltopoffset: -120
+        });
+      }, 100);
+    }
+
+    //если блок для контента пустой, открепляем плавающее левое меню
+    if ($(".js-content-with-sticky").length) {
+      if ($('.js-content-with-sticky').html().trim() === '') {
+        $(".js-sticky-block").trigger("sticky_kit:detach");
+      }
+    }
+  }
 });
 
 //перезапуск функции навешивания класса с тенью на шапку при скролле и ресайзе
@@ -245,6 +297,33 @@ $(window).resize(function() {
       }, 100);
     }
   }
+
+  if ($("#config-result").length) {
+    if ($("body").width() >= 768) {
+      $(".js-sticky-block").trigger("sticky_kit:detach");
+      setTimeout(function() {
+        $(".js-sticky-block").stick_in_parent({
+          offset_top: 120
+        });
+      }, 100);
+    }
+  }
+
+  if ($("#config-nav").length) {
+    if ($("body").width() >= 992) {
+      $(".js-sticky-block").trigger("sticky_kit:detach");
+      setTimeout(function() {
+        $(".js-sticky-block").stick_in_parent({
+          offset_top: 120
+        });
+
+        //навигация по якорям в новости
+        $("#config-nav").ddscrollSpy({
+          scrolltopoffset: -120
+        });
+      }, 100);
+    }
+  }
 });
 
 //открепляем и перезапускаем прилипающий блок при повороте устройства
@@ -259,6 +338,33 @@ $(window).on("orientationchange", function(event) {
 
         //навигация по якорям в новости
         $("#delivery-nav").ddscrollSpy({
+          scrolltopoffset: -120
+        });
+      }, 100);
+    }
+  }
+
+  if ($("#config-result").length) {
+    if ($("body").width() >= 768) {
+      $(".js-sticky-block").trigger("sticky_kit:detach");
+      setTimeout(function() {
+        $(".js-sticky-block").stick_in_parent({
+          offset_top: 120
+        });
+      }, 100);
+    }
+  }
+
+  if ($("#config-nav").length) {
+    if ($("body").width() >= 992) {
+      $(".js-sticky-block").trigger("sticky_kit:detach");
+      setTimeout(function() {
+        $(".js-sticky-block").stick_in_parent({
+          offset_top: 120
+        });
+
+        //навигация по якорям в новости
+        $("#config-nav").ddscrollSpy({
           scrolltopoffset: -120
         });
       }, 100);

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>Конфигуратор</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  //= template/favicon.html
+
+  //= template/style.html
+</head>
+
+<body>
+  //= template/sprite.html
+
+  //= template/header.html
+
+  <div class="page-content">
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Продукция</a></li>
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="stations.html">Графические станции</a></li>
+          <li class="breadcrumbs__item">Графическая станция Forsite750D</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="config-top">
+        <div class="config-top__text-block">
+          <h1>Графическая станция Forsite750D</h1>
+          <div class="config-top__image-block config-top__image-block--mobile"><img src="images/content/stations/img_3.jpg" alt="Графическая станция  Forsite750D"></div>
+          <div class="config-top__text">
+            <p>Назначение: - Для профессионалов работающих в области: - Промышленный дизайн - Промышленная визуализация - Проектировка сложных сцен и объектов - Фотореалистичный рендеринг на GPU - Работа в IRAY | Octane Render | BunkSpeed | V-RAY-RT
+              и пр. - Инженерные расчеты ANSYS, MatLAB, Microwave Studio etc.</p>
+            <p>При установки процессоров Intel Core i7 и Core i9 ограничение до 128GB по оперативной памяти.</p>
+          </div>
+          <p class="config-top__button-block">
+            <a class="button button--br_3" href="#">Сохранить конфигурацию</a><br>
+            <a class="button button--black" href="#">Запросить цену в проект</a>
+          </p>
+        </div>
+        <div class="config-top__image-block config-top__image-block--desktop"><img width="385" src="images/content/stations/img_3.jpg" alt="Графиеская станция"></div>
+      </div>
+      <div class="config-nav">
+        <a class="js-tab-nav config-nav__item is-active" href="javascript:void(0)" data-target="1">Конфигурация</a>
+        <a class="js-tab-nav config-nav__item" href="javascript:void(0)" data-target="2">Описание</a>
+        <a class="js-tab-nav config-nav__item" href="javascript:void(0)" data-target="3">Задать вопрос</a>
+      </div>
+    </div>
+    <div class="config-tabs">
+      <div class="container">
+        <div class="js-tab config-tab is-active" data-target="1">
+          <div class="config">
+            <div class="config__left-column">
+              <div class="js-sticky-block">
+                <ul id="config-nav" class="float-nav">
+                  <li class="float-nav__item"><a class="float-nav__link" href="#1">Платформа</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#2">Блок питания</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#3">Система охлаждения процессора</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#4">Процессор</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#5">Системная плата/чипсет</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#6">Оперативная память</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#7">Видеокарта</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#8">Встроенный Raid-контроллер</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#9">Техническая поддержка</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#10">Гарантия</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#11">Тестирование</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="config__center-column">
+              <form method="get" action="config.html">
+                <div class="config-step">
+                  <h2 id="1">Платформа</h2>
+                  <p>Midi Tower NR600 (ATX)</p>
+                </div>
+                <div class="config-step">
+                  <h2 id="2">Блок питания</h2>
+                  <label class="radio-label">
+                    <input type="radio" name="power" value="1" checked />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">1000W ActivePFC Вентилятор 140мм модульный</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="power" value="2" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">1200W ActivePFC Вентилятор 140мм модульный</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="power" value="3" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">1500W ActivePFC Вентилятор 140мм модульный</span>
+                  </label>
+                </div>
+                <div class="config-step">
+                  <h2 id="3">Система охлаждения процессора</h2>
+                  <label class="radio-label">
+                    <input type="radio" name="cpu_fan" value="1" checked />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">Система жидкостного охлаждения 2 х120мм</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="cpu_fan" value="2" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">Система жидкостного охлаждения 2 х140мм</span>
+                  </label>
+                </div>
+                <div class="config-step">
+                  <h2 id="4">Процессор</h2>
+                  <label class="radio-label">
+                    <input type="radio" name="cpu" value="1" checked />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">8-ядерный Intel Core i7-9800X 3.8-4.4GHz, 16.5M, S2066</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="cpu" value="2" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">10-ядерный Intel Core i9-9900X 3.5-4.5GHz, 19.25M, S2066</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="cpu" value="3" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">12-ядерный Intel Core i9-9920X 2.9-4.3GHz, 16.5M, S2066</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="cpu" value="4" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">14-ядерный Intel Core i9-9940X 3.3-4.4GHz, 19.25M, S2066</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="cpu" value="5" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">16-ядерный Intel Core i9-9960X 3.1-4.4GHz, 22M, S2066</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="cpu" value="5" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">18-ядерный Intel Core i9-9980XE 3.0-4.4GHz, 24.75M, S2066</span>
+                  </label>
+                </div>
+                <div class="config-step">
+                  <h2 id="5">Системная плата/чипсет</h2>
+                  <p>Intel X299 WS PRO</p>
+                </div>
+                <div class="config-step">
+                  <h2 id="6">Оперативная память</h2>
+                  <label class="radio-label">
+                    <input type="radio" name="ram" value="1" checked />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">16GB (2x8GB) DDR4 3000MHz non-ECC PC4-24000</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="ram" value="2" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">32GB (2x16GB) DDR4 3000MHz non-ECC PC4-24000</span>
+                  </label>
+                </div>
+                <div class="config-step">
+                  <h2 id="7">Видеокарта</h2>
+                  <label class="radio-label">
+                    <input type="radio" name="gpu" value="1" checked />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">Nvidia Quadro RTX 4000 8GB GDDR6X 2304 CUDA cores 3xDP/VirtualLink</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="gpu" value="2" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">Nvidia Quadro RTX 5000 16GB GDDR6 3072 CUDA cores 4xDP/VirtualLink</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="gpu" value="3" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">Nvidia Quadro RTX 6000 24GB GDDR6 4608 CUDA cores 4xDP/VirtualLink</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="gpu" value="4" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">Nvidia Quadro RTX 8000 48GB GDDR6 4608 CUDA cores 4xDP/VirtualLink</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="gpu" value="5" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">GeForce RTX 2070 8GB DDR6 2304 CUDA cores Turing™</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="gpu" value="6" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">GeForce RTX 2080 8GB DDR6 2944 CUDA cores Turing™</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="gpu" value="6" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">GeForce RTX 2080Ti 11GB DDR6 4352 CUDA cores Turing™</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="gpu" value="7" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">Nvidia Quadro GV100 32GB 5120 CUDA Cores 4xDP</span>
+                  </label>
+                </div>
+                <div class="config-step">
+                  <h2 id="8">Встроенный Raid-контроллер</h2>
+                  <p>6x SATA (6Gbps) RAID 0, 1, 5, 10</p>
+                </div>
+                <div class="config-step">
+                  <h2 id="9">Техническая поддержка</h2>
+                  <p>Первичная поддержка по телефону или удаленная помощь (при наличии интернета) в течении 12 месяцев</p>
+                </div>
+                <div class="config-step">
+                  <h2 id="10">Гарантия</h2>
+                  <label class="radio-label">
+                    <input type="radio" name="guarantee" value="1" checked />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">Расширенная гарантия 12 месяцев</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="guarantee" value="2" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">Расширенная гарантия 24 месяца</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="guarantee" value="3" />
+                    <span class="radio-icon"></span>
+                    <span class="radio-text">Расширенная гарантия 36 месяцев + доставка до СЦ</span>
+                  </label>
+                </div>
+                <div class="config-step">
+                  <h2 id="11">Тестирование</h2>
+                  <p>Стандартный стресс-тест основных компонентов 24 часа</p>
+                </div>
+              </form>
+            </div>
+            <div class="config__right-column">
+              <div class="js-sticky-block">
+                <div id="config-result">
+                  <div class="config-result">
+                    <p class="config-result__title">Графическая станция Forsite750D</p>
+                    <p class="config-result__note">Рекомендованная розничная цена</p>
+                    <p class="config-result__price">165 000 руб.</p>
+                    <a class="button button--br_3 button--white" href="javascript:void(0)">Запросить цену</a><br>
+                    <a class="button button--br_3 button--white_border" href="javascript:void(0)">Подробнее</a>
+                  </div>
+                  <a class="recall-link" href="tel:+78005006993">
+                    <span class="recall-link__text">Для получения индивидуальных ценовых условий свяжитесь с нами</span>
+                    <span class="recall-link__phone">8 800 500-69-93</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="js-tab config-tab" data-target="2">2</div>
+        <div class="js-tab config-tab" data-target="3">3</div>
+      </div>
+    </div>
+  </div>
+
+  //= template/footer.html
+
+  //= template/scripts.html
+  <script type="text/javascript" src="js/jquery.sticky-kit.min.js"></script>
+  <script type="text/javascript" src="js/ddscrollspy.js"></script>
+</body>
+
+</html>

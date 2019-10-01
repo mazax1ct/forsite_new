@@ -1,0 +1,217 @@
+.config-top
+  margin-bottom: 65px
+
+  @media(min-width: 768px)
+    align-items: center
+    display: flex
+    flex-direction: row-reverse
+
+  @media(min-width: 1350px)
+    margin-bottom: 115px
+
+  &__text-block
+    @media(min-width: 768px)
+      width: 50%
+
+  &__text
+    color: #333
+    margin-bottom: 40px
+
+  &__image-block
+    margin-bottom: 40px
+
+    &--mobile
+      padding-left: 45px
+      padding-right: 45px
+      text-align: center
+
+      @media(min-width: 768px)
+        display: none
+
+    &--desktop
+      display: none
+
+      @media(min-width: 768px)
+        display: block
+        min-width: 50%
+        margin-bottom: 0
+        padding-left: 30px
+        padding-right: 30px
+        text-align: center
+        width: 50%
+
+      @media(min-width: 1200px)
+        padding-right: 70px
+        padding-left: 70px
+
+  &__button-block
+    .button
+      margin-bottom: 5px
+      max-width: 345px
+      width: 100%
+
+      @media(min-width: 768px)
+        max-width: 280px
+
+      &:last-child
+        margin-bottom: 0
+
+.config-nav
+  display: flex
+  overflow-x: auto
+
+  &__item
+    border-bottom: 2px solid transparent
+    color: #333
+    font-weight: 300
+    margin-right: 25px
+    padding-bottom: 30px
+    text-decoration: none
+
+    @media(min-width: 1350px)
+      font-size: 18px
+      line-height: 26px
+      margin-right: 40px
+
+    &.is-active
+      border-bottom-color: #223D72
+
+    &:last-child
+      margin-right: 0
+
+.config-tabs
+  background-color: #F7F7F7
+  margin-bottom: -40px
+  padding-top: 25px
+  padding-bottom: 40px
+
+  @media(min-width: 1350px)
+    margin-bottom: -60px
+    padding-top: 60px
+    padding-bottom: 80px
+
+.config-tab
+  display: none
+
+  &.is-active
+    display: block
+
+.config
+  @media(min-width: 768px)
+    display: flex
+
+  &__left-column
+    display: none
+
+    @media(min-width: 992px)
+      display: block
+      min-width: 250px
+      width: 250px
+
+    @media(min-width: 1200px)
+      min-width: 360px
+      width: 360px
+
+  &__center-column
+    flex-grow: 1
+
+    @media(min-width: 768px)
+      padding-left: 15px
+      padding-right: 15px
+
+    @media(min-width: 1200px)
+      padding-left: 30px
+      padding-right: 30px
+
+  &__right-column
+    @media(min-width: 768px)
+      min-width: 250px
+      width: 250px
+
+.config-step
+  background-color: #fff
+  border-bottom: 2px solid rgba(0,0,0,0.04)
+  box-shadow: none
+  color: #333
+  margin-bottom: 15px
+  padding: 20px 20px 25px
+  transition: box-shadow 0.3s
+
+  @media(min-width: 768px)
+    border: none
+
+  &:hover
+    box-shadow: 0 13px 34px 0 rgba(0,0,0,0.07)
+
+  &:last-child
+    margin-bottom: 0
+
+  h2
+    font-size: 18px
+    line-height: 26px
+    margin-bottom: 10px
+
+  .radio-label,
+  .checkbox-label
+    margin-bottom: 10px
+
+    &:last-child
+      margin-bottom: 0
+
+.config-result
+  background-color: #223D72
+  border-radius: 2px
+  color: #fff
+  margin-bottom: 25px
+  padding: 25px 30px 35px
+
+  &__title
+    font-size: 16px
+    line-height: 21px
+    margin-bottom: 10px
+
+  &__note
+    color: #F5F8FF
+    font-size: 12px
+    line-height: 18px
+    margin-bottom: 10px
+
+  &__price
+    font-size: 28px
+    font-weight: 700
+    white-space: nowrap
+
+  .button
+    margin-bottom: 10px
+    width: 100%
+
+    &:last-child
+      margin-bottom: 0
+
+.recall-link
+  background: url('../images/icons/pointer.svg') no-repeat 0 1px transparent
+  display: block
+  min-height: 65px
+  padding-left: 70px
+  text-decoration: none
+
+  &:hover,
+  &:focus
+    .recall-link__phone
+      text-decoration: underline
+
+  &__text
+    color: rgba(#000, 0.6)
+    display: block
+    font-size: 12px
+    font-weight: 300
+    line-height: 16px
+    margin-bottom: 10px
+    max-width: 275px
+
+  &__phone
+    color: #000
+    display: block
+    font-size: 18px
+    font-weight: 500
+    line-height: 28px
