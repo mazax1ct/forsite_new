@@ -7,7 +7,7 @@
     padding-bottom: 80px
 
 .stations-list
-  @media(min-width: 992px)
+  @media(min-width: 600px)
     display: flex
     flex-wrap: wrap
     margin-left: -15px
@@ -16,7 +16,7 @@
   &__item
     margin-bottom: 20px
 
-    @media(min-width: 992px)
+    @media(min-width: 600px)
       margin-bottom: 30px
       padding-left: 15px
       padding-right: 15px
@@ -27,17 +27,27 @@
 
     &:nth-last-child(2),
     &:nth-last-child(1)
-      @media(min-width: 992px)
+      @media(min-width: 600px)
         margin-bottom: 0
 
 .station
   border: 1px solid #F2F2F2
   color: #414141
   font-size: 12px
+  height: 100%
   line-height: 16px
   padding: 25px 30px 45px
 
+  @media(min-width: 600px)
+    padding-left: 25px
+    padding-right: 25px
+
   @media(min-width: 768px)
+    padding-left: 30px
+    padding-right: 30px
+
+  @media(min-width: 992px)
+    align-items: center
     display: flex
     padding-top: 35px
 
@@ -47,11 +57,16 @@
     padding-right: 30px
 
     @media(min-width: 768px)
-      margin-bottom: 0
       min-width: 280px
+      width: 280px
+
+    @media(min-width: 992px)
+      margin-bottom: 0
+      padding-left: 0
+
+    @media(min-width: 1350px)
       padding-left: 15px
       padding-right: 45px
-      width: 280px
 
     @media(min-width: 992px) and (max-width: 1349px)
       min-width: 200px
