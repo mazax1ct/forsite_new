@@ -1,12 +1,17 @@
 .partners-block
-  background-color: #F7F7F7
   color: rgba(#414141, 0.5)
   font-size: 12px
   line-height: 16px
   padding-top: 45px
   padding-bottom: 60px
 
+  &--grey
+    background-color: #F7F7F7
+
   @media(min-width: 1350px)
+    color: #333
+    font-size: 15px
+    line-height: 23px
     padding-top: 65px
     padding-bottom: 75px
 
@@ -20,6 +25,10 @@
   display: flex
   flex-wrap: wrap
   margin-top: 35px
+  margin-bottom: -20px
+
+  @media(min-width: 768px)
+    margin-bottom: -40px
 
   &__item
     display: flex
@@ -34,16 +43,17 @@
       padding-bottom: 40px
       width: 25%
 
-    &:nth-last-child(2),
-    &:nth-last-child(1)
-      margin-bottom: 0
+    &:last-child
+      margin-bottom: 20px
+
+      @media(min-width: 768px)
+        margin-bottom: 40px
 
     &:nth-last-child(4),
     &:nth-last-child(3),
     &:nth-last-child(2),
     &:nth-last-child(1)
       @media(min-width: 768px)
-        margin-bottom: 0
         padding-bottom: 0
 
       &::after
@@ -120,3 +130,43 @@
   &::after
     display: none
     right: 0
+
+.partners-text
+  @media(min-width: 768px)
+    align-items: center
+    display: flex
+    justify-content: space-between
+
+  @media(min-width: 1350px)
+    margin-top: -30px
+
+  p
+    @media(min-width: 768px)
+      margin-bottom: 0
+
+.partners-link
+  &--mobile
+    margin-top: 25px
+    text-align: center
+
+    @media(min-width: 768px)
+      display: none
+
+  &--desktop
+    display: none
+
+    @media(min-width: 768px)
+      display: block
+
+  a
+    font-size: 10px
+    font-weight: 700
+    display: inline-block
+    padding-top: 10px
+    padding-bottom: 10px
+    text-decoration: none
+    text-transform: uppercase
+
+    &:hover,
+    &:focus
+      text-decoration: underline

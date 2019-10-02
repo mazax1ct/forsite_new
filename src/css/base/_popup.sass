@@ -1,0 +1,149 @@
+.popup
+  display: none
+  font-size: 14px
+  line-height: 20px
+  padding-top: 55px
+  padding-left: 15px
+  padding-right: 15px
+  padding-bottom: 40px
+  width: 100%
+
+  &.fancybox-content
+    max-width: 520px
+
+    @media(min-width: 768px)
+      padding: 50px 55px
+
+  &--big
+    &.fancybox-content
+      max-width: 750px
+
+      @media(min-width: 768px)
+        padding-top: 60px
+        padding-right: 60px
+        padding-right: 60px
+        padding-bottom: 80px
+
+  &--blue
+    &.fancybox-content
+      background-color: #213C71
+      color: #fff
+      text-align: center
+
+      .popup__close-icon
+        fill: #fff
+
+  &__close
+    align-items: center
+    background: none
+    border: none
+    cursor: pointer
+    display: flex
+    justify-content: center
+    height: 44px
+    left: auto
+    padding: 0
+    position: absolute
+    right: 0
+    top: 0
+    width: 44px
+
+    @media(min-width: 768px)
+      right: 17px
+      top: 17px
+
+  &__close-icon
+    fill: #979797
+    height: 17px
+    width: 17px
+
+  &__title
+    font-size: 22px
+    font-weight: 500
+    line-height: 26px
+    margin-bottom: 25px
+
+    &--big
+      font-size: 24px
+      line-height: 32px
+      margin-bottom: 15px
+
+      @media(min-width: 768px)
+        font-size: 32px
+        line-height: 38px
+        margin-bottom: 20px
+
+.save-controls
+  counter-reset: list
+  margin-top: 30px
+
+  @media(min-width: 768px)
+    display: flex
+    justify-content: space-between
+    margin-top: 50px
+
+  &__item
+    margin-bottom: 35px
+    position: relative
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+
+    &:last-child
+      margin-bottom: 0
+
+    &::before
+      color: #F7F7F7
+      content: '0' counter(list)
+      counter-increment: list
+      font-size: 99px
+      font-weight: 500
+      line-height: 70px
+      position: absolute
+      left: 35px
+      top: 5px
+
+      @media(min-width: 768px)
+        left: 30px
+        top: 20px
+
+.save-control
+  color: #000
+  display: flex
+  font-size: 14px
+  line-height: 20px
+  position: relative
+  text-decoration: none
+  z-index: 1
+
+  @media(min-width: 768px)
+    flex-direction: column
+
+  &:hover,
+  &:focus
+    .save-control__text
+      text-decoration: underline
+
+  &__image
+    display: block
+    height: 68px
+    min-width: 70px
+    width: 70px
+
+    @media(min-width: 768px)
+      margin-bottom: 20px
+
+  &__text
+    padding-left: 35px
+
+    @media(min-width: 768px)
+      padding-left: 0
+
+.thanks
+  text-align: center
+
+  &__title
+    font-size: 36px
+    font-weight: 500
+    line-height: 44px
+    margin-bottom: 25px

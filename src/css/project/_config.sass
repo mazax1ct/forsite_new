@@ -59,6 +59,8 @@
 .config-nav
   display: flex
   overflow-x: auto
+  position: relative
+  z-index: 1
 
   &__item
     border-bottom: 2px solid transparent
@@ -67,6 +69,7 @@
     margin-right: 25px
     padding-bottom: 30px
     text-decoration: none
+    white-space: nowrap
 
     @media(min-width: 1350px)
       font-size: 18px
@@ -112,6 +115,9 @@
       min-width: 360px
       width: 360px
 
+    .float-nav
+      margin-left: 10px
+
   &__center-column
     flex-grow: 1
 
@@ -127,6 +133,17 @@
     @media(min-width: 768px)
       min-width: 250px
       width: 250px
+
+  &__column-title
+    color: #000
+    font-size: 18px
+    font-weight: 500
+    line-height: 28px
+
+    a
+      color: #000
+      font-weight: 500
+      text-decoration: none
 
 .config-step
   background-color: #fff
@@ -171,15 +188,22 @@
     margin-bottom: 10px
 
   &__note
-    color: #F5F8FF
-    font-size: 12px
+    color: #A0B2D7
+    font-size: 11px
     line-height: 18px
     margin-bottom: 10px
 
   &__price
     font-size: 28px
     font-weight: 700
+    line-height: 20px
+    margin-bottom: 25px
     white-space: nowrap
+
+    img
+      height: 20px
+      vertical-align: top
+      width: 17px
 
   .button
     margin-bottom: 10px
@@ -215,3 +239,5 @@
     font-size: 18px
     font-weight: 500
     line-height: 28px
+
+.rub

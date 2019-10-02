@@ -15,6 +15,7 @@
   //= template/favicon.html
 
   //= template/style.html
+  <link rel="stylesheet" href="css_include_once/jquery.fancybox.css" />
 </head>
 
 <body>
@@ -44,8 +45,8 @@
             <p>При установки процессоров Intel Core i7 и Core i9 ограничение до 128GB по оперативной памяти.</p>
           </div>
           <p class="config-top__button-block">
-            <a class="button button--br_3" href="#">Сохранить конфигурацию</a><br>
-            <a class="button button--black" href="#">Запросить цену в проект</a>
+            <button class="button button--br_3" type="button" data-fancybox data-src="#save">Сохранить конфигурацию</button><br>
+            <button class="button button--black" type="button" data-fancybox data-src="#price-request">Запросить цену в проект</button>
           </p>
         </div>
         <div class="config-top__image-block config-top__image-block--desktop"><img width="385" src="images/content/stations/img_3.jpg" alt="Графиеская станция"></div>
@@ -62,19 +63,22 @@
           <div class="config">
             <div class="config__left-column">
               <div class="js-sticky-block">
-                <ul id="config-nav" class="float-nav">
-                  <li class="float-nav__item"><a class="float-nav__link" href="#1">Платформа</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#2">Блок питания</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#3">Система охлаждения процессора</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#4">Процессор</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#5">Системная плата/чипсет</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#6">Оперативная память</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#7">Видеокарта</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#8">Встроенный Raid-контроллер</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#9">Техническая поддержка</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#10">Гарантия</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#11">Тестирование</a></li>
-                </ul>
+                <div id="config-nav">
+                  <p class="config__column-title">Характеристики</p>
+                  <ul class="float-nav">
+                    <li class="float-nav__item"><a class="float-nav__link" href="#1">Платформа</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#2">Блок питания</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#3">Система охлаждения процессора</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#4">Процессор</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#5">Системная плата/чипсет</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#6">Оперативная память</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#7">Видеокарта</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#8">Встроенный Raid-контроллер</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#9">Техническая поддержка</a></li>
+                  </ul>
+                  <p class="config__column-title"><a href="#10">Гарантия</a></p>
+                  <p class="config__column-title"><a href="#11">Тестирование</a></p>
+                </div>
               </div>
             </div>
             <div class="config__center-column">
@@ -245,8 +249,8 @@
                   <div class="config-result">
                     <p class="config-result__title">Графическая станция Forsite750D</p>
                     <p class="config-result__note">Рекомендованная розничная цена</p>
-                    <p class="config-result__price">165 000 руб.</p>
-                    <a class="button button--br_3 button--white" href="javascript:void(0)">Запросить цену</a><br>
+                    <p class="config-result__price">165 000 <img src="images/icons/rub.svg" alt="руб." title="руб."></p>
+                    <button class="button button--br_3 button--white" data-fancybox data-src="#price-request">Запросить цену</button><br>
                     <a class="button button--br_3 button--white_border" href="javascript:void(0)">Подробнее</a>
                   </div>
                   <a class="recall-link" href="tel:+78005006993">
@@ -258,7 +262,9 @@
             </div>
           </div>
         </div>
-        <div class="js-tab config-tab" data-target="2">2</div>
+        <div class="js-tab config-tab" data-target="2">
+          <button class="button button--br_3" type="button" data-fancybox data-src="#guarantee">Гарантийная заявка</button>
+        </div>
         <div class="js-tab config-tab" data-target="3">3</div>
       </div>
     </div>
@@ -266,9 +272,30 @@
 
   //= template/footer.html
 
+  //= template/popups.html
+
   //= template/scripts.html
   <script type="text/javascript" src="js/jquery.sticky-kit.min.js"></script>
   <script type="text/javascript" src="js/ddscrollspy.js"></script>
+  <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+  <script>
+    //копирование в буфер обмена
+    var copyBtn = document.querySelector('.js-copy-link');
+    copyBtn.addEventListener('click', function(event) {
+      var link = document.querySelector('.js-constant-link');
+      var range = document.createRange();
+      range.selectNode(link);
+      window.getSelection().addRange(range);
+      try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copy email command was ' + msg);
+      } catch (err) {
+        console.log('Oops, unable to copy');
+      }
+      window.getSelection().removeAllRanges();
+    });
+  </script>
 </body>
 
 </html>

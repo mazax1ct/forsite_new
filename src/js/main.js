@@ -275,6 +275,12 @@ $(document).ready(function () {
       }
     }
   }
+
+  //попап
+  $('[data-fancybox]').fancybox({
+    smallBtn: false,
+    toolbar: false
+  });
 });
 
 //перезапуск функции навешивания класса с тенью на шапку при скролле и ресайзе

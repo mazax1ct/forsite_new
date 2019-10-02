@@ -1,0 +1,185 @@
+.catalog-main-sections
+  background-color: #F7F7F7
+  color: rgba(#414141, 0.5)
+  font-size: 12px
+  line-height: 16px
+  padding-top: 75px
+  padding-bottom: 50px
+
+  @media(min-width: 1350px)
+    color: #333
+    font-size: 15px
+    line-height: 23px
+    padding-top: 105px
+    padding-bottom: 100px
+
+  &__text
+    margin-bottom: 30px
+
+    @media(min-width: 768px)
+      align-items: center
+      display: flex
+      justify-content: space-between
+      margin-top: -20px
+
+    @media(min-width: 1350px)
+      margin-top: -30px
+
+    p
+      @media(min-width: 768px)
+        margin-bottom: 0
+
+    a
+      display: none
+      font-size: 10px
+      font-weight: 700
+      padding-top: 10px
+      padding-bottom: 10px
+      text-decoration: none
+      text-transform: uppercase
+
+      @media(min-width: 768px)
+        display: block
+
+      &:hover,
+      &:focus
+        text-decoration: underline
+
+.catalog-sections-list
+  margin-bottom: -10px
+
+  @media(min-width: 600px)
+    display: flex
+    flex-wrap: wrap
+    margin-left: -15px
+    margin-right: -15px
+    margin-bottom: -30px
+
+  &__item
+    margin-bottom: 10px
+
+    @media(min-width: 600px)
+      margin-bottom: 30px
+      padding-left: 15px
+      padding-right: 15px
+      width: 50%
+
+    @media(min-width: 992px)
+      width: 25%
+
+.section-card
+  background-color: #fff
+  color: #000
+  font-weight: 400
+  display: flex
+  padding: 20px 20px 30px
+  text-decoration: none
+
+  @media(min-width: 600px)
+    border-bottom: 2px solid rgba(0,0,0,0.04)
+    height: 100%
+    flex-direction: column
+    padding: 25px 25px 20px
+
+  @media(min-width: 1200px)
+    padding-left: 30px
+    padding-right: 30px
+
+  &:hover,
+  &:focus
+    .section-card__title,
+    .section-card__more
+      text-decoration: underline
+
+    .section-card__image
+      transform: scale(1.05)
+
+  &__image-block,
+  &__title,
+  &__info,
+  &__preview-text,
+  &__more
+    display: block
+
+  &__image-block
+    text-align: center
+    width: 25%
+
+    @media(min-width: 375px)
+      width: 35%
+
+    @media(min-width: 600px)
+      align-items: center
+      display: flex
+      flex-grow: 1
+      justify-content: center
+      margin-bottom: 30px
+      width: 100%
+
+    @media(min-width: 992px)
+      height: 206px
+      max-height: 206px
+
+    @media(min-width: 1350px)
+      margin-bottom: 45px
+
+  &__image
+    transition: transform 0.3s
+    transform: scale(1)
+
+    @media(min-width: 768px)
+      flex-shrink: 0
+
+  &__info
+    padding-left: 20px
+    width: 75%
+
+    @media(min-width: 375px)
+      width: 65%
+
+    @media(min-width: 600px)
+      padding-left: 0
+      width: 100%
+
+    @media(min-width: 992px)
+      display: flex
+      flex-direction: column
+      flex-grow: 1
+
+  &__title
+    font-size: 18px
+    font-weight: 500
+    line-height: 22px
+    margin-bottom: 15px
+
+    @media(min-width: 1350px)
+      font-size: 22px
+      line-height: 26px
+
+  &__preview-text
+    color: rgba(#414141, 0.5)
+    font-size: 12px
+    line-height: 16px
+    margin-bottom: 20px
+
+    @media(min-width: 1350px)
+      flex-grow: 1
+      font-size: 14px
+      line-height: 20px
+      margin-bottom: 45px
+
+  &__more
+    align-items: center
+    display: flex
+    font-size: 10px
+    font-weight: 700
+    text-transform: uppercase
+
+    @media(min-width: 992px)
+      margin-top: auto
+
+  &__more-icon
+    stroke: #223D72
+    height: 16px
+    margin-left: 10px
+    width: 16px

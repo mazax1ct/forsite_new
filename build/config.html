@@ -15,6 +15,7 @@
   <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css_include_once/jquery.fancybox.css" />
 </head>
 
 <body>
@@ -349,8 +350,8 @@
             <p>При установки процессоров Intel Core i7 и Core i9 ограничение до 128GB по оперативной памяти.</p>
           </div>
           <p class="config-top__button-block">
-            <a class="button button--br_3" href="#">Сохранить конфигурацию</a><br>
-            <a class="button button--black" href="#">Запросить цену в проект</a>
+            <button class="button button--br_3" type="button" data-fancybox data-src="#save">Сохранить конфигурацию</button><br>
+            <button class="button button--black" type="button" data-fancybox data-src="#price-request">Запросить цену в проект</button>
           </p>
         </div>
         <div class="config-top__image-block config-top__image-block--desktop"><img width="385" src="images/content/stations/img_3.jpg" alt="Графиеская станция"></div>
@@ -367,19 +368,22 @@
           <div class="config">
             <div class="config__left-column">
               <div class="js-sticky-block">
-                <ul id="config-nav" class="float-nav">
-                  <li class="float-nav__item"><a class="float-nav__link" href="#1">Платформа</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#2">Блок питания</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#3">Система охлаждения процессора</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#4">Процессор</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#5">Системная плата/чипсет</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#6">Оперативная память</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#7">Видеокарта</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#8">Встроенный Raid-контроллер</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#9">Техническая поддержка</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#10">Гарантия</a></li>
-                  <li class="float-nav__item"><a class="float-nav__link" href="#11">Тестирование</a></li>
-                </ul>
+                <div id="config-nav">
+                  <p class="config__column-title">Характеристики</p>
+                  <ul class="float-nav">
+                    <li class="float-nav__item"><a class="float-nav__link" href="#1">Платформа</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#2">Блок питания</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#3">Система охлаждения процессора</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#4">Процессор</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#5">Системная плата/чипсет</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#6">Оперативная память</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#7">Видеокарта</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#8">Встроенный Raid-контроллер</a></li>
+                    <li class="float-nav__item"><a class="float-nav__link" href="#9">Техническая поддержка</a></li>
+                  </ul>
+                  <p class="config__column-title"><a href="#10">Гарантия</a></p>
+                  <p class="config__column-title"><a href="#11">Тестирование</a></p>
+                </div>
               </div>
             </div>
             <div class="config__center-column">
@@ -550,8 +554,8 @@
                   <div class="config-result">
                     <p class="config-result__title">Графическая станция Forsite750D</p>
                     <p class="config-result__note">Рекомендованная розничная цена</p>
-                    <p class="config-result__price">165 000 руб.</p>
-                    <a class="button button--br_3 button--white" href="javascript:void(0)">Запросить цену</a><br>
+                    <p class="config-result__price">165 000 <img src="images/icons/rub.svg" alt="руб." title="руб."></p>
+                    <button class="button button--br_3 button--white" data-fancybox data-src="#price-request">Запросить цену</button><br>
                     <a class="button button--br_3 button--white_border" href="javascript:void(0)">Подробнее</a>
                   </div>
                   <a class="recall-link" href="tel:+78005006993">
@@ -563,7 +567,9 @@
             </div>
           </div>
         </div>
-        <div class="js-tab config-tab" data-target="2">2</div>
+        <div class="js-tab config-tab" data-target="2">
+          <button class="button button--br_3" type="button" data-fancybox data-src="#guarantee">Гарантийная заявка</button>
+        </div>
         <div class="js-tab config-tab" data-target="3">3</div>
       </div>
     </div>
@@ -636,12 +642,288 @@
     </div>
   </footer>
 
+  <div id="price-request" class="popup popup--big">
+    <button data-fancybox-close class="popup__close" title="Закрыть">
+      <svg class="popup__close-icon" aria-hidden="true">
+        <use xlink:href="#menu-close" />
+      </svg>
+    </button>
+    <p class="popup__title">Запросить цену в проект</p>
+    <p class="color-grey">
+      Вы выбрали: Графическая станция <span class="color-black fw_400">FORSITE 450D №82484</span><br>
+      Для запроса индивидуальных ценовых условий, пожалуйста, заполните форму:
+    </p>
+    <form class="form" action="">
+      <div class="form__row">
+        <div class="form__cell">
+          <label class="input-label">
+            <input class="js-input input" type="text" name="name" value="" />
+            <span class="input-label__label">Ваше ФИО</span>
+          </label>
+        </div>
+        <div class="form__cell">
+          <label class="input-label">
+            <input class="js-input input" type="text" name="company" value="" />
+            <span class="input-label__label">Название организации</span>
+          </label>
+        </div>
+      </div>
+      <div class="form__row">
+        <div class="form__cell">
+          <label class="input-label">
+            <input class="js-input input" type="text" name="phone" value="" />
+            <span class="input-label__label">Контактный телефон</span>
+          </label>
+        </div>
+        <div class="form__cell">
+          <label class="input-label">
+            <input class="js-input input" type="text" name="email" value="" />
+            <span class="input-label__label">Email</span>
+          </label>
+        </div>
+      </div>
+      <div class="form__row">
+        <label class="input-label">
+          <textarea class="js-input textarea"></textarea>
+          <span class="input-label__label">Ваше сообщение</span>
+        </label>
+      </div>
+      <div class="form__button-block">
+        <button class="form__submit button button--br_3" type="submit">Отправить</button>
+        <p class="form__note">Нажимая кнопку «Отправить» вы подтверждаете свое согласие на обработку персональных данных</p>
+      </div>
+    </form>
+  </div>
+  
+  <div id="save" class="popup popup--big">
+    <button data-fancybox-close class="popup__close" title="Закрыть">
+      <svg class="popup__close-icon" aria-hidden="true">
+        <use xlink:href="#menu-close" />
+      </svg>
+    </button>
+    <p class="popup__title">Сохранение конфигурации</p>
+    <p>Сохраните Вашу конфигурацию, что бы не потерять информацию или вернуться к ней позднее.</p>
+    <p>Рекомендуем отправить конфигурацию на электронную почту. Если Вы зарегистрированы на сайте, она будет доступна в <a href="#">личном кабинете</a>.</p>
+    <div class="save-controls">
+      <div class="save-controls__item">
+        <a class="save-control" href="javascript:voiad(0)" data-fancybox data-src="#save-email">
+          <span class="save-control__image">
+            <img src="images/icons/envelope.svg" alt="">
+          </span>
+          <span class="save-control__text">Отправить конфигурацию<br> на почту</span>
+        </a>
+      </div>
+      <div class="save-controls__item">
+        <a class="save-control" href="#">
+          <span class="save-control__image">
+            <img src="images/icons/pdf.svg" alt="">
+          </span>
+          <span class="save-control__text">Сохранить конфигурацию<br> в файл PDF</span>
+        </a>
+      </div>
+      <div class="save-controls__item">
+        <a class="save-control" href="javascript:voiad(0)" data-fancybox data-src="#save-link">
+          <span class="save-control__image">
+            <img src="images/icons/link.svg" alt="">
+          </span>
+          <span class="save-control__text">Создать постоянную<br> ссылку</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div id="save-email" class="popup">
+    <button data-fancybox-close class="popup__close" title="Закрыть">
+      <svg class="popup__close-icon" aria-hidden="true">
+        <use xlink:href="#menu-close" />
+      </svg>
+    </button>
+    <p class="popup__title">Сохранение конфигурации</p>
+    <p>Введите вашу почту и мы вышлем вам ссылку</p>
+    <form class="form" action="">
+      <div class="form__row">
+        <label class="input-label">
+          <input class="js-input input" type="text" name="email" value="" />
+          <span class="input-label__label">Email</span>
+        </label>
+      </div>
+      <div class="form__button-block">
+        <button class="form__submit button button--br_3" type="submit">Отправить</button>
+      </div>
+    </form>
+  </div>
+  
+  <div id="save-link" class="popup">
+    <button data-fancybox-close class="popup__close" title="Закрыть">
+      <svg class="popup__close-icon" aria-hidden="true">
+        <use xlink:href="#menu-close" />
+      </svg>
+    </button>
+    <p class="popup__title">Спасибо!</p>
+    <p>Конфигурация успешно сохранена и доступна по постоянной ссылке:</p>
+    <p><a class="js-constant-link" href="https://forsite-company.ru/configurator/user/82635/">https://forsite-company.ru/configurator/user/82635/</a><br><br></p>
+    <p>
+      <button class="js-copy-link form__submit button button--br_3" type="button">Скопировать</button>
+    </p>
+  </div>
+  
+  <div id="guarantee" class="popup popup--big">
+    <button data-fancybox-close class="popup__close" title="Закрыть">
+      <svg class="popup__close-icon" aria-hidden="true">
+        <use xlink:href="#menu-close" />
+      </svg>
+    </button>
+    <p class="popup__title popup__title--big">Гарантийная заявка</p>
+    <p class="popup__title">Информация о устройстве</p>
+    <form class="form" action="">
+      <div class="form__row">
+        <div class="form__cell">
+          <label class="input-label">
+            <input class="js-input input" type="text" name="model" value="" />
+            <span class="input-label__label">Модель устройства</span>
+          </label>
+        </div>
+        <div class="form__cell">
+          <label class="input-label">
+            <input class="js-input input" type="text" name="buy_date" value="" />
+            <span class="input-label__label">Дата покупки*</span>
+          </label>
+        </div>
+      </div>
+      <div class="form__row">
+        <div class="form__cell">
+          <label class="input-label">
+            <input class="js-input input" type="text" name="serial" value="" />
+            <span class="input-label__label">Серийный номер</span>
+          </label>
+        </div>
+        <div class="form__cell">
+          <label class="input-label">
+            <input class="js-input input" type="text" name="damage" value="" />
+            <span class="input-label__label">Видимые повреждения устройства</span>
+          </label>
+        </div>
+      </div>
+      <div class="form__row">
+        <div class="form__cell">
+          <label class="input-label">
+            <input class="js-input input" type="text" name="complect" value="" />
+            <span class="input-label__label">Комплектация</span>
+          </label>
+          <p class="form__note">Заполняется, если сдаются дополнительные компоненты</p>
+        </div>
+        <div class="form__cell">
+          <p class="form__cell-title">Необходимо ли сохранение данных</p>
+          <div class="form__inline-labels">
+            <label class="radio-label">
+              <input type="radio" name="save" value="1" />
+              <span class="radio-icon"></span>
+              <span class="radio-text">Да</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="save" value="2" checked />
+              <span class="radio-icon"></span>
+              <span class="radio-text">Нет</span>
+            </label>
+          </div>
+          <p class="form__note">ВНИМАНИЕ! Услуга платная</p>
+        </div>
+      </div>
+      <div class="form__row form__row--indent_30">
+        <label class="input-label">
+          <textarea class="js-input textarea"></textarea>
+          <span class="input-label__label">Описание неисправности*</span>
+        </label>
+      </div>
+      <p class="popup__title">Контактные данные</p>
+      <div class="form__row">
+        <div class="form__cell">
+          <label class="input-label">
+            <input class="js-input input" type="password" name="pass" value="" />
+            <span class="input-label__label">Пароль учетной записи</span>
+          </label>
+        </div>
+        <div class="form__cell">
+          <label class="input-label">
+            <input class="js-input input" type="text" name="fio" value="" />
+            <span class="input-label__label">Имя и Фамилия</span>
+          </label>
+        </div>
+      </div>
+      <div class="form__row">
+        <div class="form__cell">
+          <label class="input-label">
+            <input class="js-input input" type="text" name="company_" value="" />
+            <span class="input-label__label">Организация*</span>
+          </label>
+        </div>
+        <div class="form__cell">
+          <label class="input-label">
+            <input class="js-input input" type="text" name="address" value="" />
+            <span class="input-label__label">Фактический адрес организации*</span>
+          </label>
+        </div>
+      </div>
+      <div class="form__row">
+        <div class="form__cell">
+          <label class="input-label">
+            <input class="js-input input" type="text" name="phone_" value="" />
+            <span class="input-label__label">Телефон*</span>
+          </label>
+        </div>
+        <div class="form__cell">
+          <label class="input-label">
+            <input class="js-input input" type="text" name="email_" value="" />
+            <span class="input-label__label">E-Mail</span>
+          </label>
+        </div>
+      </div>
+      <div class="form__button-block">
+        <button class="form__submit button button--br_3" type="submit" data-fancybox data-src="#thanks">Отправить заявку</button>
+      </div>
+    </form>
+  </div>
+  
+  <div id="thanks" class="popup popup--blue">
+    <button data-fancybox-close class="popup__close" title="Закрыть">
+      <svg class="popup__close-icon" aria-hidden="true">
+        <use xlink:href="#menu-close" />
+      </svg>
+    </button>
+    <div class="thanks">
+      <p>
+        <img src="images/icons/thanks.svg" alt="">
+      </p>
+      <p class="thanks__title">Спасибо!</p>
+      <p>Ваша заявка принята, наш менеджер<br><br> свяжется с вами в течении 15 минут</p>
+    </div>
+  </div>
+
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/select2.full.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript" src="js/jquery.sticky-kit.min.js"></script>
   <script type="text/javascript" src="js/ddscrollspy.js"></script>
+  <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+  <script>
+    //копирование в буфер обмена
+    var copyBtn = document.querySelector('.js-copy-link');
+    copyBtn.addEventListener('click', function(event) {
+      var link = document.querySelector('.js-constant-link');
+      var range = document.createRange();
+      range.selectNode(link);
+      window.getSelection().addRange(range);
+      try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copy email command was ' + msg);
+      } catch (err) {
+        console.log('Oops, unable to copy');
+      }
+      window.getSelection().removeAllRanges();
+    });
+  </script>
 </body>
 
 </html>
