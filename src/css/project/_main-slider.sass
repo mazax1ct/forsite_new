@@ -1,0 +1,139 @@
+.main-slider-block
+  position: relative
+
+.main-slider-nav
+  height: 0px
+  left: 50%
+  position: absolute
+  top: 50%
+  transform: translateX(-50%)
+  width: 100%
+  z-index: 1
+
+  .slick-arrow
+    border: 1px solid #fff
+    height: 44px
+    opacity: 0.3
+    transition: opacity 0.3s
+    width: 44px
+
+    &:hover,
+    &:focus
+      opacity: 1
+
+  .slick-arrow__icon
+    fill: none
+    height: 16px
+    stroke: #fff
+    width: 8px
+
+.main-slider
+  border-top: 1px solid rgba(#979797, 0.2)
+  background-color: #000
+
+  &.slick-dotted
+    margin-bottom: 0
+
+  .slick-dots
+    bottom: -40px
+
+    li
+      height: 40px
+      margin-left: 10px
+      margin-right: 10px
+      width: 40px
+
+      &::before
+        display: none
+
+      button
+        border-bottom: 2px solid rgba(#272729, 0.5)
+        height: 40px
+        padding: 0
+        transition: border-color 0.3s
+        width: 40px
+
+      &.slick-active
+        button
+          border-bottom-color: #223D72
+
+  &__slide
+    overflow: hidden
+    position: relative
+
+    @media(max-width: 767px)
+      min-height: 330px
+
+    &--1
+      .main-slider__slide-container
+        padding-left: 25%
+        padding-top: 40px
+
+        @media(min-width: 375px)
+          padding-left: 33%
+
+        @media(min-width: 600px)
+          padding-left: 40%
+
+        @media(min-width: 992px)
+          padding-top: 60px
+
+        @media(min-width: 1200px)
+          padding-top: 100px
+
+        @media(min-width: 1350px)
+          padding-top: 90px
+
+      .main-slider__slide-image
+        @media(max-width: 767px)
+          margin-left: 30px
+
+      .main-slider__slide-text
+        max-width: 400px
+
+        @media(min-width: 1350px)
+          max-width: 540px
+
+  &__slide-image
+    @media(max-width: 767px)
+      height: 330px
+      max-width: initial
+      left: 50%
+      position: absolute
+      top: 0
+      transform: translateX(-50%)
+      width: auto
+
+  &__slide-container
+    position: relative
+    width: 100%
+    z-index: 1
+
+    @media(min-width: 768px)
+      left: 50%
+      position: absolute
+      padding-left: 43.5%
+      top: 0
+      transform: translateX(-50%)
+
+  &__slide-title
+    color: #fff
+    font-size: 24px
+    font-weight: 500
+    line-height: 32px
+
+    @media(min-width: 1350px)
+      font-size: 55px
+      line-height: 62px
+      margin-bottom: 35px
+
+  &__slide-text
+    color: rgba(#fff, 0.5)
+    font-size: 12px
+    line-height: 16px
+
+    @media(min-width: 1350px)
+      color: #fff
+      font-size: 18px
+      line-height: 26px
+      margin-bottom: 40px

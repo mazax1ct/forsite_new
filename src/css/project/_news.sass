@@ -1,14 +1,16 @@
 .news-list
   margin-left: -15px
   margin-right: -15px
-  margin-bottom: 45px
 
   @media(min-width: 768px)
     display: flex
     flex-wrap: wrap
 
   &:last-child
-    margin-bottom: 0
+    margin-bottom: -30px
+
+    @media(min-width: 1350px)
+      margin-bottom: -45px
 
   &__item
     margin-bottom: 30px
@@ -23,17 +25,6 @@
 
     @media(min-width: 1350px)
       margin-bottom: 45px
-
-    &:last-child
-      margin-bottom: 0
-
-    &:nth-last-child(2)
-      @media(min-width: 768px)
-        margin-bottom: 0
-
-    &:nth-last-child(3)
-      @media(min-width: 1200px)
-        margin-bottom: 0
 
 .news
   color: #000

@@ -1,0 +1,108 @@
+.incut
+  background-color: #223D72
+  color: #fff
+  font-size: 14px
+  line-height: 20px
+  overflow: hidden
+  position: relative
+  padding-top: 50px
+  padding-bottom: 60px
+  text-align: center
+
+  @media(min-width: 1350px)
+    padding-top: 105px
+    padding-bottom: 110px
+
+  &::after
+    background-color: #20396B
+    content: ''
+    height: 100%
+    left: 50%
+    position: absolute
+    top: 0
+    transform: skew(-45deg)
+    width: 200%
+
+    @media(min-width: 768px)
+      left: 35%
+
+  &__container
+    position: relative
+    z-index: 1
+
+  &__title
+    color: #fff
+    font-size: 22px
+    font-weight: 300
+    line-height: 26px
+    margin-bottom: 15px
+
+    @media(min-width: 1350px)
+      font-size: 36px
+      line-height: 41px
+
+  &__text
+    font-size: 14px
+    line-height: 20px
+
+    @media(min-width: 1350px)
+      font-size: 18px
+      line-height: 26px
+      margin-bottom: 40px
+
+.incut-2
+  color: #fff
+  background-color: #000
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  background-size: auto 100%
+  font-size: 12px
+  font-weight: 400
+  line-height: 16px
+  padding-top: 40px
+  padding-bottom: 50px
+
+  @media(min-width: 992px)
+    padding-left: 110px
+    padding-right: 110px
+
+  @media(min-width: 1350px)
+    font-size: 18px
+    line-height: 26px
+    margin-bottom: 95px
+    padding-top: 90px
+    padding-bottom: 115px
+
+  h2
+    color: #fff
+
+  &__text-block
+    max-width: 325px
+
+    @media(min-width: 1350px)
+      max-width: 620px
+
+  &__text
+    margin-bottom: 40px
+
+    @media(min-width: 1350px)
+      max-width: 500px
+
+  &__more
+    align-items: center
+    color: #fff
+    display: inline-flex
+    font-size: 10px
+    font-weight: 700
+    text-decoration: none
+    text-transform: uppercase
+
+    &:hover,
+    &:focus
+      text-decoration: underline
+
+  &__more-icon
+    stroke: #fff
+    height: 16px
+    margin-left: 10px
+    width: 16px

@@ -22,6 +22,29 @@ $(document).ready(function () {
   //запуск функции навешивания класса с тенью на шапку
   resize_scroll();
 
+  //слайдер картинок
+  if ($('.js-main-slider').length) {
+    $('.js-main-slider').slick({
+      auto: false,
+      mobileFirst: true,
+      slidesToShow: 1,
+      infinite: true,
+      arrows: false,
+      appendArrows: $('.main-slider-nav'),
+      prevArrow: '<button type="button" class="slick-prev slick-arrow" title="Назад"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#main-slider-prev"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next slick-arrow" title="Вперед"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#main-slider-next"/></svg></button>',
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 1349,
+          settings: {
+            arrows: true
+          }
+        }
+      ]
+    });
+  }
+
   //кастомный селект
   $('.js-select').select2({
     minimumResultsForSearch: Infinity

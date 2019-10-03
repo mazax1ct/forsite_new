@@ -1,0 +1,68 @@
+.promo-block
+  padding-top: 65px
+  padding-bottom: 50px
+
+  @media(min-width: 1350px)
+    padding-top: 105px
+    padding-bottom: 80px
+
+  &__container
+    position: relative
+    z-index: 1
+
+    @media(min-width: 768px)
+      align-items: center
+      display: flex
+      flex-direction: row-reverse
+
+  &__text-block
+    @media(min-width: 768px)
+      width: 50%
+
+    .h1
+      margin-bottom: 10px
+
+      @media(min-width: 768px)
+        margin-bottom: 25px
+
+  &__image-block
+    &--mobile
+      padding-left: 20px
+      padding-right: 20px
+      margin-bottom: 50px
+
+      @media(min-width: 768px)
+        display: none
+
+    &--desktop
+      display: none
+
+      @media(min-width: 768px)
+        display: block
+        min-width: 50%
+        padding-right: 30px
+        text-align: center
+        width: 50%
+
+      @media(min-width: 1200px)
+        padding-right: 70px
+
+  &__label
+    border: 2px solid #213B6E
+    color: #213B6E
+    display: inline-block
+    font-size: 10px
+    font-weight: 700
+    line-height: 10px
+    padding: 6px 12px
+    text-transform: uppercase
+
+  &__text
+    font-size: 14px
+    line-height: 20px
+    margin-bottom: 25px
+
+    @media(min-width: 1350px)
+      font-size: 18px
+      line-height: 26px
+      margin-bottom: 30px

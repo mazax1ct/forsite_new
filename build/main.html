@@ -19,6 +19,12 @@
 
 <body class="main-page">
   <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="main-slider-prev" viewBox="0 0 10 18">
+      <path d="M9 1L1 9.38095L9 17" />
+    </symbol>
+    <symbol id="main-slider-next" viewBox="0 0 10 18">
+      <path d="M1 1L9 9.38095L1 17" />
+    </symbol>
     <symbol id="back" viewBox="0 0 54 54">
       <g>
         <path fill="none" fill-rule="evenodd" clip-rule="evenodd" d="M27 53C12.6406 53 1 41.3594 1 27C1 12.6406 12.6406 1 27 1C41.3594 1 53 12.6406 53 27C53 41.3594 41.3594 53 27 53Z" stroke-width="2" />
@@ -328,11 +334,21 @@
   </header>
 
   <div class="page-content">
-    <div class="js-main-slider main-slider">
-      <div class="main-slider__slide"></div>
-      <div class="main-slider__slide"></div>
-      <div class="main-slider__slide"></div>
-      <div class="main-slider__slide"></div>
+    <div class="main-slider-block">
+      <div class="js-main-slider main-slider">
+        <div class="main-slider__slide main-slider__slide--1">
+          <img class="main-slider__slide-image" src="images/content/main/banner.jpg" alt="">
+          <div class="main-slider__slide-container container">
+            <p class="main-slider__slide-title">Суперкомпьютеры<br> <span class="color-blue">NVIDIA®</span> TESLA®</p>
+            <p class="main-slider__slide-text">Первая в мире линейкасуперкомпьютеров, специально разработанная для задач искусственного интеллекта.</p>
+            <p><a class="button button--br_3" href="#">Подробнее</a></p>
+          </div>
+        </div>
+        <div class="main-slider__slide">
+          <img class="main-slider__slide-image" src="images/content/main/banner.jpg" alt="">
+        </div>
+      </div>
+      <div class="main-slider-nav container"></div>
     </div>
     <div class="catalog-main-sections">
       <div class="container container--small">
@@ -407,7 +423,28 @@
         </div>
       </div>
     </div>
-    <div class="container"></div>
+    <div class="promo-block">
+      <div class="promo-block__container container container--small">
+        <div class="promo-block__text-block">
+          <p><span class="promo-block__label">суперкомпьютеры</span></p>
+          <h2 class="h1">Corsair Carbide Series<br> Air 540 1</h2>
+          <div class="promo-block__image-block promo-block__image-block--mobile"><img width="402" src="images/content/main/promo.jpg" alt="Corsair Carbide Series Air 540 1"></div>
+          <div class="promo-block__text">
+            <p>Системы NVIDIA DGX™, созданные для удовлетворения вычислительных нужд в области глубокого обучения и анализа данных, построены на основе революционной архитектуры графических процессоров NVIDIA Volta™. Благодаря инновационному
+              программному обеспечению, оптимизированному под GPU, и упрощенному управлению, эти решения обеспечивают революционную производительность и продуктивность работы.</p>
+          </div>
+          <p class="promo-block__button-block"><a class="button button--black" href="#">Подробнее</a></p>
+        </div>
+        <div class="promo-block__image-block promo-block__image-block--desktop"><img width="402" src="images/content/main/promo.jpg" alt="Corsair Carbide Series Air 540 1"></div>
+      </div>
+    </div>
+    <div class="incut">
+      <div class="incut__container container container--small">
+        <h2 class="incut__title"><span class="fw_500">NVIDIA EGX</span>. Комплексное решение для мгновенного развертывания ИИ как на устройствах, так и в облаке.</h2>
+        <p class="incut__text">Выберите правильное решение для глубокого обучения для бизнеса</p>
+        <p><a class="button button--br_3 button--white" href="#">Подробнее</a></p>
+      </div>
+    </div>
     <div class="text-block text-block--big_text">
       <div class="container container--small">
         <div class="text-block__row">
@@ -415,6 +452,126 @@
             <h2 class="h1" style="max-width: 420px">Глубокое обучение в дата-центре, облаке и на других устройствах.</h2>
           </div>
           <div class="text-block__column">
+            <p>Системы NVIDIA DGX™, созданные для удовлетворения вычислительных нужд в области глубокого обучения и анализа данных, построены на основе революционной архитектуры графических процессоров NVIDIA Volta™. Благодаря инновационному
+              программному обеспечению, оптимизированному под GPU, и упрощенному управлению, эти решения обеспечивают революционную производительность и продуктивность работы.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container container--small">
+      <div class="damn">
+        <div class="damn__items">
+          <div class="damn__item">
+            <p class="damn__item-title">Разработка</p>
+            <p>Обучение</p>
+          </div>
+          <div class="damn__item">
+            <p class="damn__item-title">Развертывание</p>
+            <p>Инференс</p>
+          </div>
+        </div>
+        <div class="damn__images">
+          <div class="damn__image-block">
+            <div class="damn__image"><img src="images/icons/damn_1.svg" alt=""></div>
+            <p class="damn__image-caption">Компьютер</p>
+          </div>
+          <div class="damn__image-block">
+            <div class="damn__image"><img src="images/icons/damn_2.svg" alt=""></div>
+            <p class="damn__image-caption">Облако</p>
+          </div>
+          <div class="damn__image-block">
+            <div class="damn__image"><img src="images/icons/damn_3.svg" alt=""></div>
+            <p class="damn__image-caption">Дата-центр</p>
+          </div>
+          <div class="damn__image-block">
+            <div class="damn__image"><img src="images/icons/damn_1.svg" alt=""></div>
+            <p class="damn__image-caption">Автомобили</p>
+          </div>
+          <div class="damn__image-block">
+            <div class="damn__image"><img src="images/icons/damn_2.svg" alt=""></div>
+            <p class="damn__image-caption">Встроенная система</p>
+          </div>
+          <div class="damn__cloud damn__cloud--1"></div>
+          <div class="damn__cloud damn__cloud--2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="incut-2 container" style="background-image: url('images/content/main/incut.jpg')">
+      <div class="incut-2__text-block">
+        <h2>Суперкомпьютеры NVIDIA® TESLA®</h2>
+        <p class="incut-2__text">Благодаря инновационному программному обеспечению, оптимизированному под GPU, и упрощенному управлению, эти решения обеспечивают революционную производительность и продуктивность работы.</p>
+        <p>
+          <a class="incut-2__more" href="#">
+            подробнее
+            <svg class="incut-2__more-icon" aria-hidden="true">
+              <use xlink:href="#small-arrow-right-round" />
+            </svg>
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="compare-block">
+      <div class="container container--small">
+        <h2>Сравнение систем</h2>
+        <div class="compare-block__container">
+          <div class="compare-block__graphics">
+            <div class="compare-item">
+              <div class="compare-item__year">2015</div>
+              <div class="compare-item__info">
+                <p class="compare-item__title">Tesla kk80 | cuda</p>
+                <div class="compare-item__progress-bar">
+                  <div class="compare-item__progress" style="width: 98%"></div>
+                </div>
+                <p class="compare-item__prop">36.000 Mins (25 Days)</p>
+              </div>
+              <div class="compare-item__image-block"><img width="49" src="images/content/main/compare_1.png" alt="Tesla kk80 | cuda"></div>
+            </div>
+            <div class="compare-item">
+              <div class="compare-item__year">2016</div>
+              <div class="compare-item__info">
+                <p class="compare-item__title">DGX-1 | PASCAL | NVLINK</p>
+                <div class="compare-item__progress-bar">
+                  <div class="compare-item__progress" style="width: 80%"></div>
+                </div>
+                <p class="compare-item__prop">1.200 Mins (20 Hours)</p>
+              </div>
+              <div class="compare-item__image-block"><img width="66" src="images/content/main/compare_2.png" alt="DGX-1 | PASCAL | NVLINK"></div>
+            </div>
+            <div class="compare-item">
+              <div class="compare-item__year">2017</div>
+              <div class="compare-item__info">
+                <p class="compare-item__title">DGX-2 | VLOTA | NVSWITCH</p>
+                <div class="compare-item__progress-bar">
+                  <div class="compare-item__progress" style="width: 20%"></div>
+                </div>
+                <p class="compare-item__prop">480 Mins (8 Hours)</p>
+              </div>
+              <div class="compare-item__image-block"><img width="66" src="images/content/main/compare_3.png" alt="DGX-2 | VLOTA | NVSWITCH"></div>
+            </div>
+            <div class="compare-item">
+              <div class="compare-item__year">2018</div>
+              <div class="compare-item__info">
+                <p class="compare-item__title">DGX-2 | VLOTA | NVSWITCH</p>
+                <div class="compare-item__progress-bar">
+                  <div class="compare-item__progress" style="width: 10%"></div>
+                </div>
+                <p class="compare-item__prop">108 Mins</p>
+              </div>
+              <div class="compare-item__image-block"><img width="61" src="images/content/main/compare_4.png" alt="DGX-2 | VLOTA | NVSWITCH"></div>
+            </div>
+            <div class="compare-item">
+              <div class="compare-item__year">2019</div>
+              <div class="compare-item__info">
+                <p class="compare-item__title">DGX | CLUSTER | VOLTA</p>
+                <div class="compare-item__progress-bar">
+                  <div class="compare-item__progress" style="width: 8%"></div>
+                </div>
+                <p class="compare-item__prop">6.3 Mins on MLPerf</p>
+              </div>
+              <div class="compare-item__image-block"><img width="59" src="images/content/main/compare_5.png" alt="DGX | CLUSTER | VOLTA"></div>
+            </div>
+          </div>
+          <div class="compare-block__text-block">
             <p>Системы NVIDIA DGX™, созданные для удовлетворения вычислительных нужд в области глубокого обучения и анализа данных, построены на основе революционной архитектуры графических процессоров NVIDIA Volta™. Благодаря инновационному
               программному обеспечению, оптимизированному под GPU, и упрощенному управлению, эти решения обеспечивают революционную производительность и продуктивность работы.</p>
           </div>
