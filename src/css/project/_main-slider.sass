@@ -27,6 +27,12 @@
     stroke: #fff
     width: 8px
 
+  .slick-prev
+    left: 15px
+
+  .slick-next
+    right: 15px
+
 .main-slider
   border-top: 1px solid rgba(#979797, 0.2)
   background-color: #000
@@ -95,6 +101,9 @@
           max-width: 540px
 
   &__slide-image
+    margin-left: auto
+    margin-right: auto
+    
     @media(max-width: 767px)
       height: 330px
       max-width: initial
