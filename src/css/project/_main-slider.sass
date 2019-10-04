@@ -63,6 +63,11 @@
         button
           border-bottom-color: #223D72
 
+  &.slick-initialized
+    .slick-slide
+      display: flex
+      height: 100%
+
   &__slide
     overflow: hidden
     position: relative
@@ -76,19 +81,14 @@
         padding-top: 40px
 
         @media(min-width: 375px)
-          padding-left: 33%
+          padding-left: 30%
 
         @media(min-width: 600px)
           padding-left: 40%
 
-        @media(min-width: 992px)
-          padding-top: 60px
-
-        @media(min-width: 1200px)
-          padding-top: 100px
-
-        @media(min-width: 1350px)
-          padding-top: 90px
+        @media(min-width: 768px)
+          padding-top: 0
+          top: 40%
 
       .main-slider__slide-image
         @media(max-width: 767px)
@@ -103,7 +103,7 @@
   &__slide-image
     margin-left: auto
     margin-right: auto
-    
+
     @media(max-width: 767px)
       height: 330px
       max-width: initial
@@ -120,10 +120,15 @@
 
     @media(min-width: 768px)
       left: 50%
+      max-width: 1350px
       position: absolute
       padding-left: 43.5%
-      top: 0
-      transform: translateX(-50%)
+      top: 50%
+      transform: translate(-50%, -50%)
+
+    @media(min-width: 1500px)
+      max-width: 2560px
+      width: 84.914%
 
   &__slide-title
     color: #fff
