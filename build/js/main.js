@@ -253,6 +253,7 @@ $(document).ready(function () {
     $(this).addClass("is-active");
     $('.js-tab').removeClass("is-active");
     $('.js-tab[data-target=' + $(this).attr("data-target") + ']').addClass("is-active");
+    $(".js-sticky-block").trigger("sticky_kit:recalc");
     return false;
   });
 
