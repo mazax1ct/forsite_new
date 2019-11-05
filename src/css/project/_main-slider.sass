@@ -79,9 +79,9 @@
       .main-slider__slide-container
         padding-left: 25%
         padding-right: 15px
-        padding-top: 40px
+        //padding-top: 40px
 
-        @media(min-width: 375px)
+        //@media(min-width: 375px)
           padding-left: 30%
 
         @media(min-width: 600px)
@@ -89,7 +89,7 @@
 
         @media(min-width: 768px)
           padding-top: 0
-          top: 40%
+          //top: 40%
 
         @media(min-width: 1350px)
           padding-right: 95px
@@ -115,9 +115,9 @@
       .main-slider__slide-container
         padding-right: 25%
         padding-left: 15px
-        padding-top: 40px
+        //padding-top: 40px
 
-        @media(min-width: 375px)
+        //@media(min-width: 375px)
           padding-right: 30%
 
         @media(min-width: 600px)
@@ -125,7 +125,7 @@
 
         @media(min-width: 768px)
           padding-top: 0
-          top: 40%
+          //top: 40%
 
         @media(min-width: 1350px)
           padding-left: 95px
@@ -161,6 +161,9 @@
       width: auto
 
   &__slide-container
+    display: flex
+    flex-direction: column
+    justify-content: center
     position: relative
     width: 100%
     z-index: 1
@@ -177,9 +180,13 @@
       max-width: 2560px
       width: 84.914%
 
+    .button
+      margin-bottom: 5px
+      min-width: 170px
+
   &__slide-title
     color: #fff
-    font-size: 24px
+    font-size: 22px
     font-weight: 500
     line-height: 32px
 
