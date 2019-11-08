@@ -301,9 +301,24 @@ $(document).ready(function () {
   }
 
   //попап
-  $('[data-fancybox]').fancybox({
-    smallBtn: false,
-    toolbar: false
+  if ($('[data-fancybox]').length) {
+    $('[data-fancybox]').fancybox({
+      smallBtn: false,
+      toolbar: false
+    });
+  }
+
+  //скролл к концу баннера
+  $('.js-scroll-to-banner-end').click(function () {
+    var bOff = $('.banner2').offset().top;
+    var bH = $('.banner2').innerHeight();
+    var hH = $('.header').innerHeight();
+    var offset = bOff + bH - hH;
+    console.log(bOff, bH, hH);
+    $('body, html').animate({
+      scrollTop: offset
+    }, 500);
+    return false;
   });
 });
 
