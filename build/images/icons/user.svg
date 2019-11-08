@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M1.1 18c0-3.5 3.5-6.2 7.9-6.2m7.9 6.2c0-3.5-3.5-6.2-7.9-6.2m0-2.5c-1.8 0-3.2-1.4-3.2-3.2V4.5c0-1.8 1.4-3.2 3.2-3.2 1.8 0 3.2 1.5 3.2 3.2v1.6c0 1.8-1.4 3.2-3.2 3.2z" fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="10"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<path class="st0" d="M1.1,18c0-3.5,3.5-6.2,7.9-6.2"/>
+<path class="st0" d="M16.9,18c0-3.5-3.5-6.2-7.9-6.2"/>
+<path class="st0" d="M9,9.3L9,9.3c-1.8,0-3.2-1.4-3.2-3.2V4.5c0-1.8,1.4-3.2,3.2-3.2l0,0c1.8,0,3.2,1.5,3.2,3.2v1.6C12.2,7.9,10.8,9.3,9,9.3z"/>
+</svg>
