@@ -1,0 +1,184 @@
+.features-block
+  padding-top: 50px
+  padding-bottom: 50px
+
+  @media(min-width: 1350px)
+    padding-top: 80px
+    padding-bottom: 110px
+
+  &--grey
+    background-color: #F7F7F7
+
+  &:last-child
+    margin-bottom: -40px
+
+    @media(min-width: 1350px)
+      margin-bottom: -60px
+
+.features-list
+  color: rgba(#414141, 0.5)
+  font-size: 12px
+  font-weight: 400
+  line-height: 16px
+
+  @media(min-width: 768px)
+    display: flex
+    flex-wrap: wrap
+
+  li
+    display: flex
+    margin-bottom: 20px
+
+    &::before
+      display: none
+
+    @media(min-width: 768px)
+      margin-bottom: 50px
+      padding-right: 50px
+      width: 50%
+
+    &:nth-last-child(2),
+    &:nth-last-child(1)
+      @media(min-width: 768px)
+        margin-bottom: 0
+
+  &__image
+    min-width: 98px
+
+.features-list2
+  color: #fff
+  font-size: 15px
+  line-height: 23px
+  margin-left: -15px
+  margin-right: -15px
+
+  @media(min-width: 800px)
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: -10px
+
+  @media(min-width: 1350px)
+    font-size: 18px
+    line-height: 26px
+
+  &:last-child
+    margin-bottom: -10px
+
+  &__item
+    margin-bottom: 10px
+
+    @media(min-width: 800px)
+      display: flex
+      padding-left: 15px
+      padding-right: 15px
+      width: 50%
+
+    &:last-child
+      margin-bottom: 10px
+
+    &::before
+      display: none
+
+.feature2
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  background-size: cover
+  background-color: #ccc
+  display: flex
+  padding:  50px 15px
+
+  @media(min-width: 800px)
+    border-radius: 3px
+    display: block
+    padding: 40px
+
+  @media(min-width: 1200px)
+    padding-left: 80px
+    padding-bottom: 80px
+    padding-right: 60px
+
+  &__image
+    height: 84px
+    min-width: 84px
+    width: 84px
+
+    @media(min-width: 800px)
+      margin-bottom: 15px
+
+  &__text
+    padding-left: 25px
+
+    @media(min-width: 800px)
+      padding-left: 0
+
+.features-list3
+  font-size: 15px
+  line-height: 23px
+  margin-left: -15px
+  margin-right: -15px
+  margin-bottom: -20px
+
+  @media(min-width: 768px)
+    display: flex
+    flex-wrap: wrap
+
+  @media(min-width: 1200px)
+    padding-bottom: 130px
+
+  @media(min-width: 1350px)
+    font-size: 18px
+    line-height: 26px
+
+  &:last-child
+    margin-bottom: -20px
+
+  &__item
+    margin-bottom: 20px
+    padding-left: 0
+    padding-right: 0
+
+    @media(min-width: 768px)
+      display: flex
+      padding-left: 15px
+      padding-right: 15px
+      width: 50%
+
+    &:nth-child(2n)
+      @media(min-width: 1200px)
+        margin-top: 130px
+        margin-bottom: -110px
+
+
+    &:last-child
+      margin-bottom: 20px
+
+    &::before
+      bottom: 30px
+      color: #fff
+      font-size: 180px
+      font-weight: 700
+      line-height: 130px
+      left: 20px
+      top: auto
+
+      @media(min-width: 768px)
+        left: 40px
+
+      @media(min-width: 1350px)
+        left: 80px
+
+.feature3
+  background-color: #F7F7F7
+  padding: 60px 20px
+
+  @media(min-width: 768px)
+    border-radius: 3px
+
+  @media(min-width: 1350px)
+    padding: 80px 40px 70px 60px
+
+  &__text-block
+    margin-bottom: 30px
+
+  &__image-block
+    text-align: right
