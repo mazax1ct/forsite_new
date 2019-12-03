@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>Программный комплекc MWCC 2.5</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+  <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="main-slider-prev" viewBox="0 0 10 18">
+      <path d="M9 1L1 9.38095L9 17" />
+    </symbol>
+    <symbol id="main-slider-next" viewBox="0 0 10 18">
+      <path d="M1 1L9 9.38095L1 17" />
+    </symbol>
+    <symbol id="back" viewBox="0 0 54 54">
+      <g>
+        <path fill="none" fill-rule="evenodd" clip-rule="evenodd" d="M27 53C12.6406 53 1 41.3594 1 27C1 12.6406 12.6406 1 27 1C41.3594 1 53 12.6406 53 27C53 41.3594 41.3594 53 27 53Z" stroke-width="2" />
+        <rect stroke="none" width="18" height="2" rx="1" transform="matrix(-1 0 0 1 39 25)" />
+        <path stroke="none" fill-rule="evenodd" clip-rule="evenodd" d="M22 22L17 26L22 30" />
+      </g>
+    </symbol>
+    <symbol id="forward" viewBox="0 0 54 54">
+      <g>
+        <path fill="none" fill-rule="evenodd" clip-rule="evenodd" d="M27 53C41.3594 53 53 41.3594 53 27C53 12.6406 41.3594 1 27 1C12.6406 1 1 12.6406 1 27C1 41.3594 12.6406 53 27 53Z" stroke-width="2" />
+        <rect stroke="none" x="15" y="25" width="18" height="2" rx="1" />
+        <path stroke="none" fill-rule="evenodd" clip-rule="evenodd" d="M32 22L37 26L32 30" />
+      </g>
+    </symbol>
+    <symbol id="search" viewBox="0 0 512 512">
+      <path d="M136.5,330.5c-25.1-34.4-40.2-76.7-40.2-122.5C96.3,93.3,189.4,0,303.9,0s207.6,93.3,207.6,208s-93.1,208-207.6,208c-45.7,0-87.9-15.1-122.2-40.3L45.7,512L0.5,466.7C0.5,466.7,136.5,330.5,136.5,330.5L136.5,330.5z M303.9,352c79.3,0,143.7-64.6,143.7-144S383.2,64,303.9,64s-143.7,64.6-143.7,144S224.7,352,303.9,352L303.9,352z" />
+    </symbol>
+    <symbol id="user" viewBox="0 0 18 18">
+      <g>
+        <path d="M1.1,18c0-3.5,3.5-6.2,7.9-6.2" />
+        <path d="M16.9,18c0-3.5-3.5-6.2-7.9-6.2" />
+        <path d="M9,9.3L9,9.3c-1.8,0-3.2-1.4-3.2-3.2V4.5c0-1.8,1.4-3.2,3.2-3.2l0,0c1.8,0,3.2,1.5,3.2,3.2v1.6C12.2,7.9,10.8,9.3,9,9.3z" />
+      </g>
+    </symbol>
+    <symbol id="menu-burger" viewBox="0 0 24 11">
+      <g>
+        <rect width="24" height="1" rx="0.5" />
+        <rect y="5" width="24" height="1" rx="0.5" />
+        <rect y="10" width="24" height="1" rx="0.5" />
+      </g>
+    </symbol>
+    <symbol id="menu-close" viewBox="0 0 18 19">
+      <g>
+        <rect x="0.868164" y="0.661133" width="24" height="1" rx="0.5" transform="rotate(45 0.868164 0.661133)" />
+        <rect width="24" height="1" rx="0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 17.1318 0.661133)" />
+      </g>
+    </symbol>
+    <symbol id="small-arrow-left" viewBox="0 0 4 8">
+      <path d="M4 0V8L0 4L4 0Z" />
+    </symbol>
+    <symbol id="refresh" viewBox="0 0 17 16">
+      <path d="M11.9003 1.04113C11.846 1.01109 11.782 1.00393 11.7224 1.0211C11.6628 1.03827 11.6125 1.07846 11.5824 1.13278L10.5645 2.97563C10.5021 3.08871 10.5431 3.23102 10.6562 3.29348C12.3797 4.24548 13.4503 6.0582 13.4503 8.02428C13.4503 11.002 11.0277 13.4246 8.05 13.4246C5.07226 13.4246 2.64971 11.002 2.64971 8.02428C2.64971 6.90672 3.00326 5.80548 3.65004 4.8946L5.26305 6.50761C5.32564 6.57016 5.41814 6.5921 5.50207 6.56421C5.58604 6.53633 5.64714 6.46354 5.65991 6.37596L6.54796 0.293338C6.55863 0.220215 6.53416 0.14639 6.4819 0.0941329C6.42964 0.0418755 6.35559 0.0174545 6.2827 0.0280744L0.200124 0.916168C0.112545 0.92894 0.0397495 0.990039 0.0119132 1.07402C-0.0159698 1.15799 0.00597168 1.25048 0.0685214 1.31303L1.81318 3.05769C0.69182 4.46705 0.076615 6.22218 0.076615 8.02428C0.076615 12.4208 3.65346 15.9977 8.05 15.9977C12.4465 15.9977 16.0234 12.4208 16.0234 8.02428C16.0234 5.12174 14.4435 2.44595 11.9003 1.04113Z" />
+    </symbol>
+    <symbol id="asc" viewBox="0 0 12 10">
+      <g>
+        <rect width="8" height="2" />
+        <rect y="4" width="10" height="2" />
+        <rect y="8" width="12" height="2" />
+      </g>
+    </symbol>
+    <symbol id="desc" viewBox="0 0 12 10">
+      <g>
+        <rect width="12" height="2" />
+        <rect y="4" width="10" height="2" />
+        <rect y="8" width="8" height="2" />
+      </g>
+    </symbol>
+    <symbol id="send" viewBox="0 0 16 14">
+      <path d="M0 13.9771L15.9851 6.99235L0 0.00756836V5.44018L11.4179 6.99235L0 8.54453V13.9771Z" />
+    </symbol>
+    <symbol id="print" viewBox="0 0 15 14">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0.0152588H12V3.11961H3V0.0152588ZM2.25 3.89569H12.75C14.025 3.89569 15 4.90461 15 6.22395V10.8805H12V13.9848H3V10.8805H0V6.22395C0 4.90461 0.975 3.89569 2.25 3.89569ZM4.5 12.4327H10.5V8.55222H4.5V12.4327ZM12.75 7.00004C12.3 7.00004 12 6.68961 12 6.22395C12 5.7583 12.3 5.44787 12.75 5.44787C13.2 5.44787 13.5 5.7583 13.5 6.22395C13.5 6.68961 13.2 7.00004 12.75 7.00004Z" />
+    </symbol>
+    <symbol id="small-arrow-right-round" viewBox="0 0 16 16">
+      <g>
+        <path fill="none" d="M8,15.5c4.1,0,7.5-3.3,7.5-7.5c0-4.1-3.3-7.5-7.5-7.5S0.5,3.9,0.5,8C0.5,12.1,3.9,15.5,8,15.5z" />
+        <path fill="none" stroke-linecap="round" stroke-linejoin="round" d="M7.1,6.1L8.9,8L7.1,9.9" />
+      </g>
+    </symbol>
+    <symbol id="slider-arrow-left" viewBox="0 0 6 12">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0V12L0 6L6 0Z" />
+    </symbol>
+    <symbol id="slider-arrow-right" viewBox="0 0 6 12">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V12L6 6L0 0Z" />
+    </symbol>
+    <symbol id="filter" viewBox="0 0 13 13">
+      <path d="M0.559921 9.78843e-07H12.4399C12.6496 -0.000385682 12.8417 0.113808 12.9375 0.295666C13.0346 0.479974 13.0175 0.701916 12.8935 0.870242L8.54115 6.85173C8.5397 6.85379 8.53811 6.85573 8.53666 6.85779C8.37852 7.06607 8.29291 7.31843 8.29251 7.57762V12.4543C8.29344 12.5986 8.23531 12.7375 8.13107 12.8399C8.0267 12.9423 7.88481 13 7.73685 13C7.66167 12.9999 7.58716 12.9853 7.51767 12.9571L5.07199 12.0474C4.85294 11.9821 4.70749 11.7803 4.70749 11.5375V7.57762C4.70709 7.31843 4.62148 7.06607 4.46347 6.85779C4.46202 6.85573 4.46043 6.85379 4.45898 6.85173L0.106508 0.870113C-0.0175457 0.701916 -0.0345888 0.480103 0.0625143 0.295795C0.158164 0.113808 0.350389 -0.000385682 0.559921 9.78843e-07Z" />
+    </symbol>
+    <symbol id="config" viewBox="0 0 17 17">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8155 5.882L16.422 6.4175C16.7682 6.53444 17.0009 6.85957 17 7.225V9.775C16.9973 10.1373 16.7653 10.4581 16.422 10.574L14.8155 11.1095L15.572 12.6225C15.7333 12.9493 15.6683 13.3425 15.4105 13.6L13.6 15.4105C13.3455 15.6606 12.9618 15.7251 12.6395 15.572L11.1265 14.8155L10.591 16.422C10.4741 16.7682 10.1489 17.0009 9.7835 17H7.2335C6.86807 17.0009 6.54294 16.7682 6.426 16.422L5.8905 14.8155L4.3775 15.572C4.05074 15.7333 3.65754 15.6683 3.4 15.4105L1.5895 13.6C1.33557 13.344 1.27084 12.9556 1.428 12.631L2.1845 11.118L0.578003 10.5825C0.231788 10.4656 -0.000940439 10.1404 2.85694e-06 9.775V7.225C0.00269368 6.8627 0.234741 6.54193 0.578003 6.426L2.1845 5.8905L1.428 4.3775C1.26675 4.05074 1.33171 3.65754 1.5895 3.4L3.4 1.5895C3.65604 1.33557 4.04445 1.27084 4.369 1.428L5.882 2.1845L6.4175 0.578003C6.53444 0.231788 6.85957 -0.000940439 7.225 2.85694e-06H9.775C10.1373 0.00269368 10.4581 0.234741 10.574 0.578003L11.1095 2.1845L12.6225 1.428C12.9493 1.26675 13.3425 1.33171 13.6 1.5895L15.4105 3.4C15.6644 3.65604 15.7292 4.04445 15.572 4.369L14.8155 5.882ZM14.28 9.503L15.3 9.163V7.8115L14.28 7.4715C13.8123 7.31625 13.4351 6.96573 13.2459 6.51073C13.0567 6.05574 13.0743 5.54105 13.294 5.1L13.804 4.1565L12.869 3.2215L11.9 3.706C11.4566 3.93497 10.9349 3.95752 10.4733 3.76766C10.0118 3.5778 9.65699 3.19473 9.503 2.72L9.163 1.7H7.837L7.497 2.72C7.34302 3.19473 6.98821 3.5778 6.52666 3.76766C6.06511 3.95752 5.54345 3.93497 5.1 3.706L4.1565 3.2215L3.2215 4.1565L3.706 5.1C3.93497 5.54345 3.95752 6.06511 3.76766 6.52666C3.5778 6.98821 3.19473 7.34302 2.72 7.497L1.7 7.837V9.163L2.72 9.503C3.19473 9.65699 3.5778 10.0118 3.76766 10.4733C3.95752 10.9349 3.93497 11.4566 3.706 11.9L3.196 12.8435L4.131 13.7785L5.1 13.294C5.54345 13.065 6.06511 13.0425 6.52666 13.2323C6.98821 13.4222 7.34302 13.8053 7.497 14.28L7.837 15.3H9.1885L9.5285 14.28C9.68375 13.8123 10.0343 13.4351 10.4893 13.2459C10.9443 13.0567 11.459 13.0743 11.9 13.294L12.8435 13.804L13.7785 12.869L13.294 11.9C13.065 11.4566 13.0425 10.9349 13.2323 10.4733C13.4222 10.0118 13.8053 9.65699 14.28 9.503ZM8.5 5.1C6.62223 5.1 5.1 6.62223 5.1 8.5C5.1 10.3778 6.62223 11.9 8.5 11.9C10.3778 11.9 11.9 10.3778 11.9 8.5C11.9 7.59827 11.5418 6.73346 10.9042 6.09584C10.2665 5.45822 9.40174 5.1 8.5 5.1ZM6.8 8.5C6.8 9.43889 7.56112 10.2 8.5 10.2C9.43889 10.2 10.2 9.43889 10.2 8.5C10.2 7.56112 9.43889 6.8 8.5 6.8C7.56112 6.8 6.8 7.56112 6.8 8.5Z" />
+    </symbol>
+    <symbol id="list" viewBox="0 0 13 10">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0H0V1.97745H2V0ZM13 0.112772H3V2.09022H13V0.112772ZM3 4.06766H13V6.04511H3V4.06766ZM2 3.95489H0V5.93234H2V3.95489ZM3 8.02255H13V10H3V8.02255ZM2 7.90978H0V9.88723H2V7.90978Z" />
+    </symbol>
+    <symbol id="tile" viewBox="0 0 11 11">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.96211 0H0V5.01108H4.96211V0ZM10.9166 0H5.95453V5.01108H10.9166V0ZM0.0833623 5.98892H5.04547V11H0.0833623V5.98892ZM11 5.98892H6.03789V11H11V5.98892Z" />
+    </symbol>
+    <symbol id="arrow_down" viewBox="0 0 8 22">
+      <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17L4 22L8 17" />
+        <rect width="18" height="2" rx="1" transform="matrix(0 1 1 0 3 0)" />
+      </g>
+    </symbol>
+  </svg>
+
+  <header class="header">
+    <div class="header__inner container">
+      <a class="logo" href="main.html">
+        <img class="logo__image logo__image--blue" src="images/logo--blue.svg" alt="FORSITE">
+        <img class="logo__image logo__image--white" src="images/logo--white.svg" alt="FORSITE">
+      </a>
+      <div class="menu-block">
+        <div class="menu-block__inner">
+          <nav class="menu-block__top">
+            <ul class="menu">
+              <li class="menu__item">
+                <a class="js-root-1 menu__link menu__link--root" href="javascript:void(0)">О компании</a>
+                <div class="js-sub-1 submenu-block">
+                  <ul class="submenu">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Наши преимущества</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Наши партнеры</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="clients.html">Клиенты</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item">
+                <a class="js-root-1 menu__link menu__link--root" href="javascript:void(0)">Типовые решения</a>
+                <div class="js-sub-1 submenu-block">
+                  <ul class="submenu">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Видеостены и видеоконтроллеры</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Графические и расчетные станции</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Высокопроизводительные вычисления</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Виртуализация рабочих мест</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Вычислительные кластеры HPC</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Машинное обучение / Deep Learning</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Системы NVIDIA DGX </a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">NVIDIA Data Science WS</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Решения для AI: Forsite ONTAP</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item">
+                <a class="js-root-1 menu__link menu__link--root" href="javascript:void(0)">Продукция</a>
+                <div class="js-sub-1 submenu-block">
+                  <ul class="submenu submenu--root">
+                    <li class="submenu__item">
+                      <a class="js-root-2 submenu__link" href="#">Рабочие станции и суперкомпьютеры</a>
+                      <div class="js-sub-2 submenu-block-2">
+                        <ul class="submenu">
+                          <li class="submenu__item submenu__title">Рабочие станции и Суперкомпьютеры</li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Графические станции</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Суперкомпьютеры</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Рабочая станция NVIDIA Data Science</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Суперкомпьютеры NVIDIA DGX</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Серверы NVIDIA GRID</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Суперкомпьютер NVIDIA DevBox</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Моноблоки</a></li>
+                        </ul>
+                        <button class="js-root-2-close submenu-close" type="button">
+                          <svg class="submenu-close__icon" aria-hidden="true">
+                            <use xlink:href="#small-arrow-left" />
+                          </svg>
+                          Назад
+                        </button>
+                      </div>
+                    </li>
+                    <li class="submenu__item">
+                      <a class="js-root-2 submenu__link" href="#">Видео стены и видео контролеры</a>
+                      <div class="js-sub-2 submenu-block-2">
+                        <ul class="submenu">
+                          <li class="submenu__item submenu__title">Видеостены и видеоконтроллеры</li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Видеоконтроллеры</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Типовые конфигурации видеостен</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Крепления для видеостен</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Профессиональные панели</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Продукция Matrox</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">ПО для видеостен</a></li>
+                        </ul>
+                        <button class="js-root-2-close submenu-close" type="button">
+                          <svg class="submenu-close__icon" aria-hidden="true">
+                            <use xlink:href="#small-arrow-left" />
+                          </svg>
+                          Назад
+                        </button>
+                      </div>
+                    </li>
+                    <li class="submenu__item">
+                      <a class="js-root-2 submenu__link" href="#">Серверы и серверное оборудование</a>
+                      <div class="js-sub-2 submenu-block-2">
+                        <ul class="submenu">
+                          <li class="submenu__item submenu__title">Серверы и Серверное оборудование</li>
+                          <li class="submenu__item"><a class="submenu__link" href="#"> Серверы Asus</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#"> Серверы Intel</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#"> Серверы Supermicro</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#"> Серверы Dell</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#"> Серверы HPE</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#"> 4х | 8x процессорные системы</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#"> Системы хранения данных</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#"> СХД QNAP</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#"> Системы высокой плотности</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#"> GPU-серверы</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#"> Промышленные компьютеры</a></li>
+                        </ul>
+                        <button class="js-root-2-close submenu-close" type="button">
+                          <svg class="submenu-close__icon" aria-hidden="true">
+                            <use xlink:href="#small-arrow-left" />
+                          </svg>
+                          Назад
+                        </button>
+                      </div>
+                    </li>
+                    <li class="submenu__item">
+                      <a class="js-root-2 submenu__link" href="#">Дополнительное оборудование</a>
+                      <div class="js-sub-2 submenu-block-2">
+                        <ul class="submenu">
+                          <li class="submenu__item submenu__title">Дополнительное оборудование</li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Сопроцессоры NVIDIA</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Профессиональные видеокарты</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Платы видеозахвата Magewell</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">KVM-консоли</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Серверные корпуса</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">19" рельсы</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Серверные шкафы</a></li>
+                          <li class="submenu__item"><a class="submenu__link" href="#">Серверные блоки питания</a></li>
+                        </ul>
+                        <button class="js-root-2-close submenu-close" type="button">
+                          <svg class="submenu-close__icon" aria-hidden="true">
+                            <use xlink:href="#small-arrow-left" />
+                          </svg>
+                          Назад
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item">
+                <a class="js-root-1 menu__link menu__link--root" href="javascript:void(0)">Наш опыт</a>
+                <div class="js-sub-1 submenu-block">
+                  <ul class="submenu">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Сертификаты</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="projects.html">Проекты</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Тестовая лаборатория</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Запрос консультации</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item">
+                <a class="js-root-1 menu__link menu__link--root" href="javascript:void(0)">Поддержка</a>
+                <div class="js-sub-1 submenu-block">
+                  <ul class="submenu">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Сервисный центр</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="delivery.html">Доставка</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Участие в торгах</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Гарантийная политика</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu-block__bottom">
+            <a class="menu-block__phone" href="tel:+78124261412">+7 (812) 426-14-12</a>
+          </div>
+        </div>
+      </div>
+      <div class="header__search">
+        <button class="js-search-open search-opener" type="button" title="Поиск">
+          <svg class="search-opener__icon" aria-hidden="true">
+            <use xlink:href="#search" />
+          </svg>
+        </button>
+        <div class="search">
+          <div class="search__inner">
+            <button class="js-search-close search__close" type="submit" title="Закрыть">
+              <svg class="search__close-icon" aria-hidden="true">
+                <use xlink:href="#menu-close" />
+              </svg>
+            </button>
+            <form action="search.html">
+              <div class="search__form">
+                <label class="search__label" for="search">
+                  <input id="search" class="search__input" type="text" name="search" value="" placeholder="Поиск по сайту" autocomplete="off">
+                </label>
+              </div>
+            </form>
+            <div class="search__results">
+              <a class="search__result" href="javascript:void(0)"><b>Граф</b>ика</a>
+              <a class="search__result" href="javascript:void(0)"><b>Граф</b>ическая станция</a>
+              <a class="search__result" href="javascript:void(0)"><b>Граф</b>ическая станция Forsite</a>
+            </div>
+            <p class="search__results-title">Товары</p>
+            <div class="search__products">
+              <a class="search__product" href="javascript:void(0)">
+                <span class="search__product-image"><img src="images/content/search-img.jpg" alt=""></span>
+                <span class="search__product-text"><b>Граф</b>ическая станция Forsite800D</span>
+              </a>
+              <a class="search__product" href="javascript:void(0)">
+                <span class="search__product-image"><img src="images/content/search-img.jpg" alt=""></span>
+                <span class="search__product-text"><b>Граф</b>ическая станция Forsite800D</span>
+              </a>
+            </div>
+            <a class="search__results-link" href="search.html">Смотреть все результаты</a>
+          </div>
+        </div>
+      </div>
+      <a class="personal-link" href="#">
+        <svg class="personal-link__icon" aria-hidden="true">
+          <use xlink:href="#user" />
+        </svg>
+      </a>
+      <button class="js-menu-open menu-toggler" type="button" title="Открыть меню">
+        <svg class="menu-toggler__icon menu-toggler__icon--burger" aria-hidden="true">
+          <use xlink:href="#menu-burger" />
+        </svg>
+        <svg class="menu-toggler__icon menu-toggler__icon--close" aria-hidden="true">
+          <use xlink:href="#menu-close" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-content">
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+          <li class="breadcrumbs__item">Программный комплекc MWCC 2.5</li>
+        </ul>
+      </div>
+    </div>
+    <div class="banner3">
+      <div class="banner3__container container">
+        <div class="banner3__text-block">
+          <h1>Программный комплекc MWCC 2.5</h1>
+          <div class="banner3__text">
+            <p>Первая в мире линейка суперкомпьютеров, специально разработанная для задач искусственного интеллекта.</p>
+          </div>
+          <p class="banner3__button-block"><a class="button button--white" href="#">Подробнее</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="mwcc">
+      <div class="container">
+        <div class="mwcc__left">
+          <div class="js-sticky-block">
+            <ul id="delivery-nav" class="left-nav">
+              <li class="left-nav__item"><a class="left-nav__link" href="#1">Общее описание</a></li>
+              <li class="left-nav__item">
+                <a class="left-nav__link" href="#2">Функционал</a>
+                <ul class="float-nav">
+                  <li class="float-nav__item"><a class="float-nav__link" href="#3">01. Источники</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#4">02. Интерфейс администратора</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#5">03. Функционал web - клиента</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#6">04. Функционал сервера</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#7">05. Опорные сетки</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#8">06. Потоковое вещание</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#9">07. Интеграция и API</a></li>
+                  <li class="float-nav__item"><a class="float-nav__link" href="#10">08. Интерфейс оператора</a></li>
+                </ul>
+              </li>
+              <li class="left-nav__item"><a class="left-nav__link" href="#11">AStra Linux Edition</a></li>
+              <li class="left-nav__item"><a class="left-nav__link" href="#12">Системные требования</a></li>
+              <li class="left-nav__item"><a class="left-nav__link" href="#13">Свидетельство о регистрации</a></li>
+              <li class="left-nav__item"><a class="left-nav__link" href="#14">Интеграторам</a></li>
+              <li class="left-nav__item"><a class="left-nav__link" href="#15">Поддержка</a></li>
+              <li class="left-nav__item"><a class="left-nav__link" href="#16"><b class="color-blue">Получить демо версию</b></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="js-content-with-sticky mwcc__right">
+          <div id="1" class="mwcc__right-block">
+            <p>Объемы рабочих данных постоянно увеличиваются, и профессио-налам в любой области как никогда важно эффективно управлять своим рабочим пространством.</p>
+            <p><b>Программный комплекс MWCC</b> - это универсальный способ управ-ления выводом контента на видеостену высокого разрешения. MWCC отличает интуитивный интерфейс для визуализации всего рабочего пространства и простого управления большим
+              количеством источников и приложений на видеостенах. Используйте свое рабочее пространство эффективно, разбивая полиэкран на несколько рабочих областей посредством создания произвольных сеток.</p>
+            <p>MWCC — это клиент-серверное приложение, позволяющее управ-лять выводом на видеостену аппаратных видеовходов про-фессиональных плат видеозахвата и программных источников (Видеопоток, HTML-контент, IP-поток, Презентации, Изображения,
+              PDF, вывод удаленных рабочих столов VNC и RDP), а также из-менять расположение окон запущенных WINDOWS приложений и получать доступ к удаленному управлению.</p>
+            <h2 class="h3">Приложение состоит из 2-х модулей:</h2>
+            <ul>
+              <li><b>Серверная часть:</b> предустанавливается на контроллер отвечает за вывод источников, шаблонов, предустановленных сеток, запуск приложений.</li>
+              <li><b>Клиентская часть:</b> позволяет управлять выводом контента, мас-штабированием и координатами окон, а также создавать и выводить шаблоны и предустановленные сетки для организации контента на видеостене.</li>
+            </ul>
+          </div>
+          <div class="mwcc__right-block mwcc__right-block--grey">
+            <div class="mwcc__right-block-inner">
+              <h2 class="h1">Приемущества MWCC 2.5</h2>
+              <div class="mwcc-feature">
+                <div class="mwcc-feature__image"><img src="images/content/mwcc/img_1.svg" alt=""></div>
+                <div class="mwcc-feature__info">
+                  <p class="mwcc-feature__title">Веб-клиент</p>
+                  <p class="mwcc-feature__text">Управление сервером MWCC осуществляется через простой и удобный Web-клиент. Управляйте вашей видеостеной с любого ПК или ноутбука без необходимости покупать дополнительные лицензии.</p>
+                </div>
+              </div>
+              <div class="mwcc-feature">
+                <div class="mwcc-feature__image"><img src="images/content/mwcc/img_2.svg" alt=""></div>
+                <div class="mwcc-feature__info">
+                  <p class="mwcc-feature__title">Кросс-платформенность</p>
+                  <p class="mwcc-feature__text">Серверная часть работает на операционных системах MS Windows 10 и на OS LINUX (в том числе ASTRA Linux). “Web-клиент” доступен для всех систем.</p>
+                </div>
+              </div>
+              <div class="mwcc-feature">
+                <div class="mwcc-feature__image"><img src="images/content/mwcc/img_3.svg" alt=""></div>
+                <div class="mwcc-feature__info">
+                  <p class="mwcc-feature__title">Интеграция</p>
+                  <p class="mwcc-feature__text">Наличие API и возможность запуска произвольных скриптов и приложений позволяет обеспечить легкую интеграцию в любую инфраструктуру.</p>
+                </div>
+              </div>
+              <div class="mwcc-feature">
+                <div class="mwcc-feature__image"><img src="images/content/mwcc/img_4.svg" alt=""></div>
+                <div class="mwcc-feature__info">
+                  <p class="mwcc-feature__title">Кастомизация под заказчика или интегратора</p>
+                  <p class="mwcc-feature__text">Благодаря собственной команде разработчиков, мы можем оперативно вносить изменения в UI клиента или добавлять поддержку новых функций согласно ТЗ заказчика.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="demo-banner">
+            <div class="demo-banner__inner container">
+              <h2 class="demo-banner__title">Попробуйте демо версию</h2>
+              <button class="demo-banner__button button button--white button--br_3" type="button">Запросить демо</button>
+            </div>
+          </div>
+          <div class="mwcc__right-block">
+            <p id="2"><img src="images/content/mwcc/img_5.jpg" alt="Функционал"></p>
+            <h2 id="3"><span class="color-blue">01.</span> Источники</h2>
+            <div class="mwcc-features2-block">
+              <div class="mwcc-features2">
+                <div class="mwcc-features2__item">
+                  <div class="mwcc-feature2">
+                    <div class="mwcc-feature2__img-block"><img src="images/content/mwcc/img_14.svg" alt=""></div>
+                    <p class="mwcc-feature2__title">Аппаратный захват</p>
+                    <p class="mwcc-feature2__text">Захват и воспроизведение внешних источников (HDMI | DVI | SDI) в форматах 1080p 60 к/c, 2160p 60 к/с</p>
+                  </div>
+                </div>
+                <div class="mwcc-features2__item">
+                  <div class="mwcc-feature2">
+                    <div class="mwcc-feature2__img-block"><img src="images/content/mwcc/img_15.svg" alt=""></div>
+                    <p class="mwcc-feature2__title">Удаленный ПК</p>
+                    <p class="mwcc-feature2__text">Вывод удаленного рабочего стола посредством протокола VNC и RDP с поддержкой управления</p>
+                  </div>
+                </div>
+                <div class="mwcc-features2__item">
+                  <div class="mwcc-feature2">
+                    <div class="mwcc-feature2__img-block"><img src="images/content/mwcc/img_16.svg" alt=""></div>
+                    <p class="mwcc-feature2__title">IP-камеры / RTSP захват</p>
+                    <p class="mwcc-feature2__text">Поддержка потокового видео, IP-камер, Web-камер высокого разрешения, RTSP и RTMP потоков вещания</p>
+                  </div>
+                </div>
+                <div class="mwcc-features2__item">
+                  <div class="mwcc-feature2">
+                    <div class="mwcc-feature2__img-block"><img src="images/content/mwcc/img_17.svg" alt=""></div>
+                    <p class="mwcc-feature2__title">WEB-страницы</p>
+                    <p class="mwcc-feature2__text">Поддержка web-контента, включая HTML5/WEBGL приложения</p>
+                  </div>
+                </div>
+                <div class="mwcc-features2__item">
+                  <div class="mwcc-feature2">
+                    <div class="mwcc-feature2__img-block"><img src="images/content/mwcc/img_18.svg" alt=""></div>
+                    <p class="mwcc-feature2__title">Windows Apps</p>
+                    <p class="mwcc-feature2__text">Запуск и управление любыми Windows-приложениями</p>
+                  </div>
+                </div>
+                <div class="mwcc-features2__item">
+                  <div class="mwcc-feature2">
+                    <div class="mwcc-feature2__img-block"><img src="images/content/mwcc/img_19.svg" alt=""></div>
+                    <p class="mwcc-feature2__title">IP-презентации и PDF</p>
+                    <p class="mwcc-feature2__text">Запуск и управление презентациями PPTX и встроенный просмотрщик PDF</p>
+                  </div>
+                </div>
+                <div class="mwcc-features2__item">
+                  <div class="mwcc-feature2">
+                    <div class="mwcc-feature2__img-block"><img src="images/content/mwcc/img_20.svg" alt=""></div>
+                    <p class="mwcc-feature2__title">Изображения</p>
+                    <p class="mwcc-feature2__text">Работа с изображениями и фото без ограничений по разрешению</p>
+                  </div>
+                </div>
+                <div class="mwcc-features2__item">
+                  <div class="mwcc-feature2">
+                    <div class="mwcc-feature2__img-block"><img src="images/content/mwcc/img_21.svg" alt=""></div>
+                    <p class="mwcc-feature2__title">Видео-контент</p>
+                    <p class="mwcc-feature2__text">Воспроизведения видеофайлов различных форматов, в том числе 4K (.avi, .wmv, .mkv)</p>
+                  </div>
+                </div>
+                <div class="mwcc-features2__item">
+                  <div class="mwcc-feature2">
+                    <div class="mwcc-feature2__img-block"><img src="images/content/mwcc/img_22.svg" alt=""></div>
+                    <p class="mwcc-feature2__title">Бегущая строка</p>
+                    <p class="mwcc-feature2__text">Захват и воспроизведение внешних источников (HDMI | DVI | SDI) в форматах 1080p 60 к/c, 2160p 60 к/с</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p>Механизм управления окнами позволяет быстро создать произвольный источник путем пере-таскивания (Drag-n-Drop) медиа-файла или сетевого источника в рабочую область, интуитивно понятным способом при помощи мыши легко изменять положение
+              окна и размер окна, при не-обходимости подключаясь к источнику для управления с клиентского приложения.</p>
+            <h2 id="4"><span class="color-blue">02.</span> <span class="fw_300">Интерфейс</span> администратора</h2>
+            <p><img src="images/content/mwcc/img_6.jpg" alt="Интерфейс администратора"></p>
+            <br>
+            <p class="fs_16"><b>Основные возможности:</b> Полностью модульный интерфейс с возможностью гибкой настройки пользовательских дашбордов и виджетов.</p>
+            <br>
+            <h3>Функциональные блоки:</h3>
+            <div class="mwcc-functions">
+              <div class="mwcc-functions__block">
+                <p class="mwcc-function">
+                  <span class="mwcc-function__num">1</span>
+                  Управление видеостеной
+                </p>
+                <p class="mwcc-function">
+                  <span class="mwcc-function__num">2</span>
+                  Предпросмотр избранных источников
+                </p>
+                <p class="mwcc-function">
+                  <span class="mwcc-function__num">3</span>
+                  Доступные источники и файловый менеджер
+                </p>
+              </div>
+              <div class="mwcc-functions__block">
+                <p class="mwcc-function">
+                  <span class="mwcc-function__num">4</span>
+                  Избранные шаблоны
+                </p>
+                <p class="mwcc-function">
+                  <span class="mwcc-function__num">5</span>
+                  Управление модулем потоковой трансляции
+                </p>
+                <p class="mwcc-function">
+                  <span class="mwcc-function__num mwcc-function__num--no_visible"></span>
+                  Кастомный пользовательский виджет (HTML-код)
+                </p>
+              </div>
+            </div>
+            <ul>
+              <li>Возможность Realtime-просмотра источников контента</li>
+              <li>Организация и быстрый доступ к избранным источникам и шаблонам</li>
+              <li>Создание элементов управления инфраструктурой</li>
+              <li>Управление окнами и расположением контента на видеостене</li>
+              <li>Простой и понятный Drug-n-Drop интерфейс с загрузкой файлов</li>
+              <li>Управление и создание опорных сеток для расположения контента</li>
+              <li>Управление и запуск предварительно созданных шаблонов</li>
+              <li>Модуль обратного управления источниками</li>
+              <li>Система мониторинга и управления контроллером и LFD панелями</li>
+              <li>Создание и настройка интерфейсов управления для операторов</li>
+            </ul>
+            <h2 id="5"><span class="color-blue">03.</span><span class="fw_300">Функционал</span> web-клиента</h2>
+            <h3 class="h4">Источники воспроизведения мультимедийного контента:</h3>
+            <ul>
+              <li>Управление запущенными видео-источниками: поворот, обрезка, наложение логотипа, зуммирование</li>
+              <li>Управление уровнем громкости, постановка на паузу, перемотка</li>
+              <li>Загрузка контента со станции оператора на видеоконтроллер через встроенный проводник</li>
+              <li>Поддержка всех популярных форматов и кодеков</li>
+              <li>Высокая производительность при работе с тяжелыми шаблонами, большим количеством IP-потоков и видео в формате 4K.</li>
+            </ul>
+            <h3 class="h4">Веб-источники:</h3>
+            <ul>
+              <li>Проброс элементов управления в web-источник, вперед, назад, зуммирование</li>
+              <li>Поддержка авторизации пользователя</li>
+              <li>Полный проброс управления в клиент; клавиатура, мышь.</li>
+            </ul>
+            <h3 class="h4">Запуск приложений Windows:</h3>
+            <ul>
+              <li>Запуск и управление любыми Windows-приложениями (SCADA, CAD, офисные пакеты и т.д.)</li>
+              <li>Поддержка работы с многооконными Windows-приложениями</li>
+              <li>Запуск ассоциированных файлов через встроенный проводник клиента</li>
+              <li>Полное управление любым приложением, запущенным на видеостене</li>
+              <li>Стабильно высокий FPS в 3D-приложениях при работе в UHD разрешениях.</li>
+            </ul>
+            <h3 class="h4">Модуль обратного управления и предпросмотра:</h3>
+            <ul>
+              <li>Возможность предпросмотра любого запущенного источника, с полным пробросом управления</li>
+              <li>Возможность захвата и предпросмотра всей рабочей области видеостены с отображением всех запущенных приложений и источников</li>
+              <li>Встроенный web-based VNC-клиент с функцией масштабирования.</li>
+            </ul>
+            <h3 class="h4">Дополнительные возможности клиента:</h3>
+            <ul>
+              <li>Перемещение, удаление, редактирование размера окна источника в режиме реального времени</li>
+              <li>Возможность задать произвольное имя источнику и назначить цвет окна в интерфейсе</li>
+              <li>Загрузка контента на контроллер через web-интерфейс</li>
+              <li>Русифицированный интерфейс программы</li>
+              <li>Вход в клиентскую часть по паролю</li>
+              <li>Привязывание (прилипание) окон источников к опорной сетке</li>
+              <li>Перемещение, удаление, редактирование размера окна источника в режиме реального времени</li>
+              <li>Сохранения шаблона (пресета) для последующего быстрого отображения и управления.</li>
+            </ul>
+            <div class="incut-4" style="max-width: 690px">
+              <p class="incut-4__title">Наша идея</p>
+              <p>Создать простой и понятный инструмент для визуализации контента на видеостене любой сложности. </p>
+            </div>
+            <h2 id="6"><span class="color-blue">04.</span> <span class="fw_300">Функционал</span> сервера MWCC</h2>
+            <h3 class="h4">Графическая подсистема:</h3>
+            <ul>
+              <li>Создание единого рабочего стола (полиэкрана) ультравысокого разрешения до 16x16K.</li>
+              <li>Максимальное количество дисплеев, подключенное к системе: 32</li>
+              <li>Предельное разрешение на 1 видеовыход: 4096x2160 @120Hz и 5120x2880@60Hz</li>
+              <li>Аппаратная синхронизация дисплеев видеостены</li>
+              <li>Компенсация рамки</li>
+              <li>Высокая производительность при работе с высоконагруженными приложениями</li>
+              <li>Плавное и синхронизированное отображение без артефактов и разрывов</li>
+              <li>Аппаратное GPU ускорение (NVENC), встроенный балансировщик GPU</li>
+              <li>Поддержка технологии NVIDIA MOSAIC</li>
+              <li>ISV-сертификация более 100 профессиональных приложений</li>
+            </ul>
+            <h3 class="h4">Модуль аппаратного захвата видеосигнала:</h3>
+            <ul>
+              <li>Аппаратный захват видео через интерфейс HDMI / DVI / SDI</li>
+              <li>Поддержка профессиональных плат захвата Magewell Capture Pro</li>
+              <li>Поддержка профессиональных плат захвата Matrox IPX-серии</li>
+              <li>Управление уровнем звука</li>
+            </ul>
+            <h3 class="h4">Встроенный сервер потокового вещания:</h3>
+            <ul>
+              <li>Встроенный многоканальный сервер RTMP с поддержкой live-вещания, ретрансляции и записи.</li>
+              <li>Встроенный сервер для трансляции изображения с плат видеозахвата (до 2160p / 60 FPS) с поддержкой GPU ускорения и режима low latency mode</li>
+              <li>Удаленное управление локальным и удаленными OBS-cерверами</li>
+            </ul>
+            <h3 class="h4">Общие настройки сервера:</h3>
+            <ul>
+              <li>Настройка конфигурации видеоконтроллера через web-интерфейс</li>
+              <li>Резервное копирование и восстановление</li>
+              <li>Логирование a</li>
+              <li>Авторизация пользователей и синхронизация клиентов</li>
+              <li>Модуль лицензии. Лицензия выписывается на контроллер, операторские места не ограничены</li>
+              <li>Встроенный VNC-сервер для организации обратного управления произвольным окном источника или операционной системой видеоконтроллера</li>
+              <li>Старт / стоп / перезагрузка сервера MWCC</li>
+              <li>Перезагрузка / выключение видеоконтроллера</li>
+              <li>Подсистема мониторинга нагрузки (CPU, GPU, Memory, LAN)</li>
+            </ul>
+            <h2 id="7"><span class="color-blue">05.</span> <span class="fw_300">Интерфейс администратора</span><br> Опорные сетки</h2>
+            <p><img style="max-width: 680px" src="images/content/mwcc/img_7.jpg" alt=""></p>
+            <p>Данный режим работы позволяет максимально просто и эффективно организовать рабочее про-странство на видеостене. Модуль построения опорных сеток позволяет разделить полиэкран на произвольные области, создать опорные сетки, а также
+              быстро изменить расположение и раз-мер окон. Созданные сетки можно сохранять для быстрого вызова. Для более удобного управ-ления окнами источников в настройках MWCC существует возможность активировать функцию “прилипание” к опорной
+              сетке.</p>
+            <p>Существует несколько режимов создания опорных сеток, в боковом меню доступен простой и понятный пользователю вариант, аналогичный созданию таблиц в MS WORD либо в любом WYSIWYG-редакторе. Данный режим обычно используется для
+              стандартных сеток 2x2, 3x3, 4x4. В расширенном режиме можно создать абсолютно любую произвольную конфигурацию сетки путем ручного изменения координат, разделения, удаления опорных линий, интеграции сетки в сетку и т.д.</p>
+            <h2 id="8"><span class="color-blue">06.</span> <span class="fw_300">Модуль</span> потоковое вещание</h2>
+            <p><img src="images/content/mwcc/img_8.jpg" alt=""></p>
+            <h3 class="color-blue">Встроенный RTMP-CЕРВЕР</h3>
+            <p>В сервер MWCC 2.5 встроен полноценный сервер для организации потокового вещания, по-зволяющий принимать и ретранслировать RTMP-видеопотоки с других серверов MWCC или с АРМ-операторов. RTMP-поток может приниматься для повторного
+              использования и вос-произведения любым плеером в вашей сетевой инфраструктуре или воспроизводиться в качестве дополнительного источника на видеостене.</p>
+            <h3 class="h4">Основные возможности и области применения:</h3>
+            <ul>
+              <li>Вывод на видеостену изображения с программного или аппаратного стримера, установленно-го на другом сервере MWCC, или программного стримера, вещающего с АРМ-оператора.</li>
+              <li>Отображение рабочей области видеостены на другие сетевые плееры в сети (клонирование изображения рабочего стола видеостены на LFD-панель находящуюся в другом помещении).</li>
+              <li>Запись заданной области видеостены или отдельного источника с поддержкой разрешения 2160p и 60 FPS в фоновом режиме.</li>
+              <li>Трансляция в фоновом режиме изображения с портов плат видеозахвата в фоновом режиме с возможностью удаленного управления. Поддерживаются разрешения 720p / 1080p / 2160p</li>
+              <li>H.264 с поддержкой Intel Quick Sync Video (QSV), Nvidia NVENC</li>
+              <li>Встроенная поддержка удаленного управления локальным или удаленными серверами Open Broadcaster Software (OBS)- с возможностью захвата изображения с устройств захвата и источни-ков в реальном времени, композицию сцен с поддержкой
+                опорных сеток, декодировку, запись и вещание.</li>
+            </ul>
+            <h2 id="9"><span class="color-blue">07.</span> <span class="fw_300">Модуль</span> интеграция & API</h2>
+            <h3 class="h4">Поддержка каскадной схемы:</h3>
+            <p>API интерфейс используется для того, чтобы интегрировать возможности программного обеспе-чения MWCC в любую действующую инфраструктуру.
+              REST API позволяет управлять сервером MWCC удаленно и получать необходимую информацию, отправляя простые HTTP запросы.
+              Поддержка функций: Запуск / остановка шаблонов, Запуск / остановка сохраненных источников по заданным координатам, изменение уровня громкости, управление панелями видеостены (On / Off / смена источника сигнала), перезапуск сервера MWCC
+              / выключение видеоконтроллера</p>
+            <h3 class="h4">Управление инфраструктурой и интеграция в IOT / Умный дом:</h3>
+            <p>Плагин “MWCC-Binding” позволяет интегрироваться в систему автоматизации OpenHab.
+              Основные возмиожности плагина: Запуск шаблонов / запуск отдельных источников / управление панелями видеостены.
+              Openhab - это сервер позволяющий объединять и управлять различными протоколами IOT таки-ми как: Bluetooth, Epson Projector, Exec (вызов и выполнение команд OS), HTTP, Modbus TCP и RTU, MQTT, PulseAudio, Samsung TV API, LG API, NEC API,
+              Panasonic API, Serial, SNMP, TCP/UDP, Wake-on-LAN, Z-Wave, ZigBee и так далее.
+              Интерфейс MWCC полностью поддерживает интеграцию управляющих элементов компонентами умного дома или вашего инфраструктурного объекта, таким образом вы получаете возможность из одного интерфейса управлять: видеостеной,
+              кондиционированием, освещением, включением и выключением мультимедиа устройств и источников контента и так далее.</p>
+            <h2 id="10"><span class="color-blue">08.</span> <span class="fw_300">Интерфейс</span> оператора</h2>
+            <p><img src="images/content/mwcc/img_9.jpg" alt=""></p>
+            <h3 class="h4 color-blue">Интерфейс управления оператора</h3>
+            <p>В сервер MWCC 2.5 встроен полноценный сервер для организации потокового вещания, по-зволяющий принимать и ретранслировать RTMP-видеопотоки с других серверов MWCC или с АРМ-операторов. RTMP-поток может приниматься для повторного
+              использования и вос-произведения любым плеером в вашей сетевой инфраструктуре или воспроизводиться в качестве дополнительного источника на видеостене.</p>
+            <h3 class="h4">Управление инфраструктурой и интеграция в IOT / Умный дом:</h3>
+            <ul>
+              <li>Модульный интерфейс с поддержкой виджетов, кнопок, элементов управления</li>
+              <li>Запуск / закрытие предварительно сохраненных шаблонов</li>
+              <li>Предпросмотр и запуск предварительно сохраненных источников</li>
+              <li>Управление громкостью видеоконтроллера</li>
+              <li>Интеграция с системами типа Умный дом (например: управление светом, кондиционерами, LFD панелями, проекторами и т.д)</li>
+              <li>Интеграция с системами управления звуком</li>
+              <li>Мониторинг состояния контроллера, видеостены, датчиков IOT и т.д.</li>
+              <li>Сценарии и запуск скриптов автоматизации.</li>
+              <li>Включение / выключение видеостены, видеоконтроллера.</li>
+              <li>Поддержка звуковых уведомлений.</li>
+              <li>Поддержка голосовых ассистентов (Яндекс-Алиса, Google Assistent и т.д.)</li>
+            </ul>
+          </div>
+          <div class="demo-banner">
+            <div class="demo-banner__inner container">
+              <h2 class="demo-banner__title">Попробуйте демо версию</h2>
+              <button class="demo-banner__button button button--white button--br_3" type="button">Запросить демо</button>
+            </div>
+          </div>
+          <div class="mwcc__right-block mwcc__right-block--grey">
+            <div class="mwcc__right-block-inner">
+              <h2 id="11" class="h1 color-blue">СПЕЦИАЛЬНАЯ ВЕРСИЯ<br> ASTRA LINUX EDITION</h2>
+              <p>Astra Linux – российская операционная система на базе Debian GNU/Linux, ориентированная на защиту конфиденциальной информации и предназначенная для защищённых рабочих станций и серверов. Система, в первую очередь, разработана для
+                спецслужб, государственных предприятий и биз-нес клиентов, для которых важна защита хранимой и обрабатываемой конфиденциальной информации.</p>
+              <h3 class="h4">Функционал MWCC ASTRA Linux Edition:</h3>
+              <ul>
+                <li>Полностью модульный веб-интерфейс</li>
+                <li>Модуль опорные сетки</li>
+                <li>Встроенный RTMP сервер потокового вещания</li>
+                <li>Модуль аппаратного захвата HDMI / DVI</li>
+                <li>Модуль REST API Поддержка функций: Запуск / остановка шаблонов, Запуск / остановка сохраненных источников по заданным координатам, изменение уровня громкости, управление панелями видеостены (On / Off / смена источника сигнала),
+                  перезапуск сервера MWCC /выключение видеоконтроллера</li>
+                <li>Управление положением и размерами окон запущенных источников:</li>
+                <li>Поддержка web-контента, включая HTML5/WEBGL приложения</li>
+                <li>Работа с изображениями и фото без ограничений по разрешению</li>
+                <li>Воспроизведения видеофайлов различных форматов, в том числе 4K (.avi, .wmv, .mkv)</li>
+                <li>Поддержка потокового видео, IP-камер, Web-камер высокого разрешения, RTSP и RTMP потоков вещания</li>
+                <li>Привязывание (прилипание) окон источников к опорной сетке</li>
+                <li>Перемещение, удаление, редактирование размера окна источника в режиме реального времени</li>
+                <li>Управление и запуск предварительно созданных шаблонов</li>
+                <li>Возможность задать произвольное имя источнику и назначить цвет окна в интерфейсе</li>
+                <li>Загрузка контента на контроллер через web-интерфейс</li>
+                <li>Русифицированный интерфейс программы</li>
+                <li>Вход в клиентскую часть по паролю</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mwcc__right-block">
+            <h2 id="12" class="h1 color-blue">МИНИМАЛЬНЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</h2>
+            <h3 class="h4">Конфигурация оборудования для работы с ПО МWСС 2.5</h3>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Заголовок</th>
+                    <th>Значение</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <th>Операционная система:</th>
+                  <td>Microsoft Windows 10 PRO / ENT</td>
+                </tr>
+                <tr>
+                  <th>Процессор:</th>
+                  <td>не ниже, чем 6-ядерный Intel® Core™ i7 / Intel® Xeon™</td>
+                </tr>
+                <tr>
+                  <th>Видеокарта:</th>
+                  <td>NVIDIA QUADRO RTX4000 и выше</td>
+                </tr>
+                <tr>
+                  <th>Память:</th>
+                  <td>не менее 16 Gb DDR4</td>
+                </tr>
+                <tr>
+                  <th>LAN:</th>
+                  <td>не менее 1Gbit/s</td>
+                </tr>
+              </table>
+            </div>
+            <h3 class="h4">Требования к рабочему месту оператора / администратора MWCC:</h3>
+            <ul>
+              <li>ПО: Windows (не ниже Microsoft Windows 7), Linux (не ниже Ubuntu 16.04 с GUI или аналогичного по функционалу дистрибутива Linux);</li>
+              <li>Процессор: не ниже Intel® Celeron™;</li>
+              <li>Видеокарта: Интегрированное видео;</li>
+              <li>Память: не менее 4 Gb;</li>
+              <li>Сетевая карта: не менее 1 Gbit.</li>
+              <li>Браузер: Chrome (Chromium) v.55 и выше. Рекомендуется работать в полноэкранном режиме (Переход в полноэкранный режим – клавиша «F11»).</li>
+              <li>Монитор с разрешением не менее 1920x1080 px, рекомендуется использовать монитор</li>
+              <li>с разрешением не менее 2560x1440 и выше.</li>
+            </ul>
+          </div>
+          <div class="mwcc__right-block mwcc__right-block--grey">
+            <div class="mwcc__right-block-inner">
+              <h2 id="13" class="h1 color-blue">СВИДЕТЕЛЬСТВО<br> О РЕГИСТРАЦИИ В РЕЕСТРЕ</h2>
+              <p><img style="max-width: 400px" src="images/content/mwcc/img_10.jpg" alt="СВИДЕТЕЛЬСТВО О РЕГИСТРАЦИИ В РЕЕСТРЕ"></p>
+            </div>
+          </div>
+          <div class="mwcc__right-block">
+            <h2 id="14" class="h1 color-blue">МОНТАЖ И ПОСТАВКИ<br> КОМПЛЕКСНЫХ РЕШЕНИЙ</h2>
+            <ol class="numbered-list">
+              <li>
+                <h3 class="h5">Разработка ТЗ</h3>
+                <p>Выясняем задачи клиента, консультируем по особенностям решения разрабатываем тех.задание на проект</p>
+              </li>
+              <li>
+                <h3 class="h5">Регистрация проекта</h3>
+                <p>Регистрация проекта позволяет получить индивидуальные цены и спланировать точные сроки производства оборудования</p>
+              </li>
+              <li>
+                <h3 class="h5">Поставка оборудования</h3>
+                <p>Предварительное тестирование оборудования на нашей сборке, отгрузка оборудования доверенными компаниями-перевозчиками</p>
+              </li>
+              <li>
+                <h3 class="h5">Монтаж</h3>
+                <p>Монтаж и пусконаладочные работы выполняются квалифицированными инженерами и монтажниками.</p>
+              </li>
+              <li>
+                <h3 class="h5">Обучение</h3>
+                <p>Финальный этап внедрения проекта является обучение сотрудников заказчика работе с комплексом.</p>
+              </li>
+              <li>
+                <h3 class="h5">Сервисный контракт</h3>
+                <p>Заключение сервисного контракта с заказчиком на обслуживание видеостены и продление гарантий при необходимости.</p>
+              </li>
+            </ol>
+            <h3 class="h4">Описание монтажных работ, выполняемых нашими специалистами</h3>
+            <div class="wd">
+              <div class="wd__col">
+                <h3 class="wd__title"><img src="images/content/mwcc/img_23.svg" alt=""> МОНТАЖ<br>ВИДЕОСТЕН</h3>
+                <ul>
+                  <li>Подвод электропитания, прокладка подходящих сигнальных кабелей</li>
+                  <li>Усиление и выравнивание стены</li>
+                  <li>Изготовление креплений и кронштейнов для видеостены любой сложности</li>
+                  <li>Изготовление специальной мебели</li>
+                  <li>Обеспечение требуемых климатических условий</li>
+                  <li>Монтаж оборудования в телекоммуникационных стойках</li>
+                  <li>Подготовка существующих источников сигналов и информационных систем для работы с видеостеной.</li>
+                  <li>Монтаж и юстировка кронштейнов для видеостены</li>
+                  <li>Монтаж, юстировка и подключение модулей видеостены</li>
+                  <li>Монтаж коммутационного оборудования</li>
+                </ul>
+              </div>
+              <div class="wd__col">
+                <h3 class="wd__title"><img src="images/content/mwcc/img_24.svg" alt=""> ПУСКОНАЛАДОЧНЫЕ<br>РАБОТЫ</h3>
+                <ul>
+                  <li>Установка юстировочного и управляющего программного обеспечения на управляющий ПК</li>
+                  <li>Калибровка и настройка модулей видеостены (разрешение, яркость, цветовой баланс)</li>
+                  <li>Настройка коммутационного оборудования и источников для работы по требуемым сценариям для вывода на видеостене</li>
+                  <li>Установка и настройка клиентского программного обеспечения на ПК-источники информации для видеостены</li>
+                  <li>Работы по отладке информационных систем, поставляющих контент (информацию), отображаемый на видеостене</li>
+                  <li>Обучение специалистов заказчика использованию и администрированию программно-аппаратного комплекса.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="mwcc__right-block mwcc__right-block--grey">
+            <div class="mwcc__right-block-inner">
+              <h2 id="15" class="h1 color-blue">ПОДДЕРЖКА</h2>
+              <p class="h2 fw_300">Остались вопросы?<br> Мы с радостью на них ответим</p>
+              <p class="color-grey fs_12" style="max-width: 440px">Если вы не нашли необходимое Вам оборудование или требуется специальная конфигурация напишите нам...</p>
+              <div class="mwcc-contacts">
+                <div class="mwcc-contacts__col">
+                  <div class="mwcc-contacts__block">
+                    <p class="mwcc-contacts__title">Телефон для связи</p>
+                    <p><a class="mwcc-contacts__phone" href="tel:+78005006993">+7 (800) 500-69-93</a></p>
+                  </div>
+                  <div class="mwcc-contacts__block">
+                    <p class="mwcc-contacts__title">Почта</p>
+                    <p><a class="fw_500" href="mailto:videowall@forsite-company.ru">videowall@forsite-company.ru</a></p>
+                  </div>
+                </div>
+                <div class="mwcc-contacts__col">
+                  <div class="mwcc-contacts__block">
+                    <p class="mwcc-contacts__title">Шоурум компании:</p>
+                    <p>Россия, Санкт-Петербург, Маршала Говорова, 52</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mwcc__right-block">
+            <h2 id="16" class="h1 color-blue">ЗАПРОС НА ДЕМО ВЕРСИЮ</h2>
+            <div class="form" style="max-width: 540px">
+              <div class="form__row">
+                <div class="form__cell">
+                  <label class="input-label">
+                    <input class="js-input input" type="text" name="name" value="">
+                    <span class="input-label__label">Имя</span>
+                  </label>
+                </div>
+                <div class="form__cell">
+                  <label class="input-label">
+                    <input class="js-input input" type="text" name="company" value="">
+                    <span class="input-label__label">Организация</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__cell">
+                  <label class="input-label">
+                    <input class="js-input input" type="text" name="place" value="">
+                    <span class="input-label__label">Должность</span>
+                  </label>
+                </div>
+                <div class="form__cell">
+                  <label class="input-label">
+                    <input class="js-input input" type="text" name="phone" value="">
+                    <span class="input-label__label">Телефон</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__cell">
+                  <label class="input-label">
+                    <input class="js-input input" type="text" name="email" value="">
+                    <span class="input-label__label">Email</span>
+                  </label>
+                </div>
+                <div class="form__cell">
+                  <label class="input-label">
+                    <input class="js-input input" type="text" name="project" value="">
+                    <span class="input-label__label">Название проекта</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__row">
+                <label class="input-label">
+                  <input class="js-input input" type="text" name="days" value="">
+                  <span class="input-label__label">Конфигурация тестового стенда</span>
+                </label>
+              </div>
+              <p class="form__note">[Пример: E5-2609v4 / 16Gb / 500Gb / Quadro P4000 / Win 10 Pro</p>
+              <div class="form__row">
+                <label class="input-label">
+                  <textarea class="js-input textarea"></textarea>
+                  <span class="input-label__label">Дополнительная информация</span>
+                </label>
+              </div>
+              <div class="form__button-block">
+                <button class="form__submit button button--br_3" type="submit">Отправить запрос</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__left">
+          <div class="footer__logo"><img src="images/logo--white.svg" alt="FORSITE"></div>
+          <p class="footer__slogan">Первая в мире линейка суперкомпьютеров, специально разработанная для задач искусственного интеллекта.</p>
+        </div>
+        <div class="footer__center">
+          <div class="footer__center-column">
+            <ul class="footer-menu">
+              <li class="footer-menu__item footer-menu__title">Продукция</li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Графические станции</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Суперкомпьютеры и GPU-серверы</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Вычислительные HPC-кластеры</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Серверы</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Видеоконтроллеры</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Серверы NVIDIA GRID</a></li>
+            </ul>
+          </div>
+          <div class="footer__center-column">
+            <ul class="footer-menu">
+              <li class="footer-menu__item footer-menu__title">Типовые решения</li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Вычисления на GPU (HPC)</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Виртуализации рабочих мест</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Машинное обучение | Deep Learning</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Масштабная визуализация</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Графические решения для САПР</a></li>
+            </ul>
+            <ul class="footer-menu">
+              <li class="footer-menu__item footer-menu__title">Центр компетенции</li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Запрос консультации</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Развернутые демо-решения</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Аренда видеостен и панелей</a></li>
+            </ul>
+          </div>
+          <div class="footer__center-column">
+            <ul class="footer-menu">
+              <li class="footer-menu__item footer-menu__title">О компании</li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Сертификаты</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Участие в торгах</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="requisites.html">Реквизиты</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="contacts.html">Контакты</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="clients.html">Клиенты</a></li>
+            </ul>
+            <ul class="footer-menu">
+              <li class="footer-menu__item footer-menu__title">Поддержка</li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Сервисный центр</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="delivery.html">Доставка</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Гарантийная политика</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Форма RMA</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__right">
+          <p class="footer__phone">
+            <a class="footer__phone-link" href="tel:+78005006993">8 800 500-69-93</a>
+          </p>
+          <p class="footer__address">г. Санкт-Петербург<br> ул. Маршала Говорова, д. 52,<br> БЦ «Алкотел»</p>
+          <p class="footer__email"><a class="footer__email-link" href="mailto:sale@forsite-company.ru">sale@forsite-company.ru</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">2019 © Forsite. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/select2.full.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/jquery.sticky-kit.min.js"></script>
+  <script type="text/javascript" src="js/ddscrollspy.js"></script>
+</body>
+
+</html>

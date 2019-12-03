@@ -1,0 +1,16 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.4" d="M79.5 40C79.5 61.8152 61.8152 79.5 40 79.5C18.1848 79.5 0.5 61.8152 0.5 40C0.5 18.1848 18.1848 0.5 40 0.5C61.8152 0.5 79.5 18.1848 79.5 40Z" stroke="#979797"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19 61H61V19H19V61Z" stroke="#505050" stroke-width="2"/>
+<path d="M19 25H61" stroke="#505050" stroke-width="2"/>
+<path d="M22 22H24" stroke="#505050" stroke-width="2"/>
+<path d="M26 22H28" stroke="#505050" stroke-width="2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24 45H40V30H24V45Z" stroke="#505050" stroke-width="2"/>
+<path d="M24 30L40 45" stroke="#505050" stroke-width="2"/>
+<path d="M40 30L24 45" stroke="#505050" stroke-width="2"/>
+<path d="M44 30H57" stroke="#505050" stroke-width="2"/>
+<path d="M44 35H57" stroke="#505050" stroke-width="2"/>
+<path d="M44 40H57" stroke="#505050" stroke-width="2"/>
+<path d="M44 45H57" stroke="#505050" stroke-width="2"/>
+<path d="M23 51H57" stroke="#505050" stroke-width="2"/>
+<path d="M23 56H57" stroke="#505050" stroke-width="2"/>
+</svg>
