@@ -1,0 +1,19 @@
+<svg width="158" height="158" viewBox="0 0 158 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="158" height="158" rx="8" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M120 106H32C30.894 106 30 105.106 30 104V40C30 38.894 30.894 38 32 38H120C121.106 38 122 38.894 122 40V104C122 105.106 121.106 106 120 106Z" stroke="#20396B" stroke-width="2"/>
+<path d="M86 110V118" stroke="#20396B" stroke-width="2"/>
+<path d="M68 118V110" stroke="#20396B" stroke-width="2"/>
+<path d="M94 118H60" stroke="#20396B" stroke-width="2"/>
+<path d="M30 94H122" stroke="#20396B" stroke-width="2"/>
+<path d="M74 100H80" stroke="#20396B" stroke-width="2"/>
+<path d="M36 46H52" stroke="#20396B" stroke-width="2"/>
+<path d="M44 54H50" stroke="#20396B" stroke-width="2"/>
+<path d="M52 54H76" stroke="#20396B" stroke-width="2"/>
+<path d="M44 62H62" stroke="#20396B" stroke-width="2"/>
+<path d="M64 62H72" stroke="#20396B" stroke-width="2"/>
+<path d="M44 78H50" stroke="#20396B" stroke-width="2"/>
+<path d="M52 78H90" stroke="#20396B" stroke-width="2"/>
+<path d="M44 86H62" stroke="#20396B" stroke-width="2"/>
+<path d="M64 86H72" stroke="#20396B" stroke-width="2"/>
+<path d="M36 70H54" stroke="#20396B" stroke-width="2"/>
+</svg>
