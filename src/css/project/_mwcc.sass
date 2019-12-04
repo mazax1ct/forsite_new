@@ -214,6 +214,9 @@
     width: 15000px
     z-index: 1
 
+    @media(min-width: 768px)
+      left: -50px
+
   &__inner
     max-width: 350px
     position: relative
@@ -234,6 +237,7 @@
       @media(min-width: 768px)
         background-size: 135px 135px
         height: 135px
+        left: -50px
         width: 135px
 
     @media(min-width: 1200px)
@@ -245,7 +249,6 @@
 
     @media(min-width: 1500px)
       max-width: 860px
-      margin: 0
 
   &__title
     color: #fff
