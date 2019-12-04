@@ -8,13 +8,32 @@
       display: flex
 
   &__left
+    background-color: #fff
     display: none
+    height: 100%
+    left: 0
+    overflow: auto
+    position: fixed
+    padding-top: 130px
+    padding-left: 40px
+    padding-right: 40px
+    top: 0
+    width: 100%
+    z-index: 9
+
+    &.is-open
+      display: block
 
     @media(min-width: 768px)
+      background: none
       display: block
+      height: auto
+      left: auto
       min-width: 300px
+      position: static
       padding-top: 50px
       padding-right: 25px
+      top: auto
       width: 300px
       z-index: 3
 
@@ -22,6 +41,12 @@
       min-width: 400px
       padding-top: 90px
       width: 400px
+
+    & > div
+      margin-bottom: 130px
+
+      @media(min-width: 768px)
+        margin-bottom: auto
 
   &__right
     @media(min-width: 768px)
@@ -72,6 +97,68 @@
   &__right-block-inner
     position: relative
     z-index: 2
+
+.cmenu-opener
+  align-items: center
+  background-color: #223D72
+  border-radius: 10px
+  border: none
+  box-shadow: none
+  bottom: 18px
+  color: #fff
+  cursor: pointer
+  display: flex
+  font-size: 14px
+  font-weight: 500
+  height: 40px
+  justify-content: center
+  left: auto
+  padding: 0
+  position: fixed
+  right: 15px
+  top: auto
+  width: 105px
+  z-index: 3
+
+  @media(min-width: 768px)
+    display: none
+
+  &__icon
+    fill: #fff
+    height: 11px
+    margin-right: 10px
+    width: 13px
+
+.cmenu-closer
+  align-items: center
+  background-color: #000
+  border-radius: 10px
+  border: none
+  box-shadow: none
+  bottom: 18px
+  color: #fff
+  cursor: pointer
+  display: flex
+  font-size: 14px
+  font-weight: 500
+  height: 40px
+  justify-content: center
+  left: auto
+  padding: 0
+  position: fixed
+  right: 15px
+  top: auto
+  width: 105px
+  z-index: 3
+
+  @media(min-width: 768px)
+    display: none
+
+  &__icon
+    fill: #fff
+    height: 11px
+    margin-right: 10px
+    width: 13px
 
 .mwcc-feature
   display: flex

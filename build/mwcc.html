@@ -118,6 +118,19 @@
         <rect width="18" height="2" rx="1" transform="matrix(0 1 1 0 3 0)" />
       </g>
     </symbol>
+    <symbol id="small_burger" viewBox="0 0 13 11">
+      <g>
+        <rect width="13" height="1" rx="0.5" fill="white" />
+        <rect y="5" width="13" height="1" rx="0.5" fill="white" />
+        <rect y="10" width="13" height="1" rx="0.5" fill="white" />
+      </g>
+    </symbol>
+    <symbol id="small_close" viewBox="0 0 11 11">
+      <g>
+        <rect x="1.25732" y="0.549805" width="13" height="1" rx="0.5" transform="rotate(45 1.25732 0.549805)" />
+        <rect width="13" height="1" rx="0.5" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 1.25732 10.4502)" />
+      </g>
+    </symbol>
   </svg>
 
   <header class="header">
@@ -363,11 +376,11 @@
       <div class="container">
         <div class="mwcc__left">
           <div class="js-sticky-block">
-            <ul id="delivery-nav" class="left-nav">
+            <ul id="content-nav" class="left-nav">
               <li class="left-nav__item"><a class="left-nav__link" href="#1">Общее описание</a></li>
               <li class="left-nav__item">
                 <a class="left-nav__link" href="#2">Функционал</a>
-                <ul class="float-nav">
+                <ul id="subcontent-nav" class="float-nav">
                   <li class="float-nav__item"><a class="float-nav__link" href="#3">01. Источники</a></li>
                   <li class="float-nav__item"><a class="float-nav__link" href="#4">02. Интерфейс администратора</a></li>
                   <li class="float-nav__item"><a class="float-nav__link" href="#5">03. Функционал web - клиента</a></li>
@@ -385,9 +398,21 @@
               <li class="left-nav__item"><a class="left-nav__link" href="#15">Поддержка</a></li>
               <li class="left-nav__item"><a class="left-nav__link" href="#16"><b class="color-blue">Получить демо версию</b></a></li>
             </ul>
+            <button class="js-cmenu-closer cmenu-closer" type="button" title="Закрыть">
+              <svg class="cmenu-opener__icon" aria-hidden="true">
+                <use xlink:href="#small_close" />
+              </svg>
+              Закрыть
+            </button>
           </div>
         </div>
         <div class="js-content-with-sticky mwcc__right">
+          <button class="js-cmenu-opener cmenu-opener" type="button" title="Открыть">
+            <svg class="cmenu-opener__icon" aria-hidden="true">
+              <use xlink:href="#small_burger" />
+            </svg>
+            Разделы
+          </button>
           <div id="1" class="mwcc__right-block">
             <p>Объемы рабочих данных постоянно увеличиваются, и профессио-налам в любой области как никогда важно эффективно управлять своим рабочим пространством.</p>
             <p><b>Программный комплекс MWCC</b> - это универсальный способ управ-ления выводом контента на видеостену высокого разрешения. MWCC отличает интуитивный интерфейс для визуализации всего рабочего пространства и простого управления большим
@@ -439,8 +464,8 @@
               <button class="demo-banner__button button button--white button--br_3" type="button">Запросить демо</button>
             </div>
           </div>
-          <div class="mwcc__right-block">
-            <p id="2"><img src="images/content/mwcc/img_5.jpg" alt="Функционал"></p>
+          <div id="2" class="mwcc__right-block">
+            <p><img src="images/content/mwcc/img_5.jpg" alt="Функционал"></p>
             <h2 id="3"><span class="color-blue">01.</span> Источники</h2>
             <div class="mwcc-features2-block">
               <div class="mwcc-features2">
@@ -643,7 +668,7 @@
               <li>Подсистема мониторинга нагрузки (CPU, GPU, Memory, LAN)</li>
             </ul>
             <h2 id="7"><span class="color-blue">05.</span> <span class="fw_300">Интерфейс администратора</span><br> Опорные сетки</h2>
-            <p><img style="max-width: 680px" src="images/content/mwcc/img_7.jpg" alt=""></p>
+            <p style="max-width: 680px"><img src="images/content/mwcc/img_7.jpg" alt=""></p>
             <p>Данный режим работы позволяет максимально просто и эффективно организовать рабочее про-странство на видеостене. Модуль построения опорных сеток позволяет разделить полиэкран на произвольные области, создать опорные сетки, а также
               быстро изменить расположение и раз-мер окон. Созданные сетки можно сохранять для быстрого вызова. Для более удобного управ-ления окнами источников в настройках MWCC существует возможность активировать функцию “прилипание” к опорной
               сетке.</p>
@@ -779,7 +804,7 @@
           <div class="mwcc__right-block mwcc__right-block--grey">
             <div class="mwcc__right-block-inner">
               <h2 id="13" class="h1 color-blue">СВИДЕТЕЛЬСТВО<br> О РЕГИСТРАЦИИ В РЕЕСТРЕ</h2>
-              <p><img style="max-width: 400px" src="images/content/mwcc/img_10.jpg" alt="СВИДЕТЕЛЬСТВО О РЕГИСТРАЦИИ В РЕЕСТРЕ"></p>
+              <p style="max-width: 400px"><img src="images/content/mwcc/img_10.jpg" alt="СВИДЕТЕЛЬСТВО О РЕГИСТРАЦИИ В РЕЕСТРЕ"></p>
             </div>
           </div>
           <div class="mwcc__right-block">
