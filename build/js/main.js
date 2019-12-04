@@ -320,6 +320,45 @@ $(document).ready(function () {
     }, 500);
     return false;
   });
+
+  //запуск плавающего левого меню в разделе доставки
+  if ($("#content-nav").length) {
+    if($("body").width() < 768) {
+      //навигация по якорям
+      $("#content-nav").ddscrollSpy({
+        scrolltopoffset: -100
+      });
+
+      //навигация по якорям
+      $("#subcontent-nav").ddscrollSpy({
+        scrolltopoffset: -100
+      });
+    } else {
+      $(".js-sticky-block").trigger("sticky_kit:detach");
+      setTimeout(function() {
+        $(".js-sticky-block").stick_in_parent({
+          offset_top: 120
+        });
+
+        //навигация по якорям
+        $("#content-nav").ddscrollSpy({
+          scrolltopoffset: -120
+        });
+
+        //навигация по якорям
+        $("#subcontent-nav").ddscrollSpy({
+          scrolltopoffset: -120
+        });
+      }, 100);
+    }
+
+    //если блок для контента пустой, открепляем плавающее левое меню
+    if ($(".js-content-with-sticky").length) {
+      if ($('.js-content-with-sticky').html().trim() === '') {
+        $(".js-sticky-block").trigger("sticky_kit:detach");
+      }
+    }
+  }
 });
 
 //перезапуск функции навешивания класса с тенью на шапку при скролле и ресайзе
@@ -364,6 +403,37 @@ $(window).resize(function() {
 
         //навигация по якорям в новости
         $("#config-nav").ddscrollSpy({
+          scrolltopoffset: -120
+        });
+      }, 100);
+    }
+  }
+
+  if ($("#content-nav").length) {
+    if($("body").width() < 768) {
+      //навигация по якорям
+      $("#content-nav").ddscrollSpy({
+        scrolltopoffset: -100
+      });
+
+      //навигация по якорям
+      $("#subcontent-nav").ddscrollSpy({
+        scrolltopoffset: -100
+      });
+    } else {
+      $(".js-sticky-block").trigger("sticky_kit:detach");
+      setTimeout(function() {
+        $(".js-sticky-block").stick_in_parent({
+          offset_top: 120
+        });
+
+        //навигация по якорям
+        $("#content-nav").ddscrollSpy({
+          scrolltopoffset: -120
+        });
+
+        //навигация по якорям
+        $("#subcontent-nav").ddscrollSpy({
           scrolltopoffset: -120
         });
       }, 100);
@@ -415,4 +485,52 @@ $(window).on("orientationchange", function(event) {
       }, 100);
     }
   }
+
+  if ($("#content-nav").length) {
+    if($("body").width() < 768) {
+      //навигация по якорям
+      $("#content-nav").ddscrollSpy({
+        scrolltopoffset: -100
+      });
+
+      //навигация по якорям
+      $("#subcontent-nav").ddscrollSpy({
+        scrolltopoffset: -100
+      });
+    } else {
+      $(".js-sticky-block").trigger("sticky_kit:detach");
+      setTimeout(function() {
+        $(".js-sticky-block").stick_in_parent({
+          offset_top: 120
+        });
+
+        //навигация по якорям
+        $("#content-nav").ddscrollSpy({
+          scrolltopoffset: -120
+        });
+
+        //навигация по якорям
+        $("#subcontent-nav").ddscrollSpy({
+          scrolltopoffset: -120
+        });
+      }, 100);
+    }
+  }
+});
+
+$(document).on('click', '.js-cmenu-opener', function () {
+  $('body').addClass('overflow');
+  $('.mwcc__left').addClass('is-open');
+  return false;
+});
+
+$(document).on('click', '.js-cmenu-closer', function () {
+  $('body').removeClass('overflow');
+  $('.mwcc__left').removeClass('is-open');
+  return false;
+});
+
+$(document).on('click', '#content-nav a', function () {
+  $('body').removeClass('overflow');
+  $('.mwcc__left').removeClass('is-open');
 });
