@@ -67,3 +67,39 @@ body
   h1
     @media(min-width: 768px)
       margin-bottom: 0
+
+.cols
+  margin-bottom: -40px
+
+  @media(min-width: 768px)
+    display: flex
+    flex-wrap: wrap
+    margin-left: -15px
+    margin-right: -15px
+
+  &--2
+    .cols__item
+      @media(min-width: 768px)
+        padding-left: 15px
+        padding-right: 15px
+        width: 50%
+
+  &--3
+    .cols__item
+      @media(min-width: 768px)
+        padding-left: 15px
+        padding-right: 15px
+        width: 33.33333%
+
+  &--4
+    .cols__item
+      @media(min-width: 768px)
+        padding-left: 15px
+        padding-right: 15px
+        width: 50%
+
+      @media(min-width: 1200px)
+        width: 25%
+
+  &__item
+    margin-bottom: 40px

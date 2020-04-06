@@ -1,14 +1,18 @@
-.breadcrumbs + .banner2
+.breadcrumbs + .banner6
   @media(min-width: 768px)
     margin-top: -30px
 
   @media(min-width: 1350px)
     margin-top: -65px
 
-.banner2
-  background-color: #223D72
+.banner6
+  background-color: #000
+  background-position: 50% 0
+  background-size: auto 100%
+  background-repeat: no-repeat
   color: #fff
   font-size: 14px
+  height: 440px
   line-height: 20px
   overflow: hidden
   position: relative
@@ -17,35 +21,24 @@
 
   @media(min-width: 768px)
     align-items: center
+    background-position: 50% 50%
+    background-size: cover
     display: flex
     justify-content: center
 
-  @media(min-width: 1200px)
-    min-height: 490px
+  @media(min-width: 1024px)
+    min-height: 580px
     padding-top: 30px
     padding-bottom: 25px
 
   &__container
     position: relative
+    width: 100%
     z-index: 1
 
     @media(min-width: 768px)
       align-items: center
       display: flex
-      flex-direction: row-reverse
-
-  &::after
-    background-color: #20396B
-    content: ''
-    height: 100%
-    left: 80%
-    position: absolute
-    top: 0
-    transform: skew(-45deg)
-    width: 200%
-
-    @media(min-width: 768px)
-      left: 55%
 
   &__text-block
     @media(min-width: 768px)
@@ -54,7 +47,8 @@
   &__text-block-inner
     display: flex
 
-  h1
+  h1,
+  .h1
     color: #fff
     font-size: 31px
     line-height: 32px
@@ -105,14 +99,3 @@
     img
       position: relative
       z-index: 2
-
-    &::after
-      @media(min-width: 768px)
-        background: url('../images/content/aipod/banner_decor.svg') no-repeat 0 50% transparent
-        content: ''
-        height: 100%
-        left: -110%
-        position: absolute
-        top: 0
-        width: 480px
-        z-index: 1
