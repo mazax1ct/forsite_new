@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="css_include_once/jquery.fancybox.css" />
 </head>
 
-<body>
+<body class="page-float-menu">
   <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
     <symbol id="main-slider-prev" viewBox="0 0 10 18">
       <path d="M9 1L1 9.38095L9 17" />
@@ -353,6 +353,18 @@
     </div>
   </header>
 
+  <div class="float-menu">
+    <div class="float-menu__inner container">
+      <p class="float-menu__title">NVIDIA DGX Systems</p>
+      <ul id="float-menu" class="float-menu__list">
+        <li class="float-menu__list-item"><a class="float-menu__link is-active" href="#1">Якорь #1</a></li>
+        <li class="float-menu__list-item"><a class="float-menu__link" href="#2">Якорь #2</a></li>
+        <li class="float-menu__list-item"><a class="float-menu__link" href="#3">Якорь #3</a></li>
+        <li class="float-menu__list-item"><button class="button button--small" type="button">СВЯЖИТЕСЬ С НАМИ</button></li>
+      </ul>
+    </div>
+  </div>
+
   <div class="page-content">
     <div class="breadcrumbs">
       <div class="container">
@@ -362,7 +374,7 @@
         </ul>
       </div>
     </div>
-    <div class="banner4" style="background-image: url('images/content/dgx-systems/banners/banner_1/mobile.jpg')">
+    <div id="1" class="banner4" style="background-image: url('images/content/dgx-systems/banners/banner_1/mobile.jpg')">
       <style>
         @media(min-width: 768px) {
           .banner4 {
@@ -395,7 +407,7 @@
         <p class="text-center">Тренируйте более крупные модели нейронных сетей быстрее и получайте результаты с первого дня работы.</p>
       </div>
     </div>
-    <div class="text-block text-block--big_text text-block--grey">
+    <div id="2" class="text-block text-block--big_text text-block--grey">
       <div class="container">
         <h2 class="text-center">DISCOVER THE BENEFITS</h2>
         <div class="cols cols--4">
@@ -469,7 +481,7 @@
         </div>
       </div>
     </div>
-    <div class="banner7">
+    <div id="3" class="banner7">
       <div class="banner7__container container">
         <div class="banner7__image-block"><img src="images/content/dgx-systems/banners/banner_4/img_1.jpg" alt=""></div>
         <div class="banner7__text-block">
@@ -580,6 +592,20 @@
   <script type="text/javascript" src="js/main.js"></script>
 
   <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="js/ddscrollspy.js"></script>
+  <script>
+  $(document).ready(function () {
+
+  });
+  //запуск плавающего левого меню в разделе доставки
+  if ($("#float-menu").length) {
+    if ($("body").width() >= 768) {
+      $("#float-menu").ddscrollSpy({
+        scrolltopoffset: -130
+      });
+    }
+  }
+  </script>
 </body>
 
 </html>
