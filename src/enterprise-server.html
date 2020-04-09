@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>Корпоративные серверы для ускорения рабочих задач</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  //= template/favicon.html
+
+  //= template/style.html
+  <link rel="stylesheet" href="css_include_once/jquery.fancybox.css" />
+</head>
+
+<body>
+  //= template/sprite.html
+
+  //= template/header.html
+
+  <div class="page-content">
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+          <li class="breadcrumbs__item">Корпоративные серверы для ускорения рабочих задач</li>
+        </ul>
+      </div>
+    </div>
+    <div class="banner4" style="background-image: url('images/content/enterprise-server/banners/banner_1/mobile.jpg')">
+      <style>
+        @media(min-width: 768px) {
+          .banner4 {
+            background-image: url('images/content/enterprise-server/banners/banner_1/tablet.jpg') !important
+          }
+        }
+
+        @media(min-width: 1024px) {
+          .banner4 {
+            background-image: url('images/content/enterprise-server/banners/banner_1/desktop.jpg') !important
+          }
+        }
+      </style>
+      <div class="banner4__container container">
+        <div class="banner4__text-block">
+          <h1>Корпоративные серверы для ускорения рабочих задач</h1>
+          <div class="banner4__text-block-inner">
+            <div class="banner4__text" style="max-width: 580px">
+              <p>T4 обеспечивает графическое ускорение ведущих корпоративных серверов.</p>
+              <a class="button" href="https://www.youtube.com/watch?v=OisDgSlp_4g&feature=emb_logo" data-fancybox="">СМОТРЕТЬ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-block text-block--big_text">
+      <div class="container container--small">
+        <p class="text-center">Графические ускорители NVIDIA T4 и библиотеки GPU-ускорения CUDA-X повышают производительность основных серверов, разработанных для современных дата-центров. Благодаря валидации NGC-Ready серверы позволяют успешно выполнять любые рабочие задачи. Дополнительные услуги службы поддержки NVIDIA NGC обеспечивают комфортную работу. Благодаря NVIDIA T4 IT-команды могут создавать стандартные инфраструктуры дата-центров с графическим ускорением на базе ведущих серверов.</p>
+      </div>
+    </div>
+    <div class="text-block text-block--big_text text-block--grey">
+      <div class="container">
+        <h2 class="text-center">Рост производительности и продуктивности<br> с одной ускоренной платформой</h2>
+        <div class="cols cols--4">
+          <div class="cols__item">
+            <h3 class="fs_100 text-center">33%</h3>
+            <p class="text-center">Прирост производительности <b>работы VDI</b> до 33 %*</p>
+          </div>
+          <div class="cols__item">
+            <h3 class="fs_100 text-center">35x</h3>
+            <p class="text-center">Тренировка алгоритмов <b>машинного обучения</b> до 35 раз быстрее</p>
+          </div>
+          <div class="cols__item">
+            <h3 class="fs_100 text-center">10x</h3>
+            <p class="text-center"><b>Тренировка</b> алгоритмов глубокого обучения до 10 раз быстрее</p>
+          </div>
+          <div class="cols__item">
+            <h3 class="fs_100 text-center">40x</h3>
+            <p class="text-center">Получение результатов <b>инференса</b> глубокого обучения до 40 раз быстрее</p>
+          </div>
+        </div>
+        <br><br>
+        <p class="text-center"><button class="button" type="button" data-src="#configs" data-fancybox="">ОПИСАНИЕ КОНФИГУРАЦИЙ</button></p>
+        <div id="configs" class="popup popup--big">
+          <button data-fancybox-close class="popup__close" title="Закрыть">
+            <svg class="popup__close-icon" aria-hidden="true">
+              <use xlink:href="#menu-close" />
+            </svg>
+          </button>
+          <p><b>VDI:</b> ПО GRID vPC протестировано на сервере с двумя процессорами Intel Xeon Gold 6148 (20 ядер, тактовая частота 2,4 ГГц), GRID vPC с T4-1B (64 VM), VMware ESXi 6.7, NVIDIA vGPU Software (410.91/412.16), Windows 10 (1803), 2 vCPU, 4 Гб памяти RAM, разрешение 1920x1080, один монитор, опыт пользователя на VMware Horizon 7.6 был оценен с помощью инструмента NVIDIA для тестирования производительности в приложениях для офисных задач: Microsoft PowerPoint, Word, Excel, Chrome, просмотр PDF-файлов и воспроизведение видео.</p>
+          <p><b>Машинное обучение:</b> Серверные узлы (61 Гб памяти, 8 vCPU, платформа 64-бит), Apache Spark. Набор данных в CSV-файле 200 Гб; Подготовка данных включает в себя объединение, трансформацию переменных. Конфигурация сервера на GPU: двухпроцессорный Xeon E5-2698 v4 с тактовой частотой 3,6 ГГц, 20 ускорителей T4 на 5 узлах (4 ускорителя Т4 на узел). Выполнено в сети InfiniBand. Этапы обработки данных на CPU для XGBoost и конвертация данных оцениваются на основе измеренных данных для 20 серверных узлов и уменьшении времени выполнения до 60 % для нормализации при тренировке на наборе данных меньшего размера на Т4.</p>
+          <p><b>Тренировка и инференс алгоритмов глубокого обучения:</b> графический процессор: двухпроцессорный Xeon E5-2698 v4 с тактовой частотой 3,6 ГГц. Серверы на GPU: 2 ускорителя T4 для тренировки, 1 ускоритель T4 для инференса, контейнер NGC 18.11-py3 с CUDA 10.0.130; NCCL 2.3.7, cuDNN 7.4.1.5; cuBLAS 10.0.130 | драйвер NVIDIA: 384.145.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-block">
+      <div class="container">
+        <div class="cols cols--2">
+          <div class="cols__item">
+            <h2>Существенное ускорение машинного обучения</h2>
+            <p>Хотя глубокое обучение применяется в мире ИИ-технологий относительно недавно, компании уже десятилетиями используют алгоритмы машинного обучения для извлечения информации из массивов данных. Дата-центр на базе NVIDIA T4 позволяет ускорять эти алгоритмы с помощью RAPIDS, открытых библиотек GPU-ускорения для подготовки данных и машинного обучения. Используя привычные программные инструменты, например, Python, T4 ускоряет машинное обучение до 35 раз по сравнению с сервером на базе процессора, в том числе алгоритмы XGBoost, PCA, K-means, k-NN, DBScan и tSVD.</p>
+          </div>
+          <div class="cols__item text-center">
+            <img src="images/content/enterprise-server/content/img_1.jpg" alt="">
+          </div>
+        </div>
+        <br><br>
+        <div class="cols cols--2 cols--2_reverse">
+          <div class="cols__item">
+            <h2>Непревзойденное ускорение инференса ИИ с тензорными ядрами Turing</h2>
+            <p>Графический ускоритель NVIDIA T4 создан на базе революционной технологии NVIDIA Turing™ с тензорными ядрами для инференса искусственного интеллекта при вычислениях с многократной точностью. Обеспечивая невероятную скорость вычислений всех типов, от FP32 и FP16 до INT8 и INT4, T4 повышает производительность инференса до 40 раз по сравнению с серверами на CPU. А в процессах обучения один сервер с двумя ускорителями T4 заменяет девять двухпроцессорных серверов.</p>
+            <p>Разработчики могут задействовать все возможности тензорных ядер Turing, используя программные библиотеки NVIDIA CUDA-X AI и интеграцию со всеми фреймворками искусственного интеллекта. Библиотеки CUDA-X созданы на основе CUDA, модели параллельного программирования NVIDIA, и содержат оптимизации для вычислительных требований искусственного интеллекта, автономных устройств, высокопроизводительных вычислений и графики.</p>
+          </div>
+          <div class="cols__item text-center">
+            <img src="images/content/enterprise-server/content/img_2.gif" alt="">
+          </div>
+        </div>
+        <br><br>
+        <div class="cols cols--2">
+          <div class="cols__item">
+            <h2>Ускорение работы в VDI</h2>
+            <p>Основные серверы на базе NVIDIA T4 сертифицированы нашими партнерами для виртуальных GPU, что позволяет пользователям комфортно работать в VDI из любой точки и на любых устройствах. Для всех специалистов, начиная от удаленных и офисных сотрудников и заканчивая дизайнерами и инженерами, T4 в сочетании с ПО NVIDIA Virtual GPU: NVIDIA GRID® Virtual PC (GRID vPC) и NVIDIA Quadro® Virtual Data Center Workstation (Quadro vDWS) обеспечивает прирост производительности работы в VDI до 33 % по сравнению с инфраструктурой только на CPU.</p>
+          </div>
+          <div class="cols__item text-center">
+            <img src="images/content/enterprise-server/content/img_3.jpg" alt="">
+          </div>
+        </div>
+        <br><br>
+        <div class="cols cols--2 cols--2_reverse">
+          <div class="cols__item">
+            <h2>Сертифицированные серверы с поддержкой NGC</h2>
+            <p>Оптимизация ПО для максимальной производительности требует глубоких знаний нескольких уровней ПО: от операционных систем и драйверов до библиотек, фреймворков и приложений. Контейнеры NGC предварительно настроены и оптимизированы для вычислений на GPU. Они предоставляют прямую связь с экспертами NVIDIA и поддержку для фреймворков глубокого обучения с ускорением на GPU, библиотек RAPIDS, NVIDIA TensorRT™ и более чем 600 приложений для высокопроизводительных вычислений.</p>
+            <p>Благодаря программе NVIDIA по распространению NGC производители серверов могут внедрять контейнеры NGC на своих системах. Серверы с поддержкой NGC позволяют менеджерам дата-центров легко устанавливать серверы на базе GPU для быстрой и успешной работы со множеством ускоренных приложений.</p>
+          </div>
+          <div class="cols__item text-center">
+            <img src="images/content/enterprise-server/content/img_4.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  //= template/footer.html
+
+  //= template/scripts.html
+
+  <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="js/ddscrollspy.js"></script>
+  <script>
+  $(document).ready(function () {
+
+  });
+  //запуск плавающего левого меню в разделе доставки
+  if ($("#float-menu").length) {
+    if ($("body").width() >= 768) {
+      $("#float-menu").ddscrollSpy({
+        scrolltopoffset: -130
+      });
+    }
+  }
+  </script>
+</body>
+
+</html>

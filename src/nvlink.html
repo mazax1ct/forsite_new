@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>NVLink и NVSwitch</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  //= template/favicon.html
+
+  //= template/style.html
+  <link rel="stylesheet" href="css_include_once/jquery.fancybox.css" />
+</head>
+
+<body>
+  //= template/sprite.html
+
+  //= template/header.html
+
+  <div class="page-content">
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+          <li class="breadcrumbs__item">NVLink и NVSwitch</li>
+        </ul>
+      </div>
+    </div>
+    <div class="banner4" style="background-image: url('images/content/nvlink/banners/banner_1/mobile.jpg')">
+      <style>
+        @media(min-width: 768px) {
+          .banner4 {
+            background-image: url('images/content/nvlink/banners/banner_1/tablet.jpg') !important
+          }
+        }
+
+        @media(min-width: 1024px) {
+          .banner4 {
+            background-image: url('images/content/nvlink/banners/banner_1/desktop.jpg') !important
+          }
+        }
+      </style>
+      <div class="banner4__container container">
+        <div class="banner4__text-block">
+          <h1>NVLink и NVSwitch</h1>
+          <div class="banner4__text-block-inner">
+            <div class="banner4__text" style="max-width: 580px">
+              <p>Элементы для продвинутого соединения GPU</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-block text-block--big_text">
+      <div class="container container--small">
+        <h2 class="text-center">Быстрые и масштабируемые технологии соединения</h2>
+        <p class="text-center">Во всех отраслях разработчики используют параллельные вычисления в различных приложениях, например для ИИ, что обусловливает необходимость в системах с несколькими GPU. Стандартным решением сложных задач являются мультипроцессорные конфигурации с PCIe, однако пропускная способность PCIe часто становится узким местом. В этом случае необходима более быстрая и масштабируемая технология соединения.</p>
+      </div>
+    </div>
+    <div class="text-block text-block--big_text text-block--grey">
+      <div class="container">
+        <h2 class="text-center">Работа комбинации NVLink и NVSwitch</h2>
+        <p class="text-center">Представляем NVIDIA® NVLinkTM и NVIDIA NVSwitchTM. NVLink – это высокоскоростная технология прямого соединения между GPU. NVSwitch обеспечивает соединение нового уровня, используя несколько NVLink для всесторонней связи GPU в одном узле, например в NVIDIA HGX-2TM. Комбинация NVLink и NVSwitch обеспечила рекорд NVIDIA в MLPerf, первом отраслевом бенчмарке для ИИ.</p>
+        <br><br>
+        <div class="cols cols--2">
+          <div class="cols__item">
+            <h3 class="text-center">NVLink</h3>
+            <p class="text-center"><img src="images/content/nvlink/content/img_1.svg" alt=""></p>
+            <p class="text-center">Tesla V100 с NVLink: соединение между GPU</p>
+          </div>
+          <div class="cols__item text-center">
+            <h3 class="text-center">NVSwitch</h3>
+            <p class="text-center"><img src="images/content/nvlink/content/img_2.svg" alt=""></p>
+            <p class="text-center">Всесторонняя коммуникация 16 GPU</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-block" style="padding-bottom: 0;">
+      <div class="container">
+        <h2 class="text-center">NVLink</h2>
+        <div class="cols cols--2">
+          <div class="cols__item">
+            <h3>Максимальная пропускная способность с NVLink</h3>
+            <p>Технология NVIDIA NVLink решает эти проблемы, обеспечивая более высокую пропускную способность, большее число соединений и улучшенную масштабируемость для конфигураций с несколькими GPU. Один графический ускоритель NVIDIA Tesla® V100 поддерживает до шести соединений с общей пропускной способностью 300 Гб/с, что в 10 раз превосходит показатели PCIe третьего поколения. Технология позволяет увеличить масштабируемость серверов, например, NVIDIA DGX-1TM и DGX-2 для ускорения тренировки моделей глубокого обучения. NVLink обеспечивает поддержку до 8 GPU на одной виртуальной машине с помощью ПО NVIDIA Quadro Virtual Data Center Workstation (vDWS) или NVIDIA Virtual Server (vComputeServer).</p>
+          </div>
+          <div class="cols__item text-center">
+            <img src="images/content/nvlink/content/img_3.png" alt="">
+          </div>
+        </div>
+        <br><br>
+        <div class="cols cols--2 cols--2_reverse">
+          <div class="cols__item">
+            <h3>Максимальное ускорение передачи данных между GPU</h3>
+            <p>Впервые технология NVLink была использована в Tesla V100 на архитектуре NVIDIA Pascal™ и повысила скорость передачи данных с 20 до 25 Гб/с в каждом направлении. Прямое соединение двух GPU повышает точность и конвергентность высокопроизводительных вычислений (НРС) и ИИ и позволяет передавать данные на порядок быстрее PCIe.</p>
+          </div>
+          <div class="cols__item text-center">
+            <img src="images/content/nvlink/content/img_4.svg" alt="">
+          </div>
+        </div>
+        <br><br>
+        <div class="cols cols--2">
+          <div class="cols__item">
+            <h3>Новый уровень производительности</h3>
+            <p>NVLink может обеспечить прирост производительности до 70% по сравнению с сервером с идентичной конфигурацией и другим типом внутреннего соединения. Значительное увеличение пропускной способности и снижение задержек позволяют еще больше повысить производительность в задачах глубокого обучения.</p>
+          </div>
+          <div class="cols__item">
+            <p>NVLink Delivers Up To 70% Speedup vs PCIe</p>
+            <p class="text-center"><img src="images/content/nvlink/content/img_5.svg" alt=""></p>
+            <p class="fs_12">NVLink: GPU Servers: Dual Xeon Gold 6140@2.30GHz or E5-2698 v4@3.6GHz for PyTorch with 8xV100<br> PCIe vs 8xV100 NVLink. SW benchmarks: MILC (APEX medium). HOOMD-Blue (microsphere), LAMMPS (LJ 2.5).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-block">
+      <div class="container">
+        <h2 class="text-center">NVSwitch</h2>
+        <div class="cols cols--2">
+          <div class="cols__item">
+            <h3>NVSwitch: Полное подключение NVLink</h3>
+            <p>Быстрое внедрение алгоритмов глубокого обучение создало необходимость в более быстрой и масштабируемой технологии внутреннего соединения, так как пропускная способность PCIe все чаще становится узким местом систем с несколькими GPU.</p>
+            <p>Для решения этой проблемы NVIDIA NVSwitch использует расширенные возможности соединения NVLink. Матрица GPU повышает производительность глубокого обучения, позволяя использовать больше GPU на одном сервере и обеспечивая полноценное подключение.</p>
+          </div>
+          <div class="cols__item text-center">
+            <img src="images/content/nvlink/content/img_6.png" alt="">
+          </div>
+        </div>
+        <br><br>
+        <div class="cols cols--2 cols--2_reverse">
+          <div class="cols__item">
+            <h3>Полноценное соединение для непревзойденной производительности</h3>
+            <p>NVSwitch – это первая архитектура, которая поддерживает 16 GPU в серверном узле и обеспечивает коммуникацию всех восьми пар со скоростью 300 Гб/с для каждой. Эти 16 GPU можно использовать как один огромный ускоритель с объемом памяти 0,5 Тб и вычислительной производительностью 2 петафлопса в задачах глубокого обучения. Одна система HGX-2 или DGX-2 с NVSwitch повышает производительность приложений до 2,7 раза по сравнению с 2 системами HGX-1 или DGX-1 с соединением InfiniBand.</p>
+          </div>
+          <div class="cols__item">
+            <p>NVSwitch Delivers a >2X Speedup for Deep Learning and HPC</p>
+            <p class="text-center"><img src="images/content/nvlink/content/img_7.svg" alt=""></p>
+            <p class="fs_12">2 сервера HGX-1V оснащены двухсокетным процессором Xeon E5 2698v4 и 8 ускорителями V100. Серверы подключены через 4 IB-порта 100 Гб (работают на DGX-1) | Сервер HGX-2 оснащен двухсокетным процессором Xeon Platinum 8168, 16 ускорителями V100 и NVSwitch (работает на DGX-2).</p>
+          </div>
+        </div>
+        <br><br>
+        <p class="fs_12"> IFS ECWMF: Integrated Forecasting System (IFS) – это глобальная модель численного прогнозирования погоды, разработанная Европейским центром среднесрочных прогнозов погоды (ECMWF) в Рединге, Великобритания. ECMWF – независимая межправительственная организация, поддерживаемая большинством европейских стран. Для обновления прогнозов она использует один из крупнейших супервычислительных центров в Европе В тестовом мини-приложении IFS основное внимание уделяется трансформации сферических гармоник, которая представляет собой серьезную нагрузку на всю модель вычислений. Показатели ускорения на графике выше, чем для полной модели IFS, так как тест усиливает стадии трансформации алгоритма. Тем не менее, тест доказывает, что эффективные и проверенные методы прогнозирования ECMWF действительны на серверах с технологией NVSwitch, например, на NVIDIA DGX-2, так как эти серверы идеально подходят для выполнения подобных задач.</p>
+        <p class="fs_12">Модель смешения мнений экспертов (MoE): На основе нейронной сети опубликованной Google в репозитории Tensor2Tensor на GitHub, с использованием модели Transformer и слоев MoE. Каждый слой модели MoE состоит из 128 экспертов и является глубокой нейронной сетью прямого распространения меньшего размера. Каждый эксперт специализируется на различных областях знаний, и все они распределены по разным GPU, что создает большой поток данных вследствие коммуникации между слоями Transformer и MoE.  Согласно Google, для тренировочного бенчмарка на моделирование языка использовался массив данных из 1 миллиарда слов. В тесте используются тензорные ядра NVIDIA Volta и требуется 45000 шагов, чтобы достичь перплексивности, равной 34. Размер выборки для данной нагрузки равен 8192 на GPU.</p>
+      </div>
+    </div>
+  </div>
+
+  //= template/footer.html
+
+  //= template/scripts.html
+
+  <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="js/ddscrollspy.js"></script>
+  <script>
+  $(document).ready(function () {
+
+  });
+  //запуск плавающего левого меню в разделе доставки
+  if ($("#float-menu").length) {
+    if ($("body").width() >= 768) {
+      $("#float-menu").ddscrollSpy({
+        scrolltopoffset: -130
+      });
+    }
+  }
+  </script>
+</body>
+
+</html>
