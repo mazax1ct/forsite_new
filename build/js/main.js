@@ -359,6 +359,15 @@ $(document).ready(function () {
       }
     }
   }
+
+  //открытие/закрытие аккордиона
+  $('.js-accordion').click(function () {
+    $(this).toggleClass('is-active');
+    $(this).next('.accordion__body').slideToggle(300, function () {
+      $(this).toggleClass('is-open');
+    });
+    return false;
+  });
 });
 
 //перезапуск функции навешивания класса с тенью на шапку при скролле и ресайзе

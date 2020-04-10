@@ -1,0 +1,52 @@
+.accordions
+  margin-left: auto
+  margin-right: auto
+  max-width: 1000px
+
+.accordion
+  border-bottom: 1px solid #ccc
+
+  &:first-child
+    border-top: 1px solid #ccc
+
+  &__title
+    cursor: pointer
+    font-size: 16px
+    font-weight: 700
+    margin-bottom: 0
+    padding-right: 40px
+    padding-top: 15px
+    padding-bottom: 15px
+    position: relative
+
+    @media(min-width: 1350px)
+      font-size: 18px
+
+    &.is-active
+      &::before
+        background-color: #A6A6A6
+        border-radius: 2px
+        content: '-'
+
+    &::before
+      align-items: center
+      background-color: #000
+      color: #fff
+      content: '+'
+      display: flex
+      justify-content: center
+      height: 17px
+      left: auto
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      width: 17px
+
+  &__body
+    display: none
+    padding-right: 40px
+    padding-bottom: 20px
+
+    &.is-open
+      display: block
