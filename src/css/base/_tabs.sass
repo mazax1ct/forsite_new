@@ -1,0 +1,35 @@
+.tabs-nav
+  display: flex
+  margin-bottom: 0
+  overflow-x: auto
+  padding-bottom: 30px
+
+  @media(min-width: 1200px)
+    justify-content: center
+
+  &__item
+    margin-left: 10px
+    margin-right: 10px
+
+    &::before
+      display: none
+
+  &__link
+    border-bottom: 2px solid transparent
+    color: #000
+    display: block
+    padding-bottom: 5px
+    text-decoration: none
+    text-transform: uppercase
+    transition: border-color 0.3s, color 0.3s
+    white-space: nowrap
+
+    &.is-active
+      border-bottom-color: #223D72
+      color: #223D72
+
+.tab
+  display: none
+
+  &.is-active
+    display: block

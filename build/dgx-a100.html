@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-  <title>NVIDIA vComputeServer</title>
+  <title>NVIDIA DGX A100</title>
 
   <meta name="description" content="">
 
@@ -355,12 +355,12 @@
 
   <div class="float-menu">
     <div class="float-menu__inner container">
-      <p class="float-menu__title">vComputeServer</p>
+      <p class="float-menu__title">DGX A100</p>
       <ul id="float-menu" class="float-menu__list">
-        <li class="float-menu__list-item"><a class="float-menu__link is-active" href="#1">Возможности</a></li>
-        <li class="float-menu__list-item"><a class="float-menu__link" href="#2">Спецификации</a></li>
-        <li class="float-menu__list-item"><a class="float-menu__link" href="#3">Партнеры</a></li>
-        <li class="float-menu__list-item"><a class="float-menu__link" href="#4">Часто задаваемые вопросы</a></li>
+        <li class="float-menu__list-item"><a class="float-menu__link is-active" href="#1">ОБЗОР</a></li>
+        <li class="float-menu__list-item"><a class="float-menu__link" href="#2">ПРЕИМУЩЕСТВА</a></li>
+        <li class="float-menu__list-item"><a class="float-menu__link" href="#3">КОМПОНЕНТЫ</a></li>
+        <li class="float-menu__list-item"><a class="float-menu__link" href="#4">ТЕХНОЛОГИИ</a></li>
       </ul>
     </div>
   </div>
@@ -370,15 +370,15 @@
       <div class="container">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
-          <li class="breadcrumbs__item">NVIDIA vComputeServer</li>
+          <li class="breadcrumbs__item">NVIDIA DGX A100</li>
         </ul>
       </div>
     </div>
-    <div class="banner4" style="background-image: url('images/content/vcserver/banners/banner_1/mobile.jpg')">
+    <div class="banner4" style="background-image: url('images/content/dgx-a100/banners/banner_1/mobile.jpg')">
       <style>
         @media(min-width: 768px) {
           .banner4 {
-            background-image: url('images/content/vcserver/banners/banner_1/tablet.jpg') !important
+            background-image: url('images/content/dgx-a100/banners/banner_1/tablet.jpg') !important
           }
 
           .banner4__text-block {
@@ -388,192 +388,255 @@
 
         @media(min-width: 1024px) {
           .banner4 {
-            background-image: url('images/content/vcserver/banners/banner_1/desktop.jpg') !important
+            background-image: url('images/content/dgx-a100/banners/banner_1/desktop.jpg') !important
           }
         }
       </style>
       <div class="banner4__container container">
         <div class="banner4__text-block">
-          <h1>NVIDIA vComputeServer</h1>
-          <p>Выполнение самых ресурсоемких задач при помощи виртуальных GPU</p>
+          <h1>NVIDIA DGX A100</h1>
+          <p>Универсальная система для инфраструктуры ИИ</p>
         </div>
       </div>
     </div>
-    <div class="text-block" style="padding-bottom: 0;">
-      <div class="container container--small">
-        <h2 class="text-center">Виртуализация вычислений для ИИ,<br> глубокого обучения и обработки данных</h2>
-        <p class="text-center">NVIDIA Virtual Compute Server (vComputeServer) обеспечивает ускоренную виртуализацию серверов из дата-центров при помощи GPU, что позволяет выполнять самые ресурсоемкие рабочие нагрузки: задачи ИИ, глубокого обучения и обработки данных, на виртуальной машине (VM).</p>
-      </div>
-    </div>
-
     <div id="1" class="text-block">
-      <div class="container">
-        <h2 class="text-center">Возможности</h2>
-        <div class="cols cols--3">
-          <div class="cols__item">
-            <p class="text-center"><img src="images/content/vcserver/content/img_1.png" alt=""></p>
-            <h3>Совместное использование GPU</h3>
-            <p>Совместное использование GPU (частичное) возможно только с технологией NVIDIA vGPU. Ресурсы GPU можно распределить между несколькими виртуальными машинами, что повышает утилизацию для более легких нагрузок, требующих ускорения на GPU.</p>
-          </div>
-          <div class="cols__item">
-            <p class="text-center"><img src="images/content/vcserver/content/img_2.png" alt=""></p>
-            <h3>Объединение GPU</h3>
-            <p>Виртуальная машина может получить доступ к мощности нескольких GPU, что часто необходимо для ресурсоемких задач. vComputeServer поддерживает как вычисления на системах с несколькими vGPU, так и одноранговые вычисления. В системах с несколькими vGPU графические процессоры не объединяются напрямую. В одноранговой сети используется NVLink для более высокой пропускной способности.</p>
-          </div>
-          <div class="cols__item">
-            <p class="text-center"><img src="images/content/vcserver/content/img_3.png" alt=""></p>
-            <h3>Управление и мониторинг</h3>
-            <p>vComputeServer обеспечивает поддержку мониторинга на уровне приложений, гостевых ОС и серверов. Упреждающее управление позволяет проводить живую миграцию, приостанавливать и возобновлять работу и определять пороговые значения, которые отражают динамику использования – и все это при помощи SDK для управления vGPU.</p>
-          </div>
-          <div class="cols__item">
-            <p class="text-center"><img src="images/content/vcserver/content/img_4.png" alt=""></p>
-            <h3>NGC</h3>
-            <p>NVIDIA GPU Cloud (NGC) – это реестр ПО, оптимизированного для GPU, для упрощения работы с задачами глубокого и машинного обучения и НРС. Теперь реестр поддерживает виртуализированные среды с NVIDIA vComputeServer.</p>
-          </div>
-          <div class="cols__item">
-            <p class="text-center"><img src="images/content/vcserver/content/img_5.png" alt=""></p>
-            <h3>Одноранговые вычисления</h3>
-            <p>NVIDIA® NVLink™– это высокоскоростное прямое соединение между GPU. Технология обеспечивает более высокую пропускную способность, большее число соединений и улучшенную масштабируемость для для конфигураций с несколькими GPU. Теперь соединение поддерживает технология NVIDIA Virtual GPU (vGPU).</p>
-          </div>
-          <div class="cols__item">
-            <p class="text-center"><img src="images/content/vcserver/content/img_6.png" alt=""></p>
-            <h3>Код исправления ошибок и удаление страниц</h3>
-            <p>Код исправления ошибок и удаление страниц обеспечивают более высокую надежность для вычислительных приложений, которые чувствительны к повреждению данных. Это особенно важно в крупномасштабных кластерных вычислительных средах, где графические процессоры обрабатывают очень большие наборы данных и/или запускают приложения на длительный период.</p>
-          </div>
-        </div>
+      <div class="container container--small">
+        <h2 class="text-center">Первая в мире система с ИИ на базе NVIDIA A100</h2>
+        <p class="text-center">NVIDIA DGX™ A100 — это первая в мире универсальная система для всех нагрузок ИИ с производительностью 5 петафлопс, которая обеспечивает высочайшую плотность вычислений и гибкость. NVIDIA DGX A100 оснащена самым мощным в мире графическим ускорителем NVIDIA A100 с тензорными ядрами, который позволяет компаниям объединить анализ данных, тренировку и инференс в унифицированной и простой в развертывании инфраструктуре ИИ с поддержкой экспертов NVIDIA в области ИИ.</p>
+        <p class="text-center">
+          <a class="button" href="https://www.youtube.com/watch?v=TJcKYUTaBtg" data-fancybox>СМОТРЕТЬ ВИДЕО</a>
+          <a class="button" href="https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/nvidia-dgx-a100-datasheet.pdf" target="_blank">СКАЧАТЬ ТЕХНИЧЕСКОЕ ОПИСАНИЕ</a>
+        </p>
       </div>
     </div>
 
     <div id="2" class="text-block text-block--big_text text-block--grey">
       <div class="container">
-        <h2 class="text-center">NVIDIA vComputeServer</h2>
-        <p class="h3 text-center">Рекомендуемые GPU</p>
-        <div class="table-responsive">
-          <table>
-            <colgroup>
-              <col>
-              <col width="33.33333%">
-              <col width="33.33333%">
-            </colgroup>
-            <thead>
-              <tr>
-                <th></th>
-                <th class="text-center">NVIDIA T4</th>
-                <th class="text-center">NVIDIA V100 (SXM2)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><b>Ядра RT</b></td>
-                <td class="text-center">48</td>
-                <td class="text-center">-</td>
-              </tr>
-              <tr>
-                <td><b>Тензорные ядра</b></td>
-                <td class="text-center">320</td>
-                <td class="text-center">640</td>
-              </tr>
-              <tr>
-                <td><b>Ядра CUDA®</b></td>
-                <td class="text-center">2560</td>
-                <td class="text-center">5120</td>
-              </tr>
-              <tr>
-                <td><b>Память</b></td>
-                <td class="text-center">16 Гб GDDR6</td>
-                <td class="text-center">32 Гб HBM2</td>
-              </tr>
-              <tr>
-                <td><b>FP 16/FP 32 (со смешанной точностью)</b></td>
-                <td class="text-center">64 Терафлопса</td>
-                <td class="text-center">125 Терафлопс</td>
-              </tr>
-              <tr>
-                <td><b>FP 32 (с одинарной точностью)</b></td>
-                <td class="text-center">8,1 Терафлопса</td>
-                <td class="text-center">125 Терафлопс</td>
-              </tr>
-              <tr>
-                <td><b>FP 64 (с двойной точностью)</b></td>
-                <td class="text-center">-</td>
-                <td class="text-center">7,8 Терафлопса</td>
-              </tr>
-              <tr>
-                <td><b>NVLink: число GPU на виртуальную машину</b></td>
-                <td class="text-center">-</td>
-                <td class="text-center">До 8</td>
-              </tr>
-              <tr>
-                <td><b>Код коррекции ошибок и удаления страниц</b></td>
-                <td class="text-center">есть</td>
-                <td class="text-center">есть</td>
-              </tr>
-              <tr>
-                <td><b>Число GPU на виртуальную машину</b></td>
-                <td class="text-center">До 16</td>
-                <td class="text-center">До 16</td>
-              </tr>
-            </tbody>
-          </table>
+        <h2 class="text-center">Ключевой компонент дата-центра с ИИ</h2>
+        <div class="cols cols--4">
+          <div class="cols__item">
+            <p class="text-center"><img src="images/content/dgx-a100/content/img_1.svg" alt=""></p>
+            <h3>Универсальная система для любых задач ИИ</h3>
+            <p class="fs_14">NVIDIA DGX A100 — это универсальная система для всей инфраструктуры ИИ: от анализа данных до тренировки и инференса. Платформа устанавливает новый стандарт плотности вычислений и заключает производительность 5 петафлопс для задач ИИ в форм-факторе 6U, заменяя устаревшие архитектурные решения единой платформой для любых задач ИИ.</p>
+          </div>
+          <div class="cols__item">
+            <p class="text-center"><img src="images/content/dgx-a100/content/img_2.svg" alt=""></p>
+            <h3>Эксперты по DGX: интегрированный доступ к экспертным знаниям в области ИИ</h3>
+            <p class="fs_14">Эксперты NVIDIA по DGX — это более 14 000 специалистов в области ИИ, которые за десять лет накопили богатый опыт и готовы помочь вам максимизировать окупаемость вложений в систему DGX.</p>
+          </div>
+          <div class="cols__item">
+            <p class="text-center"><img src="images/content/dgx-a100/content/img_3.svg" alt=""></p>
+            <h3>Быстрые результаты</h3>
+            <p class="fs_14">NVIDIA DGX A100 — это первая в мире система на базе GPU NVIDIA A100 с тензорными ядрами. DGX A100 объединяет в себе 8 ускорителей A100 и обеспечивает непревзойденное масштабируемое ускорение, будучи полностью оптимизированной для ПО NVIDIA CUDA-X™ и комплексного стека решений NVIDIA для дата-центра.</p>
+          </div>
+          <div class="cols__item">
+            <p class="text-center"><img src="images/content/dgx-a100/content/img_4.svg" alt=""></p>
+            <h3>Исключительная масштабируемость дата-центра</h3>
+            <p class="fs_14">NVIDIA DGX A100 оснащена коммутатором Mellanox с максимальной пропускной способностью 225 Гбит/с. Это одно из многих преимуществ, которые делают DGX A100 ключевым компонентом крупных кластеров ИИ, таких как референсная архитектура для масштабируемых инфраструктур ИИ NVIDIA DGX SuperPOD™.</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <div id="3" class="text-block" style="padding-bottom: 0;">
+    <div class="text-block" style="padding-bottom: 0;">
       <div class="container">
-        <h2 class="text-center">Партнеры по виртуализации</h2>
-        <div class="cols cols--4">
-          <div class="cols__item text-center">
-            <img src="images/content/vcserver/content/img_7.jpg" alt="">
+        <ul class="tabs-nav">
+          <li class="tabs-nav__item"><a class="js-tab-change tabs-nav__link is-active" href="javascript:void(0)" data-target="1">Разработчикам</a></li>
+          <li class="tabs-nav__item"><a class="js-tab-change tabs-nav__link" href="javascript:void(0)" data-target="2">Менеджерам проектов</a></li>
+          <li class="tabs-nav__item"><a class="js-tab-change tabs-nav__link" href="javascript:void(0)" data-target="3">Бизнес-лидерам</a></li>
+        </ul>
+        <div class="tabs">
+          <div class="tab is-active" data-target="1">
+            <div class="cols cols--2 cols--2_reverse">
+              <div class="cols__item">
+                <h3>Быстрое решение сложных задач обработки данных</h3>
+                <p class="h5">Преимущества</p>
+                <ul>
+                  <li>Откажитесь от долгой настройки и тестирования с использованием оптимизированного ПО для ИИ.</li>
+                  <li>Получайте более качественные модели быстрее с максимальной производительностью, которая обеспечивает быстрые итерации.</li>
+                  <li>Не тратьте время на системную интеграцию и разработку ПО.</li>
+                </ul>
+              </div>
+              <div class="cols__item text-center">
+                <img src="images/content/dgx-a100/content/img_5.jpg" alt="">
+              </div>
+            </div>
           </div>
-          <div class="cols__item text-center">
-            <img src="images/content/vcserver/content/img_8.jpg" alt="">
+          <div class="tab" data-target="2">
+            <div class="cols cols--2 cols--2_reverse">
+              <div class="cols__item">
+                <h3>Развертывание инфраструктуры и начало работы с ИИ</h3>
+                <p class="h5">Преимущества</p>
+                <ul>
+                  <li>Оцените простую инфраструктуру и планирование мощности с единой системой для всех задач ИИ.</li>
+                  <li>Обеспечьте максимальную плотность вычислений и производительность с минимальными ресурсами.</li>
+                  <li>Используйте встроенную технологию безопасности во всех слоях: от контейнера до чипа.</li>
+                </ul>
+              </div>
+              <div class="cols__item text-center">
+                <img src="images/content/dgx-a100/content/img_6.jpg" alt="">
+              </div>
+            </div>
           </div>
-          <div class="cols__item text-center">
-            <img src="images/content/vcserver/content/img_9.jpg" alt="">
-          </div>
-          <div class="cols__item text-center">
-            <img src="images/content/vcserver/content/img_10.jpg" alt="">
+          <div class="tab" data-target="3">
+            <div class="cols cols--2 cols--2_reverse">
+              <div class="cols__item">
+                <h3>Ускорьте получение результатов и окупаемость инвестиций в ИИ</h3>
+                <p class="h5">Преимущества</p>
+                <ul>
+                  <li>Повысьте эффективность работы специалистов по data science и избавьтесь от действий, не дающих экономического эффекта</li>
+                  <li>Ускорьте весь цикл разработки, от идеи до конечной версии.</li>
+                  <li>Устраните трудности с помощью экспертов по DGX.</li>
+                </ul>
+              </div>
+              <div class="cols__item text-center">
+                <img src="images/content/dgx-a100/content/img_7.jpg" alt="">
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="text-block">
+      <div class="container">
+        <h2 class="text-center">Революционная производительность</h2>
+        <div class="cols cols--3">
+          <div class="cols__item">
+            <h3>Анализ данных</h3>
+            <p class="h5">PageRank</p>
+            <p>Более быстрый анализ данных означает больше идей для разработки ИИ <br><br></p>
+            <p><img src="images/content/dgx-a100/content/img_8.svg" alt=""></p>
+            <p class="fs_12 color-grey">3,000X CPU Servers vs. 4X DGX A100. Published Common Crawl Data Set: 128B Edges, 2.6TB Graph.</p>
+          </div>
+          <div class="cols__item">
+            <h3>Тренировка</h3>
+            <p class="h5">NLP: BERT-Large</p>
+            <p>Более быстрая тренировка позволяет создать самые продвинутые модели ИИ. <br><br></p>
+            <p><img src="images/content/dgx-a100/content/img_9.svg" alt=""></p>
+            <p class="fs_12 color-grey">BERT Pre-Training Throughput using PyTorch including (2/3)Phase 1 and (1/3)Phase 2. Phase 1 Seq Len = 128, Phase 2 Seq Len = 512. V100: DGX-1 with 8X V100 using FP32 precision. DGX A100: DGX A100 with 8X A100 using TF32 precision.</p>
+          </div>
+          <div class="cols__item">
+            <h3>Инференс</h3>
+            <p class="h5">Peak Compute</p>
+            <p>Ускорение инференса повышает окупаемость инвестиций благодаря максимальной утилизации системы</p>
+            <p><img src="images/content/dgx-a100/content/img_10.svg" alt=""></p>
+            <p class="fs_12 color-grey">CPU Server: 2X Intel Platinum 8280 using INT8. DGX A100: DGX A100 with 8X A100 using INT8 with Structural Sparsity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="3" class="text-block text-block--big_text text-block--grey">
+      <div class="container">
+        <h2 class="text-center">Передовые компоненты системы DGX A100</h2>
+        <div class="cols cols--2">
+          <div class="cols__item">
+            <ol>
+              <li><b>8 GPU NVIDIA A100 с общим объемом памяти 320 Гб</b> <br> <span class="fs_12">12 соединений NVLink на GPU пропускная способность между GPU 600 Гбит/с</span><br><br></li>
+              <li><b>6 коммутаторов NVSwitch шестого поколения</b> <br> <span class="fs_12">Двунаправленный интерфейс 4,8 Тбит/с В 2 раза быстрее предыдущего поколения</span><br><br></li>
+              <li><b>9 адаптеров Mellanox ConnectX-6 VPI HDR/200 GB Ethernet</b> <br> <span class="fs_12">Двунаправленный интерфейс 225 Гбит/с</span><br><br></li>
+              <li><b>Два 64-ядерных процессора AMD и 1 Тб системной памяти</b> <br> <span class="fs_12">В 2,7 раза больше ядер для самых ресурсоемких задач ИИ</span><br><br></li>
+              <li><b>SSD Gen4 NVME объемом 15 Тб</b> <br> <span class="fs_12">Пиковая пропускная способность 25,6 Гбит/с до 2 раз быстрее, чем SSD Gen3 NVME</span><br><br></li>
+            </ol>
+          </div>
+          <div class="cols__item text-center">
+            <img src="images/content/dgx-a100/content/img_11.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="4" class="text-block">
       <div class="container">
-        <h2 id="4" class="text-center">Часто задаваемые вопросы</h2>
-        <div class="accordions">
-          <div class="accordion">
-            <p class="js-accordion accordion__title">Чем vComputeServer отличается от GRID vPC/vApps и Quadro vDWS?</p>
-            <div class="accordion__body">
-              <p>GRID vPC/vApps и Quadro vDWS – клиентские вычислительные решения для виртуализации бизнеса и работы с графикой и видео. vComputeServer разработан для ресурсоемких серверных нагрузок: задач ИИ, глубокого обучения и обработки данных.</p>
+        <h2 class="text-center">Технологии NVIDIA DGX A100</h2>
+        <ul class="tabs-nav">
+          <li class="tabs-nav__item"><a class="js-tab-change tabs-nav__link is-active" href="javascript:void(0)" data-target="1">GPU A100</a></li>
+          <li class="tabs-nav__item"><a class="js-tab-change tabs-nav__link" href="javascript:void(0)" data-target="2">Multi-Instance GPU</a></li>
+          <li class="tabs-nav__item"><a class="js-tab-change tabs-nav__link" href="javascript:void(0)" data-target="3">NVLink и NVSwitch</a></li>
+          <li class="tabs-nav__item"><a class="js-tab-change tabs-nav__link" href="javascript:void(0)" data-target="4">Mellanox ConnectX-6</a></li>
+          <li class="tabs-nav__item"><a class="js-tab-change tabs-nav__link" href="javascript:void(0)" data-target="5">Оптимизированный стек ПО</a></li>
+          <li class="tabs-nav__item"><a class="js-tab-change tabs-nav__link" href="javascript:void(0)" data-target="6">Безопасность</a></li>
+        </ul>
+        <div class="tabs">
+          <div class="tab is-active" data-target="1">
+            <div class="cols cols--2">
+              <div class="cols__item">
+                <h3>GPU NVIDIA A100 с тензорными ядрами</h3>
+                <p>GPU NVIDIA A100 с тензорными ядрами обеспечивает непревзойденное ускорение для ИИ, анализа данных и высокопроизводительных вычислений (HPC) для решения самых сложных вычислительных задач. Благодаря тензорным ядрам третьего поколения, обеспечивающим значительный прирост производительности, A100 можно масштабировать до тысячи GPU, а с помощью технологии Multi-instance GPU разделить на семь инстансов для ускорения задач любого масштаба.</p>
+              </div>
+              <div class="cols__item text-center">
+                <img src="images/content/dgx-a100/content/img_12.jpg" alt="">
+              </div>
             </div>
           </div>
-
-          <div class="accordion">
-            <p class="js-accordion accordion__title">Условия лицензии для vComputeServer такие же, как для GRID vPC/vApps и Quadro vDWS?</p>
-            <div class="accordion__body">
-              <p>Нет, vComputeServer лицензируется иначе. На GRID vPC/vApps и Quadro vDWS приобретается постоянная или годовая подписка по числу одновременных пользователей. Так как vComputeServer предназначен для серверных нагрузок, лицензия привязана к GPU, а не к пользователю. На vComputeServer приобретается годовая подписка по лицензии GPU. Подробнее о лицензии можно прочитать в руководстве «Комплектации, цены и лицензии NVIDIA Virtual GPU».</p>
+          <div class="tab" data-target="2">
+            <div class="cols cols--2">
+              <div class="cols__item">
+                <h3>Multi-Instance GPU (MIG)</h3>
+                <p>Технология MIG позволяет разделить 8 ускорителей в DGX A100 на 56 полностью изолированных инстансов, оснащенных памятью с высокой пропускной способностью, кэшем и вычислительными ядрами. Теперь администраторы могут предложить оптимальный размер GPU с гарантированным качеством обслуживания (QoS) для различных задач.</p>
+              </div>
+              <div class="cols__item text-center">
+                <img src="images/content/dgx-a100/content/img_13.jpg" alt="">
+              </div>
             </div>
           </div>
-
-          <div class="accordion">
-            <p class="js-accordion accordion__title">Какие GPU NVIDIA поддерживаются vComputeServer?</p>
-            <div class="accordion__body">
-              <p>Для vComputeServer рекомендуется использовать NVIDIA V100 и NVIDIA T4. Также поддерживаются Quadro RTX™ 6000 и RTX 8000 и графические карты с архитектурой Pascal: NVIDIA P40, P100 и P6.</p>
+          <div class="tab" data-target="3">
+            <div class="cols cols--2">
+              <div class="cols__item">
+                <h3>NVLink и NVSwitch нового поколения</h3>
+                <p>Третье поколение NVIDIA® NVLink® в DGX A100 удваивает скорость обмена данными между GPU до 600 Гбит/с, что почти в 10 раз превосходит показатели PCIe Gen 4. DGX A100 также оснащена коммутатором NVIDIA NVSwitch™ нового поколения, который в 2 раза быстрее предыдущих решений.</p>
+              </div>
+              <div class="cols__item text-center">
+                <img src="images/content/dgx-a100/content/img_14.jpg" alt="">
+              </div>
             </div>
           </div>
-
-          <div class="accordion">
-            <p class="js-accordion accordion__title">Какие серверы сертифицированы для запуска vComputeServer?</p>
-            <div class="accordion__body">
-              <p>Полный список сертифицированных серверов для всех продуктов vGPU можно посмотреть здесь.</p>
+          <div class="tab" data-target="4">
+            <div class="cols cols--2">
+              <div class="cols__item">
+                <h3>Mellanox ConnectX-6 VPI HDR InfiniBand</h3>
+                <p>DGX A100 включает в себя новые адаптеры Mellanox ConnectX-6 VPI HDR InfiniBand/Ethernet с пропускной способностью 200 Гбит/с, которые обеспечивают высокоскоростное соединение для задач ИИ.</p>
+              </div>
+              <div class="cols__item text-center">
+                <img src="images/content/dgx-a100/content/img_15.jpg" alt="">
+              </div>
             </div>
           </div>
+          <div class="tab" data-target="5">
+            <div class="cols cols--2">
+              <div class="cols__item">
+                <h3>Оптимизированный стек ПО</h3>
+                <p>DGX A100 содержит протестированный и оптимизированный стек ПО DGX, включая базовую операционную систему для ИИ, все необходимое системное ПО, а также GPU-ускоренные приложения, предварительно натренированные модели и другие ресурсы из NGC™.</p>
+              </div>
+              <div class="cols__item text-center">
+                <img src="images/content/dgx-a100/content/img_16.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="tab" data-target="6">
+            <div class="cols cols--2">
+              <div class="cols__item">
+                <h3>Встроенная технология безопасности </h3>
+                <p>DGX A100 обеспечивает самый надежный уровень безопасности для развертываний ИИ благодаря многоуровневому подходу, который защищает все основные программно-аппаратные компоненты, включая самошифрующиеся диски, контейнеры ПО, управление и мониторинг безопасности и другие решения.</p>
+              </div>
+              <div class="cols__item text-center">
+                <img src="images/content/dgx-a100/content/img_17.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-          <div class="accordion">
-            <p class="js-accordion accordion__title">Можно ли использовать контейнеры с vComputeServer?</p>
-            <div class="accordion__body">
-              <p>Да, контейнеры можно запускать на виртуальных машинах с vComputeServer. NVIDIA NGC предоставляет полноценный каталог контейнеров с ускорением на GPU для глубокого и машинного обучения и НРС. Нагрузки также можно выполнять прямо на виртуальной машине без контейнеров при помощи vComputeServer.</p>
+    <div class="banner8" style="background-image: url('images/content/dgx-a100/banners/banner_2/mobile.jpg')">
+      <div class="banner8__container container">
+        <div class="banner8__text-block">
+          <h2 class="h1">NVIDIA DGX SuperPOD</h2>
+          <div class="banner8__text-block-inner">
+            <div class="banner8__text" style="max-width: 580px">
+              <p>Передовая инфраструктура ИИ</p>
+              <p><a class="button" href="#">ПОДРОБНЕЕ</a></p>
             </div>
           </div>
         </div>

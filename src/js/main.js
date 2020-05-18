@@ -247,7 +247,7 @@ $(document).ready(function () {
     });
   }
 
-  //переключение табов
+  //переключение табов в конфигураторе
   $('.js-tab-nav').on('click', function() {
     $('.js-tab-nav').removeClass("is-active");
     $(this).addClass("is-active");
@@ -542,4 +542,16 @@ $(document).on('click', '.js-cmenu-closer', function () {
 $(document).on('click', '#content-nav a', function () {
   $('body').removeClass('overflow');
   $('.mwcc__left').removeClass('is-open');
+});
+
+//переключение табов
+$(document).on('click', '.js-tab-change', function () {
+  var parent = $(this).closest('.tabs-nav');
+  var el = $(this);
+  parent.find('.js-tab-change').removeClass("is-active");
+  el.addClass("is-active");
+
+  parent.next('.tabs').find('.tab').removeClass("is-active");
+  parent.next('.tabs').find('.tab[data-target=' + $(this).attr("data-target") + ']').addClass("is-active");
+  return false;
 });
