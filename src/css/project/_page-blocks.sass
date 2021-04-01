@@ -1,6 +1,6 @@
 .pb1
   font-size: 12px
-  line-height: 20px
+  line-height: 16px
   padding-top: 40px
   padding-bottom: 40px
   text-align: center
@@ -18,6 +18,15 @@
     padding-left: 15px
     padding-right: 15px
 
+    &--middle
+      max-width: 1160px
+
+    &--big
+      font-size: 14px
+      font-weight: 300
+      line-height: 19px
+      max-width: 1360px
+
     p
       &:not(:last-child)
         margin-bottom: 32px
@@ -34,11 +43,119 @@
       line-height: 42px
       margin-bottom: 32px
 
+  &__buttons
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-left: -15px
+    margin-right: -15px
+
+    .button
+      min-width: 280px
+      margin-left: 15px
+      margin-right: 15px
+      margin-bottom: 24px
+      width: 280px
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-left: -12px
+    margin-right: -12px
+
+  &__list-item
+    margin-bottom: 24px
+    padding-left: 12px
+    padding-right: 12px
+    text-align: center
+    width: 50%
+
+    @media(min-width: 768px)
+      width: 33.33333%
+
+    @media(min-width: 1024px)
+      width: 25%
+
+    &--small
+      @media(min-width: 1024px)
+        width: 20%
+
+    a
+      display: inline-block
+      vertical-align: top
+
+      &:hover
+        img
+          transform: scale(1.02)
+
+    img
+      transform: scale(1)
+      transition: transform 0.3s
+
+  &__cards-list
+    margin-left: -15px
+    margin-right: -15px
+    max-width: 1155px
+
+    @media(min-width: 600px)
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+
+    @media(min-width: 1170px)
+      margin-left: auto
+      margin-right: auto
+
+  &__card-item
+    margin-bottom: 24px
+    padding-left: 15px
+    padding-right: 15px
+
+    @media(min-width: 600px)
+      width: 50%
+
+    @media(min-width: 1024px)
+      width: 33.33333%
+
+  &__card
+    align-items: center
+    background-color: #fff
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.06)
+    color: rgba(#000, 0.6)
+    display: flex
+    font-size: 14px
+    font-weight: 300
+    line-height: 20px
+    flex-direction: column
+    height: 100%
+    max-width: 330px
+    margin-left: auto
+    margin-right: auto
+    padding: 32px 32px 78px
+    text-align: center
+
+  &__card-icon
+    margin-bottom: 8px
+
+  &__card-title
+    color: #000
+    font-size: 18px
+    font-weight: 500
+    line-height: 20px
+    margin-bottom: 16px
+
 .pb2
+  align-items: center
   background-color: #223D72
   color: #fff
+  display: flex
+  flex-direction: column
   font-size: 12px
+  font-weight: 300
   line-height: 14px
+  justify-content: center
+  min-height: 240px
   overflow: hidden
   position: relative
   padding-top: 40px
@@ -46,10 +163,14 @@
   text-align: center
 
   @media(min-width: 1024px)
-    font-size: 20px
+    font-size: 18px
     line-height: 24px
     padding-top: 48px
     padding-bottom: 48px
+
+  small
+    @media(min-width: 1024px)
+      font-size: 16px
 
   &::after
     background-color: #20396B
@@ -65,13 +186,16 @@
       left: 45%
 
   &__container
-    max-width: 680px
+    max-width: 1360px
     margin-left: auto
     margin-right: auto
     padding-left: 15px
     padding-right: 15px
     position: relative
     z-index: 1
+
+    &--small
+      max-width: 680px
 
   &__title
     color: #fff
@@ -423,7 +547,7 @@
     padding-right: 15px
 
   &__list
-    @media(min-width: 1024px)
+    @media(min-width: 768px)
       display: flex
       flex-wrap: wrap
       margin-left: -15px
@@ -432,7 +556,7 @@
   &__list-item
     margin-bottom: 24px
 
-    @media(min-width: 1024px)
+    @media(min-width: 768px)
       display: flex
       padding-left: 15px
       padding-right: 15px
@@ -461,3 +585,337 @@
     @media(min-width: 1024px)
       font-size: 36px
       line-height: 40px
+
+.pb7
+  padding-top: 40px
+  padding-bottom: 40px
+
+  @media(min-width: 1024px)
+    padding-top: 56px
+    padding-bottom: 112px
+
+  &__title
+    font-size: 24px
+    font-weight: 500
+    line-height: 28px
+    text-align: center
+    margin-top: -24px
+    margin-bottom: 24px
+
+    @media(min-width: 1024px)
+      font-size: 42px
+      line-height: 44px
+
+  &__subtitle
+    font-size: 24px
+    font-weight: 300
+    line-height: 28px
+    margin-bottom: 16px
+
+  &__nav
+    background-color: $color-light-grey
+    margin-bottom: 32px
+
+  &__nav-list
+    display: flex
+    list-style: none
+    margin: 0
+    overflow-x: auto
+    padding: 0
+
+    @media(min-width: 1200px)
+      justify-content: center
+
+  &__nav-item
+    margin-bottom: 0
+
+    &::before
+      display: none
+
+    &:not(:last-child)
+      margin-right: 30px
+
+      @media(min-width: 1024px)
+        margin-right: 40px
+
+    &--eq_3
+      min-width: 300px
+      width: 300px
+
+      &:not(:last-child)
+        @media(min-width: 1200px)
+          margin-right: 80px
+
+
+
+  &__nav-link
+    align-items: center
+    border-bottom: 3px solid transparent
+    border-top: 3px solid transparent
+    color: #A0A0A0
+    display: flex
+    justify-content: center
+    font-size: 14px
+    font-weight: 500
+    min-height: 85px
+    padding-left: 4px
+    padding-right: 4px
+    text-decoration: none
+    transition: color 0.3s, border-bottom-color 0.3s
+    white-space: nowrap
+
+    &:hover
+      color: #000
+
+    &.is-active
+      border-bottom-color: $color-blue
+      color: #000
+
+  &__container
+    margin-left: auto
+    margin-right: auto
+    max-width: 1360px
+    padding-left: 15px
+    padding-right: 15px
+
+  &__tab
+    display: none
+    font-size: 12px
+    font-weight: 300
+    line-height: 20px
+
+    @media(min-width: 1024px)
+      font-size: 18px
+      line-height: 26px
+
+    &.is-active
+      display: block
+
+    img
+      margin-bottom: 32px
+
+      @media(min-width: 1024px)
+        margin-bottom: 0
+
+
+  &__tab-title
+    font-size: 24px
+    font-weight: 500
+    line-height: 28px
+    margin-bottom: 24px
+
+    @media(min-width: 1024px)
+      font-size: 42px
+      line-height: 44px
+
+  &__more-link
+
+.pb8
+  font-size: 12px
+  line-height: 20px
+  padding-top: 40px
+  padding-bottom: 40px
+
+  @media(min-width: 1024px)
+    font-size: 18px
+    line-height: 26px
+    padding-top: 80px
+    padding-bottom: 80px
+
+  &__container
+    max-width: 1360px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 15px
+    padding-right: 15px
+
+    p
+      &:not(:last-child)
+        margin-bottom: 32px
+
+  &__title
+    font-size: 24px
+    font-weight: 500
+    line-height: 28px
+    margin-bottom: 16px
+
+    @media(min-width: 1024px)
+      font-size: 42px
+      line-height: 44px
+      margin-bottom: 32px
+
+  img
+    margin-bottom: 32px
+
+    @media(min-width: 1024px)
+      margin-bottom: 0
+
+.pb9
+  align-items: flex-start
+  background-color: #000
+  background-position: 50% 50%
+  background-size: auto 100%
+  background-repeat: no-repeat
+  color: #fff
+  display: flex
+  flex-direction: column
+  font-size: 20px
+  font-weight: 300
+  justify-content: center
+  min-height: 280px
+  line-height: 24px
+  overflow: hidden
+  position: relative
+  padding-top: 40px
+  padding-bottom: 40px
+
+  @media(min-width: 1024px)
+    font-size: 36px
+    line-height: 42px
+
+  &__container
+    margin-left: auto
+    margin-right: auto
+    padding-left: 15px
+    padding-right: 15px
+    max-width: 1360px
+    width: 100%
+    z-index: 1
+
+  &__title
+    color: #fff
+    font-size: 24px
+    font-weight: 500
+    line-height: 28px
+    margin-bottom: 8px
+
+    @media(min-width: 1024px)
+      font-size: 36px
+      line-height: 42px
+
+  .button--white
+    color: #000
+
+.pb10
+  background: rgb(155,175,202)
+  background: linear-gradient(180deg, rgba(155,175,202,1) 0%, rgba(228,237,246,1) 50%, rgba(155,175,202,1) 100%)
+  font-size: 12px
+  font-weight: 300
+  line-height: 14px
+  padding-top: 40px
+  padding-bottom: 40px
+  text-align: center
+
+  @media(min-width: 768px)
+    text-align: left
+
+  @media(min-width: 1024px)
+    font-size: 18px
+    line-height: 24px
+    padding-top: 56px
+    padding-bottom: 112px
+
+  &__container
+    max-width: 1360px
+    padding-left: 15px
+    padding-right: 15px
+    margin-left: auto
+    margin-right: auto
+
+  &__title
+    font-size: 24px
+    font-weight: 500
+    line-height: 28px
+    margin-bottom: 16px
+    text-align: center
+
+    @media(min-width: 1024px)
+      font-size: 36px
+      line-height: 38px
+      margin-bottom: 24px
+
+  img
+    margin-bottom: 16px
+
+.pb11
+  background-color: #333
+  color: #fff
+  font-size: 12px
+  line-height: 14px
+  padding-top: 36px
+  padding-bottom: 36px
+  text-align: center
+
+  @media(min-width: 768px)
+    text-align: left
+
+  @media(min-width: 1024px)
+    font-size: 18px
+    line-height: 24px
+
+  &__container
+    max-width: 1360px
+    padding-left: 15px
+    padding-right: 15px
+    margin-left: auto
+    margin-right: auto
+
+  &__title
+    color: #fff
+    font-size: 24px
+    font-weight: 500
+    line-height: 28px
+    margin-bottom: 16px
+
+    @media(min-width: 1024px)
+      font-size: 36px
+      line-height: 38px
+      margin-bottom: 24px
+
+  img
+    margin-bottom: 24px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+
+.back-white
+  background-color: #fff
+
+.back-grey
+  background-color: $color-light-grey
+
+.simple-slider
+  &.slick-dotted.slick-slider
+    margin-bottom: 60px
+
+  .slick-track
+    display: flex
+
+  .slick-slide
+    height: auto
+
+    .pb2
+      height: 100%
+
+  .slick-dots
+    bottom: -40px
+
+    li
+      height: 40px
+      margin-left: 10px
+      margin-right: 10px
+      width: 40px
+
+      &::before
+        display: none
+
+      button
+        border-bottom: 2px solid rgba(#272729, 0.5)
+        height: 40px
+        padding: 0
+        transition: border-color 0.3s
+        width: 40px
+
+      &.slick-active
+        button
+          border-bottom-color: #223D72
