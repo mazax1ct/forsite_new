@@ -1,0 +1,288 @@
+.cfg-page
+  .page-content
+    min-height: 100vh
+
+.cfg
+  &__left
+
+
+  &__title
+    font-size: 24px
+    font-weight: 500
+    line-height: 1.33333
+    text-align: center
+    margin-bottom: 12px
+
+  &__image
+    display: block
+    text-align: center
+
+    img
+      max-width: 375px
+
+  &__description
+    box-shadow: 0 2px 1px 0 rgba(#000, 0.25)
+
+  &__desc-opener
+    background-color: #fff
+    border: none
+    color: #223D72
+    cursor: pointer
+    font-size: 14px
+    font-weight: 500
+    height: 44px
+    text-align: center
+    width: 100%
+
+    @media(min-width: 1024px)
+      display: none
+
+  &__desc-dropdown
+    display: none
+    padding-bottom: 20px
+
+    @media(min-width: 1024px)
+      display: block !important
+
+  &__desc-text
+    font-size: 15px
+    font-weight: 300
+    line-height: 1.33333
+    padding-left: 20px
+    padding-right: 20px
+    text-align: center
+
+    @media(min-width: 1024px)
+      text-align: left
+
+  &__desc-spec
+    @media(max-width: 1023px)
+      display: none
+
+  &__mobile-price-block
+    padding-top: 16px
+    padding-bottom: 24px
+    text-align: center
+
+  &__get-price
+    max-width: 280px
+    margin-bottom: 14px
+    width: 100%
+
+  &__tel
+    align-items: center
+    background-color: #fff
+    box-shadow: 0 1px 4px 0 rgba(#000, 0.15)
+    border-radius: 3px
+    color: #000
+    display: flex
+    font-size: 14px
+    font-weight: 500
+    height: 44px
+    justify-content: center
+    max-width: 186px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 8px
+    padding-right: 8px
+    transition: background-color 0.3s, color 0.3s
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      background-color: #000
+      color: #fff
+
+      svg
+        fill: #fff
+
+    svg
+      fill: #000
+      height: 22px
+      min-width: 22px
+      margin-right: 20px
+      transition: fill 0.3s
+      width: 22px
+
+  &__parts
+    &--mobile
+      background-color: #fff
+      box-shadow: 0 1px 4px 0 rgba(#000, 0.15)
+      padding-left: 12px
+      padding-right: 12px
+      position: sticky
+      top: 80px
+      z-index: 1
+
+  &__parts-list
+    display: flex
+    list-style: none
+    margin-left: -6px
+    margin-right: -6px
+    overflow-x: auto
+    scrollbar-width: thin
+
+  &__parts-item
+    margin-bottom: 0
+    padding-left: 6px
+    padding-right: 6px
+
+    &::before
+      display: none
+
+  &__part
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    flex-direction: column
+    font-size: 8px
+    font-weight: 300
+    padding: 1px 0 5px
+
+    &:hover,
+    &:focus
+      .cfg__part-icon
+        box-shadow: 0 4px 8px 0 rgba(#000, 0.08)
+
+    &.is-active
+      .cfg__part-icon
+        border-color: #000
+
+  &__part-icon
+    align-items: center
+    border: 1px solid transparent
+    display: flex
+    height: 40px
+    justify-content: center
+    margin-bottom: 6px
+    width: 40px
+
+    svg
+      fill: #000
+      height: 30px
+      width: 30px
+
+  &__list-block
+    display: none
+    padding: 5px 15px
+
+    &.is-active
+      display: block
+
+  &__list-title
+    align-items: center
+    display: flex
+    font-size: 18px
+    font-weight: 500
+    line-height: 1.22222
+    margin-bottom: 12px
+
+    svg
+      display: none
+      height: 22px
+      min-width: 22px
+      margin-right: 8px
+      width: 22px
+
+      @media(min-width: 1024px)
+        display: block
+
+  &__list
+    font-size: 15px
+    font-weight: 300
+    line-height: 1.46666
+
+  &__list-item
+    margin-bottom: 8px
+    position: relative
+
+    &::before
+      display: none
+
+    input[type="checkbox"],
+    input[type="radio"]
+      position: absolute
+      height: 1px
+      overflow: hidden
+      clip: rect(0 0 0 0)
+      width: 1px
+
+      &:focus + label
+        box-shadow: 0 4px 8px 0 rgba(#000, 0.08)
+
+      &:checked + label
+        border-color: #223D72
+        box-shadow: none
+
+        &::after
+          border: 2px solid #223D72
+          bottom: 0
+          content: ''
+          left: 0
+          position: absolute
+          pointer-events: none
+          right: 0
+          top: 0
+
+      &:disabled + label
+        background-color: #F7F7F7
+        cursor: default
+
+        &:hover
+          box-shadow: none
+
+    label
+      border: 1px solid #F7F7F7
+      cursor: pointer
+      display: flex
+      flex-direction: column
+      justify-content: center
+      min-height: 60px
+      padding: 8px 16px
+      position: relative
+
+      &:hover
+        box-shadow: 0 4px 8px 0 rgba(#000, 0.08)
+
+      b
+        display: block
+        font-weight: 500
+
+
+
+  &__bottom
+    .cfg__tel,
+    .cfg__price-block
+      @media(max-width: 1023px)
+        display: none
+
+  &__bottom-left
+    margin-left: auto
+    margin-right: auto
+    max-width: 280px
+    padding-top: 24px
+    padding-bottom: 24px
+
+    .button
+      align-items: center
+      display: flex
+      justify-content: center
+      width: 100%
+
+      &:not(:last-child)
+        margin-bottom: 16px
+
+      &:hover,
+      &:focus
+        svg
+          fill: #fff
+
+      svg
+        fill: #000
+        height: 20px
+        min-width: 20px
+        margin-right: 8px
+        transition: fill 0.3s
+        width: 20px

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>Конфигуратор</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/style.html
+    <link rel="stylesheet" href="css_include_once/jquery.fancybox.css" />
+</head>
+
+<body class="cfg-page">
+    //= template/sprite.html
+
+    //= template/header.html
+
+    <div class="page-content">
+        <div class="breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+                    <li class="breadcrumbs__item">Конфигуратор</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cfg">
+            <div class="cfg__left">
+                <h1 class="cfg__title">Рабочая станция Forsite750D</h1>
+                <picture class="cfg__image">
+                    <source srcset="images/content/cfg/img_1.jpg, images/content/cfg/img_1@2x.jpg 2x">
+                    <img src="images/content/cfg/img_1_mob.jpg" srcset="images/content/cfg/img_1_mob@2x.jpg" alt="">
+                </picture>
+                <div class="cfg__description">
+                    <button class="js-description-toggler cfg__desc-opener" type="button">Показать описание</button>
+                    <div class="cfg__desc-dropdown">
+                        <div class="cfg__desc-text">
+                            <p>Высокопроизводительная графическая станция для работы с медиа-контентом высокого разрешения, задачами фото-реалистичного рендеринга, монтажа видео в формате 4K и Live трансляциями.</p>
+                        </div>
+                        <div class="cfg__desc-spec">
+                            <ul>
+                                <li><b>Процессор:</b> 6-ядерный Intel Core i5-10500 3.10-4.50GHz, 12M, S1200</li>
+                                <li><b>Оперативная память:</b> 16GB (2x8GB) DDR4 3000MHz non-ECC PC4-24000</li>
+                                <li><b>Видеокарта:</b> Nvidia Quadro T 1000 4GB GDDR6 896 CUDA cores 4 x miniDP</li>
+                                <li><b>Системный SSD:</b> 250GB Desktop Series SSD SATA 3.0 2.5"</li>
+                                <li><b>SSD M.2:</b> 256GB SSD M.2 NVMe</li>
+                                <li><b>Сеть:</b> 2 x Intel I350-AM2 + 1 x Mgmt LAN</li>
+                                <li><b>ОС:</b> Microsoft Windows 10 Professional x64 Rus</li>
+                                <li><b>Тестирование:</b> Стресс-тест 7 дней</li>
+                            </ul>
+                            <p><b>Артикул:</b> 723NV-3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cfg__mobile-price-block">
+                    <button class="cfg__get-price button button--br_3" type="button" data-fancybox="" data-src="#price-request">Запросить цену</button>
+                    <a class="cfg__tel" href="tel:+78005006993">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#phone" />
+                        </svg>
+                        8 800 500-69-93
+                    </a>
+                </div>
+            </div>
+            <div class="cfg__parts cfg__parts--mobile">
+                <ul class="cfg__parts-list">
+                    <li class="cfg__parts-item">
+                        <button class="js-change-parts cfg__part is-active" type="button" data-target="1">
+                            <span class="cfg__part-icon">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#cfg_cpu" />
+                                </svg>
+                            </span>
+                            <span class="cfg__part-text">Процессор</span>
+                        </button>
+                    </li>
+                    <li class="cfg__parts-item">
+                        <button class="js-change-parts cfg__part" type="button" data-target="2">
+                            <span class="cfg__part-icon">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#cfg_gpu" />
+                                </svg>
+                            </span>
+                            <span class="cfg__part-text">Граф.&nbsp;карта</span>
+                        </button>
+                    </li>
+                    <li class="cfg__parts-item">
+                        <button class="js-change-parts cfg__part" type="button" data-target="3">
+                            <span class="cfg__part-icon">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#cfg_ram" />
+                                </svg>
+                            </span>
+                            <span class="cfg__part-text">Оперативная память</span>
+                        </button>
+                    </li>
+                    <li class="cfg__parts-item">
+                        <button class="js-change-parts cfg__part" type="button" data-target="4">
+                            <span class="cfg__part-icon">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#cfg_video" />
+                                </svg>
+                            </span>
+                            <span class="cfg__part-text">Видео&shy;выходы</span>
+                        </button>
+                    </li>
+                    <li class="cfg__parts-item">
+                        <button class="js-change-parts cfg__part" type="button" data-target="5">
+                            <span class="cfg__part-icon">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#cfg_ssd" />
+                                </svg>
+                            </span>
+                            <span class="cfg__part-text">SSD</span>
+                        </button>
+                    </li>
+                    <li class="cfg__parts-item">
+                        <button class="js-change-parts cfg__part" type="button" data-target="6">
+                            <span class="cfg__part-icon">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#cfg_ssd" />
+                                </svg>
+                            </span>
+                            <span class="cfg__part-text">SSD&nbsp;NVME</span>
+                        </button>
+                    </li>
+                    <li class="cfg__parts-item">
+                        <button class="js-change-parts cfg__part" type="button" data-target="7">
+                            <span class="cfg__part-icon">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#cfg_lan" />
+                                </svg>
+                            </span>
+                            <span class="cfg__part-text">Сеть</span>
+                        </button>
+                    </li>
+                    <li class="cfg__parts-item">
+                        <button class="js-change-parts cfg__part" type="button" data-target="8">
+                            <span class="cfg__part-icon">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#cfg_sys" />
+                                </svg>
+                            </span>
+                            <span class="cfg__part-text">Система</span>
+                        </button>
+                    </li>
+                    <li class="cfg__parts-item">
+                        <button class="js-change-parts cfg__part" type="button" data-target="9">
+                            <span class="cfg__part-icon">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#cfg_test" />
+                                </svg>
+                            </span>
+                            <span class="cfg__part-text">Тестирование</span>
+                        </button>
+                    </li>
+                    <li class="cfg__parts-item">
+                        <button class="js-change-parts cfg__part" type="button" data-target="10">
+                            <span class="cfg__part-icon">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#cfg_support" />
+                                </svg>
+                            </span>
+                            <span class="cfg__part-text">Поддержка</span>
+                        </button>
+                    </li>
+                    <li class="cfg__parts-item">
+                        <button class="js-change-parts cfg__part" type="button" data-target="11">
+                            <span class="cfg__part-icon">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#cfg_warranty" />
+                                </svg>
+                            </span>
+                            <span class="cfg__part-text">Гарантия</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="cfg__right">
+                <div class="cfg__list-block is-active" data-target="1">
+                    <p class="cfg__list-title">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#cfg_cpu" />
+                        </svg>
+                        Процессор
+                    </p>
+                    <ul class="cfg__list">
+                        <li class="cfg__list-item">
+                            <input id="checkbox_1" type="radio" name="cpu" value="1" checked>
+                            <label for="checkbox_1">
+                                <b>6-ядерный Intel Core i5-10500</b>
+                                3.10-4.50GHz, 12M, S1200
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="checkbox_2" type="radio" name="cpu" value="2" disabled>
+                            <label for="checkbox_2">
+                                <b>6-ядерный Intel Core i5-10600</b>
+                                3.30-4.8GHz, 12M, S1200
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="checkbox_3" type="radio" name="cpu" value="3">
+                            <label for="checkbox_3">
+                                <b>6-ядерный Intel Core i5-10600K</b>
+                                4.10-4.8GHz, 12M, S1200
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="checkbox_4" type="radio" name="cpu" value="4">
+                            <label for="checkbox_4">
+                                <b>8-ядерный Intel Core i7-10700</b>
+                                2.90-4.80GHz, 16M, S1200
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="checkbox_5" type="radio" name="cpu" value="5">
+                            <label for="checkbox_5">
+                                <b>8-ядерный Intel Core i7-10700K</b>
+                                3.80-5.10GHz, 16M, S1200
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="checkbox_6" type="radio" name="cpu" value="6">
+                            <label for="checkbox_6">
+                                <b>10-ядерный Intel Core i9-10900</b>
+                                2.80-5.2GHz, 20M, S1200
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="checkbox_7" type="radio" name="cpu" value="7">
+                            <label for="checkbox_7">
+                                <b>10-ядерный Intel Core i9-10900K</b>
+                                3.70-5.30GHz, 20M, S1200
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="checkbox_8" type="radio" name="cpu" value="8">
+                            <label for="checkbox_8">
+                                <b>6-ядерный Intel Core i5-11600K</b>
+                                3.90-4.90GHz, 12M, S1200
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cfg__list-block" data-target="2">
+                    <p class="cfg__list-title">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#cfg_gpu" />
+                        </svg>
+                        Графический ускоритель
+                    </p>
+                    <ul class="cfg__list">
+                        <li class="cfg__list-item">
+                            <input id="gpu_1" type="radio" name="gpu" value="1" checked>
+                            <label for="gpu_1">
+                                <b>Nvidia Quadro T 1000</b>
+                                4GB GDDR6 896 CUDA cores 4 x miniDP
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="gpu_2" type="radio" name="gpu" value="2">
+                            <label for="gpu_2">
+                                <b>Nvidia Quadro GV100</b>
+                                32GB 5120 CUDA Cores 4xDP
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="gpu_3" type="radio" name="gpu" value="3">
+                            <label for="gpu_3">
+                                <b>Nvidia Quadro RTX A4000</b>
+                                16GB GDDR6 6144 CUDA cores 4xDP
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="gpu_4" type="radio" name="gpu" value="4">
+                            <label for="gpu_4">
+                                <b>Nvidia Quadro RTX A5000 </b>
+                                24GB GDDR6 8192 CUDA cores 4xDP
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cfg__list-block" data-target="3">
+                    <p class="cfg__list-title">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#cfg_ram" />
+                        </svg>
+                        Оперативная память
+                    </p>
+                    <ul class="cfg__list">
+                        <li class="cfg__list-item">
+                            <input id="ram_1" type="radio" name="ram" value="1" checked>
+                            <label for="ram_1">
+                                <b>16GB (2x8GB) DDR4</b>
+                                3000MHz non-ECC PC4-24000
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="ram_2" type="radio" name="ram" value="2">
+                            <label for="ram_2">
+                                <b>32GB (2x16GB) DDR4</b>
+                                3000MHz non-ECC PC4-24000
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cfg__list-block" data-target="4">
+                    <p class="cfg__list-title">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#cfg_video" />
+                        </svg>
+                        Количество видеовыходов
+                    </p>
+                    <ul class="cfg__list">
+                        <li class="cfg__list-item">
+                            <input id="vid_1" type="radio" name="vid" value="1" checked>
+                            <label for="vid_1">
+                                <b>до 8-ми MiniDP</b>
+                                4096x2160 @ 60Hz
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="vid_2" type="radio" name="vid" value="2">
+                            <label for="vid_2">
+                                <b>до 16-ти DP</b>
+                                4096x2160 @ 60Hz
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="vid_3" type="radio" name="vid" value="3">
+                            <label for="vid_3">
+                                <b>до 32-ти DP </b>
+                                4096x2160 @ 60Hz
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cfg__list-block" data-target="5">
+                    <p class="cfg__list-title">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#cfg_ssd" />
+                        </svg>
+                        Накопитель SSD
+                    </p>
+                    <ul class="cfg__list">
+                        <li class="cfg__list-item">
+                            <input id="ssd_1" type="radio" name="ssd" value="1" checked>
+                            <label for="ssd_1">
+                                <b>250GB Desktop Series</b>
+                                SSD SATA 3.0 2.5"
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="ssd_2" type="radio" name="ssd" value="2">
+                            <label for="ssd_2">
+                                <b>240GB Intel S4510 Series Servers SSD</b>
+                                SATA 3.0 2.5" (R:560MB/s;W:280MB/s)
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cfg__list-block" data-target="6">
+                    <p class="cfg__list-title">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#cfg_ssd" />
+                        </svg>
+                        Накопитель SSD NVMe M.2
+                    </p>
+                    <ul class="cfg__list">
+                        <li class="cfg__list-item">
+                            <input id="ssd_2_1" type="radio" name="ssd_2" value="1" checked>
+                            <label for="ssd_2_1">
+                                <b>250GB Desktop Series</b>
+                                SSD SATA 3.0 2.5"
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="ssd_2_2" type="radio" name="ssd_2" value="2">
+                            <label for="ssd_2_2">
+                                <b>240GB Intel S4510 Series Servers SSD</b>
+                                SATA 3.0 2.5" (R:560MB/s;W:280MB/s)
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cfg__list-block" data-target="7">
+                    <p class="cfg__list-title">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#cfg_lan" />
+                        </svg>
+                        Сеть
+                    </p>
+                    <ul class="cfg__list">
+                        <li class="cfg__list-item">
+                            <input id="lan_1" type="radio" name="lan" value="1" checked>
+                            <label for="lan_1">
+                                <b>2 x Intel I350-AM2 + 1 x Mgmt LAN</b>
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="lan_2" type="radio" name="lan" value="2">
+                            <label for="lan_2">
+                                <b>2 x Intel I350-AM2 + 1 x Mgmt LAN</b>
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="lan_3" type="radio" name="lan" value="3">
+                            <label for="lan_3">
+                                <b>2 x Intel I350-AM2 + 1 x Mgmt LAN</b>
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="lan_4" type="radio" name="lan" value="4">
+                            <label for="lan_4">
+                                <b>2 x Intel I350-AM2 + 1 x Mgmt LAN</b>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cfg__list-block" data-target="8">
+                    <p class="cfg__list-title">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#cfg_sys" />
+                        </svg>
+                        Операционная система
+                    </p>
+                    <ul class="cfg__list">
+                        <li class="cfg__list-item">
+                            <input id="sys_1" type="radio" name="sys" value="1" checked>
+                            <label for="sys_1">
+                                <b>Linux Ubuntu LTS 18.04</b>
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="sys_2" type="radio" name="sys" value="2">
+                            <label for="sys_2">
+                                <b>Microsoft Windows 10 Professional x64 Rus</b>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cfg__list-block" data-target="9">
+                    <p class="cfg__list-title">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#cfg_test" />
+                        </svg>
+                        Тестирование
+                    </p>
+                    <ul class="cfg__list">
+                        <li class="cfg__list-item">
+                            <input id="test_1" type="radio" name="test" value="1" checked>
+                            <label for="test_1">
+                                <b>Стресс-тест 24 часа</b>
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="test_2" type="radio" name="test" value="2">
+                            <label for="test_2">
+                                <b>Стресс-тест 7 дней</b>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cfg__list-block" data-target="10">
+                    <p class="cfg__list-title">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#cfg_support" />
+                        </svg>
+                        Поддержка
+                    </p>
+                    <ul class="cfg__list">
+                        <li class="cfg__list-item">
+                            <input id="support_1" type="radio" name="support" value="1" checked>
+                            <label for="support_1">
+                                <b>По телефону</b>
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="support_2" type="radio" name="support" value="2">
+                            <label for="support_2">
+                                <b>По сети Интернет</b>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cfg__list-block" data-target="11">
+                    <p class="cfg__list-title">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#cfg_warranty" />
+                        </svg>
+                        Гарантия
+                    </p>
+                    <ul class="cfg__list">
+                        <li class="cfg__list-item">
+                            <input id="warranty_1" type="radio" name="warranty" value="1" checked>
+                            <label for="warranty_1">
+                                <b>3 года</b>
+                            </label>
+                        </li>
+                        <li class="cfg__list-item">
+                            <input id="warranty_2" type="radio" name="warranty" value="2">
+                            <label for="warranty_2">
+                                <b>5 лет</b>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cfg__bottom">
+                <div class="cfg__bottom-left">
+                    <button class="button button--black" type="button">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#download" />
+                        </svg>
+                        Сохранить конфигурацию
+                    </button>
+                    <button class="button button--black" type="button">Сформировать ТЗ</button>
+                </div>
+                <a class="cfg__tel" href="tel:+78005006993">8 800 500-69-93</a>
+                <div class="cfg__price-block">
+                    <span class="cfg__price">₽ 4 553 894</span>
+                    <a href="#">Купить</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    //= template/footer.html
+
+    //= template/popups.html
+
+    //= template/scripts.html
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/cfg.js"></script>
+</body>
+
+</html>
