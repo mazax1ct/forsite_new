@@ -12,7 +12,7 @@ $(document).on('click', '.js-description-toggler', function () {
 
 $(document).on('click', '.js-description-toggler2', function () {
   if(!$(this).hasClass('is-active')) {
-    $(this).addClass('is-active').text('Скрыть');
+    $(this).addClass('is-active').text('Скрыть подробнее');
     $('.cfg__desc-text').addClass('is-open');
   } else {
     $('.cfg__desc-text').removeClass('is-open');
