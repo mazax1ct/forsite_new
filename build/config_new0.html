@@ -563,15 +563,17 @@
 
         <div class="cfg">
             <div class="cfg__left">
-                <div class="cfg__image cfg__image--desktop">
-                    <img src="images/content/cfg/img_1.jpg" srcset="images/content/cfg/img_1@2x.jpg" alt="">
-                </div>
+                <picture class="cfg__image cfg__image--desktop">
+                    <source srcset="images/content/cfg/img_1.jpg, images/content/cfg/img_1@2x.jpg 2x">
+                    <img src="images/content/cfg/img_1_mob.jpg" srcset="images/content/cfg/img_1_mob@2x.jpg" alt="">
+                </picture>
                 <div class="cfg__info">
                     <div class="cfg__info-inner">
                         <h1 class="cfg__title">Рабочая станция Forsite750D</h1>
-                        <div class="cfg__image cfg__image--mobile">
-                            <img src="images/content/cfg/img_1_mob.jpg" srcset="images/content/cfg/img_1_mob@2x.jpg 2x" alt="">
-                        </div>
+                        <picture class="cfg__image cfg__image--mobile">
+                            <source srcset="images/content/cfg/img_1.jpg, images/content/cfg/img_1@2x.jpg 2x">
+                            <img src="images/content/cfg/img_1_mob.jpg" srcset="images/content/cfg/img_1_mob@2x.jpg" alt="">
+                        </picture>
                         <div class="cfg__description">
                             <button class="js-description-toggler cfg__desc-opener" type="button">Показать описание</button>
                             <div class="cfg__desc-dropdown">
@@ -596,10 +598,7 @@
                             </div>
                         </div>
                         <div class="cfg__mobile-price-block">
-                            <div class="cfg__mobile-price-inner">
-                                <a class="cfg__mobile-buy-button button button--br_3" href="#">Купить</a>
-                                <div class="cfg__mobile-price">₽ 4 553 894</div>
-                            </div>
+                            <button class="cfg__get-price button button--br_3" type="button" data-fancybox="" data-src="#price-request">Запросить цену</button>
                             <a class="cfg__tel" href="tel:+78005006993">
                                 <svg aria-hidden="true">
                                     <use xlink:href="#phone" />

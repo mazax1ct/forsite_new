@@ -25,14 +25,17 @@
 
   &:disabled,
   &.disabled
+    background-color: #808080
+    border-color: #808080
     cursor: default
-    opacity: 0.5
+    color: #fff
 
     &:hover,
     &:focus,
     &:active
-      background-color: #223D72
-      border-color: #223D72
+      background-color: #808080
+      border-color: #808080
+      color: #fff
       outline: none
 
   &--black
@@ -49,16 +52,22 @@
 
     &:disabled,
     &.disabled
+      background-color: #808080
+      border-color: #808080
       cursor: default
-      opacity: 0.5
+      color: #fff
+      opacity: 1
 
       &:hover,
       &:focus,
       &:active
-        background-color: #fff
-        border-color: #000
-        color: #000
+        background-color: #808080
+        border-color: #808080
+        color: #fff
         outline: none
+
+      svg
+        fill: #fff !important
 
   &--white
     background-color: #fff
