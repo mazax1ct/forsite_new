@@ -37,9 +37,9 @@
       text-align: left
 
     @media(min-width: 1200px)
-      margin-bottom: 20px
+      margin-bottom: 16px
 
-    @media(min-width: 2500px)
+    //@media(min-width: 2500px)
       font-size: 36px
 
   &__image
@@ -147,27 +147,28 @@
     text-align: center
 
     @media(min-width: 1024px)
-      max-height: 6.66666em
+      //max-height: 6.66666em
       max-width: 340px
-      margin-bottom: 12px
-      overflow-y: hidden
+      margin-bottom: 16px
+      //overflow-y: hidden
       padding-left: 0
       padding-right: 0
       text-align: left
-      transition: max-height 0.5s
+      //transition: max-height 0.5s
 
     @media(min-width: 1900px)
       font-size: 18px
       max-width: 440px
+      margin-bottom: 32px
 
-    @media(min-width: 2500px)
+    //@media(min-width: 2500px)
       font-size: 20px
       max-width: 465px
 
-    &.is-open
+    //&.is-open
       max-height: 400px
 
-  &__desc-text-toggler-block
+  //&__desc-text-toggler-block
     margin-bottom: 16px
     max-width: 340px
     text-align: right
@@ -178,10 +179,10 @@
     @media(min-width: 1900px)
       max-width: 440px
 
-    @media(min-width: 2500px)
+    //@media(min-width: 2500px)
       max-width: 465px
 
-  &__desc-text-toggler
+  //&__desc-text-toggler
     background-color: transparent
     border: none
     cursor: pointer
@@ -191,50 +192,50 @@
     padding: 0
     transition: color 0.3s
 
-    @media(min-width: 1900px)
+    //@media(min-width: 1900px)
       font-size: 16px
 
-    @media(min-width: 2500px)
+    //@media(min-width: 2500px)
       font-size: 18px
 
-    &:hover,
-    &:focus
+    //&:hover,
+    //&:focus
       color: #223d72
       outline: none
 
+  &__desc-spec-title
+    font-size: 16px
+    font-weight: 500
+    line-height: 1.25
+    margin-bottom: 8px
+
   &__desc-spec
+    font-size: 14px
+    line-height: 1.42857
     max-width: 340px
 
     @media(max-width: 1023px)
       display: none
 
     @media(min-width: 1900px)
-      font-size: 18px
       max-width: 440px
 
-    @media(min-width: 2500px)
+    //@media(min-width: 2500px)
       max-width: 465px
 
     ul
-      font-size: 12px
-      line-height: 1.66666
-      margin-left: -12px
+      font-size: 14px
+      line-height: 1.42857
+      margin-left: -1em
 
       @media(min-width: 1900px)
-        font-size: 18px
-        margin-left: -18px
+        //font-size: 18px
 
       li
-        padding-left: 12px
-
-        @media(min-width: 1900px)
-          padding-left: 18px
+        padding-left: 1em
 
         &::before
-          margin-left: -12px
-
-          @media(min-width: 1900px)
-            margin-left: -18px
+          margin-left: -1em
 
     b
       font-weight: 500
@@ -333,7 +334,7 @@
 
       @media(min-width: 1900px)
         justify-content: flex-start
-        padding-top: 55px
+        padding-top: 50px
 
       .cfg__parts-list
         //background-color: #fff
@@ -472,7 +473,7 @@
     line-height: 1.22222
     margin-bottom: 12px
 
-    @media(min-width: 1900px)
+    //@media(min-width: 1900px)
       font-size: 22px
 
     svg
@@ -495,7 +496,7 @@
       overflow-y: auto
       scrollbar-width: thin
 
-    @media(min-width: 1900px)
+    //@media(min-width: 1900px)
       font-size: 18px
 
     &::-webkit-scrollbar
