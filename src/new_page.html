@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>Новая страница</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/style.html
+    <link rel="stylesheet" href="css_include_once/jquery.fancybox.css" />
+    <link rel="stylesheet" href="css_include_once/bootstrap-grid.css" />
+</head>
+
+<body>
+    //= template/sprite.html
+
+    //= template/header.html
+
+    <div class="page-content">
+        <div class="breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+                    <li class="breadcrumbs__item">Новая страница</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <h1 class="text-center">The ultimate GPU server<br> for <span class="color-blue">deep learning</span></h1>
+
+            <p class="text-center"><a class="button button--black" href="#">Get pricing</a></p>
+
+            <p class="text-center"><img src="https://lambdalabs.com/static/images/products/deep-learning-server.jpeg" alt=""></p>
+
+            <p class="divider-title"><span>Spec Highlights</span></p>
+
+            <h2 class="text-center">Engineered for <span class="color-blue">your workload</span></h2>
+
+            <p class="text-center">Tell us about your research and we'll design a machine that's perfectly tailored to your needs.</p>
+
+            <p class="text-center"><a class="button button--black" href="#">Talk to an engineer</a></p>
+
+            <br>
+
+            <p class="text-center"><img width="700" src="https://lambdalabs.com/static/images/products/scalar/4U.jpeg" alt=""></p>
+
+            <div class="highlights">
+                <div class="highlights__item">
+                    <p class="highlights__item-top">Up to</p>
+                    <p class="highlights__item-bottom">
+                        <span class="big">8</span>
+                        <span class="small">GPUs<br> from NVIDIA</span>
+                    </p>
+                </div>
+                <div class="highlights__item">
+                    <p class="highlights__item-top">Up to</p>
+                    <p class="highlights__item-bottom">
+                        <span class="big">128</span>
+                        <span class="small">cores<br> and 256 threads</span>
+                    </p>
+                </div>
+                <div class="highlights__item">
+                    <p class="highlights__item-top">Up to</p>
+                    <p class="highlights__item-bottom">
+                        <span class="big">4096</span>
+                        <span class="small">GB of<br> memory</span>
+                    </p>
+                </div>
+                <div class="highlights__item">
+                    <p class="highlights__item-top">Up to</p>
+                    <p class="highlights__item-bottom">
+                        <span class="big">60</span>
+                        <span class="small">TB of<br> NVMe SSDs</span>
+                    </p>
+                </div>
+            </div>
+
+            <p class="divider-title"><span>Lambda Stack</span></p>
+
+            <div class="pb12">
+                <div class="container container--small">
+                    <div class="cols cols--2">
+                        <div class="cols__item">
+                            <h2>Plug in. <span class="color-blue">Start training.</span></h2>
+                            <p>Our servers include Lambda Stack, which manages frameworks like Pytorch and TensorFlow. With Lambda Stack, you can stop worrying about broken GPU drivers and focus on your research.</p>
+                            <ul class="markered-list">
+                                <li>
+                                    <b>Zero configuration required</b><br>
+                                    All your favorite frameworks come pre-installed.
+                                </li>
+                                <li>
+                                    <b>Easily upgrade PyTorch and TensorFlow</b><br>
+                                    When a new version is released, just run a simple upgrade command.
+                                </li>
+                                <li>
+                                    <b>No more broken GPU drivers</b><br>
+                                    Drivers will "just work" and keep compatible with popular frameworks.
+                                </li>
+                            </ul>
+                            <a class="button button--black" href="#">Learn more</a>
+                        </div>
+                        <div class="cols__item text-center">
+                            <img src="https://lambdalabs.com/static/images/lambda-stack-small.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="divider-title"><span>Support</span></p>
+
+            <div class="pb12">
+                <div class="container container--small">
+                    <div class="cols cols--2 cols--2_reverse">
+                        <div class="cols__item">
+                            <h2>Lambda <span class="color-blue">Premium Support</span></h2>
+                            <p>With our Premium Support option, you can focus on your code and leave the rest to us. If something goes wrong with your machine, whether it be a driver issue, kernel panic, or hardware failure, our support team can
+                                debug it.</p>
+                            <ul class="markered-list">
+                                <li>
+                                    <b>ZExpert assistance</b><br>
+                                    From engineers ready to troubleshoot your hardware, operating system, and machine learning software.
+                                </li>
+                                <li>
+                                    <b>Extra cover</b><br>
+                                    An extended warranty covering hardware failures with rapid repair and replacement.
+                                </li>
+                                <li>
+                                    <b>Always here</b><br>
+                                    Providing you with live help from a dedicated contact via phone or email.
+                                </li>
+                            </ul>
+                            <a class="button button--black" href="#">Learn more</a>
+                        </div>
+                        <div class="cols__item text-center">
+                            <img src="https://lambdalabs.com/static/images/products/support/support.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="divider-title"><span>Colocation</span></p>
+
+            <div class="pb12">
+                <div class="container container--small">
+                    <div class="cols cols--2">
+                        <div class="cols__item">
+                            <h2>Your servers. <span class="color-blue">Our datacenter.</span></h2>
+                            <p>Lambda Colocation makes it easy to deploy and scale your machine learning infrastructure. We'll manage racking, networking, power, cooling, hardware failures, and physical security. Your servers will run in a Tier 3
+                                data center with state-of-the-art cooling that's designed for GPUs. You'll get remote access to your servers, just like a public cloud.</p>
+                            <a class="button button--black" href="#">Learn more</a>
+                        </div>
+                        <div class="cols__item text-center">
+                            <img src="https://lambdalabs.com/static/images/products/colo/hero.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="benefits">
+                        <div class="benefits__item">
+                            <p><img src="images/content/dgx_new/icon_11.svg" alt=""></p>
+                            <p class="title">Fast support</p>
+                            <p class="description">If hardware fails, our on-premise data center engineers can quickly debug and replace parts.</p>
+                        </div>
+                        <div class="benefits__item">
+                            <p><img src="images/content/dgx_new/icon_2.svg" alt=""></p>
+                            <p class="title">Optimal performance</p>
+                            <p class="description">Our state-of-the-art cooling keeps your GPUs cool to maximize performance and longevity.</p>
+                        </div>
+                        <div class="benefits__item">
+                            <p><img src="images/content/dgx_new/icon_12.svg" alt=""></p>
+                            <p class="title">High availability</p>
+                            <p class="description">Our Tier 3 data center has redundant power and cooling to ensure your servers stay online.</p>
+                        </div>
+                        <div class="benefits__item">
+                            <p><img src="images/content/dgx_new/icon_8.svg" alt=""></p>
+                            <p class="title">No network set up</p>
+                            <p class="description">We handle all network configuration and provide you with remote access to your servers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="divider-title"><span>Research</span></p>
+
+            <h2 class="text-center">Explore our research</h2>
+
+            <p class="text-center"><a class="arrowed-link" href="#">View all research</a></p>
+
+            <div class="features-list4">
+                <div class="features-list4__item">
+                    <div class="feature4">
+                        <p class="feature4__title">ICCV 2021</p>
+                        <div class="feature4__text">
+                            <p><b>Multiple Pairwise Ranking Networks for Personalized Video Summarization</b></p>
+                            <p>We propose a model for personalized video summaries by conditioning the summarization process with predefined categorical labels.</p>
+                        </div>
+                        <p class="feature4__link">
+                            <a class="arrowed-link" href="#">Learn more</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="features-list4__item">
+                    <div class="feature4">
+                        <p class="feature4__title">ICCV 2021</p>
+                        <div class="feature4__text">
+                            <p><b>Multiple Pairwise Ranking Networks for Personalized Video Summarization</b></p>
+                            <p>We propose a model categorical labels.</p>
+                        </div>
+                        <p class="feature4__link">
+                            <a class="arrowed-link" href="#">Learn more</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="features-list4__item">
+                    <div class="feature4">
+                        <p class="feature4__title">ICCV 2021</p>
+                        <div class="feature4__text">
+                            <p><b>Multiple Pairwise Ranking Networks for Personalized Video Summarization</b></p>
+                            <p>We propose a model for personalized video summaries</p>
+                        </div>
+                        <p class="feature4__link">
+                            <a class="arrowed-link" href="#">Learn more</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="features-list4__item">
+                    <div class="feature4">
+                        <p class="feature4__title">ICCV 2021</p>
+                        <div class="feature4__text">
+                            <p><b>Multiple Pairwise Ranking Networks for Personalized Video Summarization</b></p>
+                            <p>We propose a model for personalized video summaries by conditioning the summarization process with predefined categorical labels.</p>
+                        </div>
+                        <p class="feature4__link">
+                            <a class="arrowed-link" href="#">Learn more</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="divider-title"><span>Tech Specs</span></p>
+
+
+            <div class="pb12">
+                <h2 class="text-center">Technical specifications</h2>
+                <ul class="tabs-nav">
+                    <li class="tabs-nav__item"><a class="js-tab-change tabs-nav__link is-active" href="javascript:void(0)" data-target="1">Scalar 2U AMD</a></li>
+                    <li class="tabs-nav__item"><a class="js-tab-change tabs-nav__link" href="javascript:void(0)" data-target="2">Scalar 4U AMD</a></li>
+                </ul>
+
+                <div class="tabs">
+                    <div class="tab is-active" data-target="1">
+                        <p class="text-center"><img width="500" src="https://lambdalabs.com/static/images/products/scalar/2U.jpeg" alt=""></p>
+
+                        <div class="accordions">
+                            <div class="accordion">
+                                <p class="js-accordion accordion__title">
+                                    GPUs<br>
+                                    <span class="fw_300">Up to 8 GPUs · NVIDIA® A100, A40, A30, RTX A6000, RTX A5000, and RTX A4000 options</span>
+                                </p>
+                                <div class="accordion__body">
+                                    <ul>
+                                        <li>
+                                            <b>NVIDIA® A100:</b> 80 GB of HBM2e, 6,912 CUDA cores, 432 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A40:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A30:</b> 24 GB of GDDR6, 3,584 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A6000:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A5000:</b> 24 GB of GDDR6, 8,192 CUDA cores, 256 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4500:</b> 20 GB of GDDR6, 7,168 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4000:</b> 16 GB of GDDR6, 6,144 CUDA cores, 192 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="accordion">
+                                <p class="js-accordion accordion__title">
+                                    Processors<br>
+                                    <span class="fw_300">2 AMD EPYC™ 7003 CPUs · Up to 64 cores, 256 threads, 256 MB cache per processor...</span>
+                                </p>
+                                <div class="accordion__body">
+                                    <ul>
+                                        <li>
+                                            <b>NVIDIA® A100:</b> 80 GB of HBM2e, 6,912 CUDA cores, 432 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A40:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A30:</b> 24 GB of GDDR6, 3,584 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A6000:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A5000:</b> 24 GB of GDDR6, 8,192 CUDA cores, 256 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4500:</b> 20 GB of GDDR6, 7,168 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4000:</b> 16 GB of GDDR6, 6,144 CUDA cores, 192 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="accordion">
+                                <p class="js-accordion accordion__title">
+                                    System memory<br>
+                                    <span class="fw_300">Up to 4096 GB of 3200 MHz DDR4 ECC RAM in 32 DIMM slots · 8 memory channels per processor</span>
+                                </p>
+                                <div class="accordion__body">
+                                    <ul>
+                                        <li>
+                                            <b>NVIDIA® A100:</b> 80 GB of HBM2e, 6,912 CUDA cores, 432 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A40:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A30:</b> 24 GB of GDDR6, 3,584 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A6000:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A5000:</b> 24 GB of GDDR6, 8,192 CUDA cores, 256 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4500:</b> 20 GB of GDDR6, 7,168 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4000:</b> 16 GB of GDDR6, 6,144 CUDA cores, 192 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="accordion">
+                                <p class="js-accordion accordion__title">
+                                    Operating system drive<br>
+                                    <span class="fw_300">Up to 15.36 TB of storage via one 2.5" NVME SSD (PCIe 3.x or PCIe 4.0)</span>
+                                </p>
+                                <div class="accordion__body">
+                                    <ul>
+                                        <li>
+                                            <b>NVIDIA® A100:</b> 80 GB of HBM2e, 6,912 CUDA cores, 432 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A40:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A30:</b> 24 GB of GDDR6, 3,584 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A6000:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A5000:</b> 24 GB of GDDR6, 8,192 CUDA cores, 256 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4500:</b> 20 GB of GDDR6, 7,168 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4000:</b> 16 GB of GDDR6, 6,144 CUDA cores, 192 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="accordion">
+                                <p class="js-accordion accordion__title">
+                                    Additional storage drives<br>
+                                    <span class="fw_300">Up to 46.08 TB of additional storage via 3 hot-swappable 2.5" NVMe SSDs (PCIe 3.x or 4.0)</span>
+                                </p>
+                                <div class="accordion__body">
+                                    <ul>
+                                        <li>
+                                            <b>NVIDIA® A100:</b> 80 GB of HBM2e, 6,912 CUDA cores, 432 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A40:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A30:</b> 24 GB of GDDR6, 3,584 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A6000:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A5000:</b> 24 GB of GDDR6, 8,192 CUDA cores, 256 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4500:</b> 20 GB of GDDR6, 7,168 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4000:</b> 16 GB of GDDR6, 6,144 CUDA cores, 192 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab" data-target="2">
+                        <p class="text-center"><img width="500" src="https://lambdalabs.com/static/images/products/scalar/4U.jpeg" alt=""></p>
+
+                        <div class="accordions">
+                            <div class="accordion">
+                                <p class="js-accordion accordion__title">
+                                    GPUs<br>
+                                    <span class="fw_300">Up to 8 GPUs · NVIDIA® A100, A40, A30, RTX A6000, RTX A5000, and RTX A4000 options</span>
+                                </p>
+                                <div class="accordion__body">
+                                    <ul>
+                                        <li>
+                                            <b>NVIDIA® A100:</b> 80 GB of HBM2e, 6,912 CUDA cores, 432 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A40:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A30:</b> 24 GB of GDDR6, 3,584 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A6000:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A5000:</b> 24 GB of GDDR6, 8,192 CUDA cores, 256 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4500:</b> 20 GB of GDDR6, 7,168 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4000:</b> 16 GB of GDDR6, 6,144 CUDA cores, 192 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="accordion">
+                                <p class="js-accordion accordion__title">
+                                    Processors<br>
+                                    <span class="fw_300">2 AMD EPYC™ 7003 CPUs · Up to 64 cores, 256 threads, 256 MB cache per processor...</span>
+                                </p>
+                                <div class="accordion__body">
+                                    <ul>
+                                        <li>
+                                            <b>NVIDIA® A100:</b> 80 GB of HBM2e, 6,912 CUDA cores, 432 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A40:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A30:</b> 24 GB of GDDR6, 3,584 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A6000:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A5000:</b> 24 GB of GDDR6, 8,192 CUDA cores, 256 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4500:</b> 20 GB of GDDR6, 7,168 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4000:</b> 16 GB of GDDR6, 6,144 CUDA cores, 192 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="accordion">
+                                <p class="js-accordion accordion__title">
+                                    System memory<br>
+                                    <span class="fw_300">Up to 4096 GB of 3200 MHz DDR4 ECC RAM in 32 DIMM slots · 8 memory channels per processor</span>
+                                </p>
+                                <div class="accordion__body">
+                                    <ul>
+                                        <li>
+                                            <b>NVIDIA® A100:</b> 80 GB of HBM2e, 6,912 CUDA cores, 432 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A40:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A30:</b> 24 GB of GDDR6, 3,584 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A6000:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A5000:</b> 24 GB of GDDR6, 8,192 CUDA cores, 256 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4500:</b> 20 GB of GDDR6, 7,168 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4000:</b> 16 GB of GDDR6, 6,144 CUDA cores, 192 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="accordion">
+                                <p class="js-accordion accordion__title">
+                                    Operating system drive<br>
+                                    <span class="fw_300">Up to 15.36 TB of storage via one 2.5" NVME SSD (PCIe 3.x or PCIe 4.0)</span>
+                                </p>
+                                <div class="accordion__body">
+                                    <ul>
+                                        <li>
+                                            <b>NVIDIA® A100:</b> 80 GB of HBM2e, 6,912 CUDA cores, 432 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A40:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A30:</b> 24 GB of GDDR6, 3,584 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A6000:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A5000:</b> 24 GB of GDDR6, 8,192 CUDA cores, 256 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4500:</b> 20 GB of GDDR6, 7,168 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4000:</b> 16 GB of GDDR6, 6,144 CUDA cores, 192 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="accordion">
+                                <p class="js-accordion accordion__title">
+                                    Additional storage drives<br>
+                                    <span class="fw_300">Up to 46.08 TB of additional storage via 3 hot-swappable 2.5" NVMe SSDs (PCIe 3.x or 4.0)</span>
+                                </p>
+                                <div class="accordion__body">
+                                    <ul>
+                                        <li>
+                                            <b>NVIDIA® A100:</b> 80 GB of HBM2e, 6,912 CUDA cores, 432 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A40:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® A30:</b> 24 GB of GDDR6, 3,584 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16, passive cooling
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A6000:</b> 48 GB of GDDR6, 10,752 CUDA cores, 336 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A5000:</b> 24 GB of GDDR6, 8,192 CUDA cores, 256 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4500:</b> 20 GB of GDDR6, 7,168 CUDA cores, 224 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                        <li>
+                                            <b>NVIDIA® RTX A4000:</b> 16 GB of GDDR6, 6,144 CUDA cores, 192 Tensor Cores, PCIe 4.0 x16
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-center">Shop Storage Servers</h2>
+
+            <div class="equipment-list equipment-list--3_in_row">
+                <div class="equipment-list__item">
+                    <div class="equipment">
+                        <div class="equipment__image">
+                            <img src="https://assets.exxactcorp.com/webp/exx/cms/system-images/exx-2u-sto-1.webp" alt="">
+                        </div>
+                        <div class="equipment__info">
+                            <h3><a href="#">Dense HPC Flash Server</a></h3>
+                            <p class="equipment__series">TTT-1233206</p>
+                            <p class="equipment__price-title">Starting at</p>
+                            <p class="equipment__price">$9,549.10</p>
+                            <ul class="unstyled-list">
+                                <li class="d-flex"><img src="images/content/equipment/gear.svg" alt=""> Great for HPC applications</li>
+                                <li class="d-flex"><img src="images/content/equipment/bargraph.svg" alt=""> Enterprise grade NVMe storage</li>
+                            </ul>
+                            <h5>Base Specs:</h5>
+                            <ul class="unstyled-list">
+                                <li><b>CPU</b> 2x Intel Xeon Scalable Series</li>
+                                <li><b>STO</b> 24x 2.5" hot-swap NVMe drive bays</li>
+                                <li><b>MEM</b> Up to 3TB DDR4</li>
+                                <li><b>PWR</b> Dual Redundant 1600W</li>
+                            </ul>
+                            <p class="equipment__button-block">
+                                <a class="button button--black open-detail-request">Get a quote</a>
+                                <a class="button button--full_black open-detail-request">Configurator</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="equipment-list__item">
+                    <div class="equipment">
+                        <div class="equipment__image">
+                            <img src="https://assets.exxactcorp.com/webp/exx/cms/system-images/exx-3u-1.webp" alt="">
+                        </div>
+                        <div class="equipment__info">
+                            <h3><a href="#">Dense HPC Flash Server</a></h3>
+                            <p class="equipment__series">TTT-1233206</p>
+                            <p class="equipment__price-title">Starting at</p>
+                            <p class="equipment__price">$9,549.10</p>
+                            <ul class="unstyled-list">
+                                <li class="d-flex"><img src="images/content/equipment/money.svg" alt=""> Great for HPC applications</li>
+                                <li class="d-flex"><img src="images/content/equipment/energy.svg" alt=""> Enterprise grade NVMe storage</li>
+                            </ul>
+                            <h5>Base Specs:</h5>
+                            <ul class="unstyled-list">
+                                <li><b>CPU</b> 2x Intel Xeon Scalable Series</li>
+                                <li><b>STO</b> 24x 2.5" hot-swap NVMe drive bays</li>
+                                <li><b>MEM</b> Up to 3TB DDR4</li>
+                                <li><b>PWR</b> Dual Redundant 1600W</li>
+                            </ul>
+                            <p class="equipment__button-block">
+                                <a class="button button--black open-detail-request">Get a quote</a>
+                                <a class="button button--full_black open-detail-request">Configurator</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="equipment-list__item">
+                    <div class="equipment">
+                        <div class="equipment__image">
+                            <img src="https://assets.exxactcorp.com/webp/exx/cms/system-images/exx-4u-sto-2.webp" alt="">
+                        </div>
+                        <div class="equipment__info">
+                            <h3><a href="#">Dense HPC Flash Server</a></h3>
+                            <p class="equipment__series">TTT-1233206</p>
+                            <p class="equipment__price-title">Starting at</p>
+                            <p class="equipment__price">$9,549.10</p>
+                            <ul class="unstyled-list">
+                                <li class="d-flex"><img src="images/content/equipment/wrench.svg" alt=""> Great for HPC applications</li>
+                                <li class="d-flex"><img src="images/content/equipment/energy.svg" alt=""> Enterprise grade NVMe storage</li>
+                            </ul>
+                            <h5>Base Specs:</h5>
+                            <ul class="unstyled-list">
+                                <li><b>CPU</b> 2x Intel Xeon Scalable Series</li>
+                                <li><b>STO</b> 24x 2.5" hot-swap NVMe drive bays</li>
+                                <li><b>MEM</b> Up to 3TB DDR4</li>
+                                <li><b>PWR</b> Dual Redundant 1600W</li>
+                            </ul>
+                            <p class="equipment__button-block">
+                                <a class="button button--black open-detail-request">Get a quote</a>
+                                <a class="button button--full_black open-detail-request">Configurator</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    //= template/footer.html
+
+
+    //= template/scripts.html
+    <script type="text/javascript" src="js/simple-slider.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+</body>
+
+</html>

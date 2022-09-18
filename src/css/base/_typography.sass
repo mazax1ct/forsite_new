@@ -703,3 +703,32 @@ img
     @media(min-width: 1024px)
       font-size: 18px
       line-height: 20px
+
+.divider-title
+  display: flex
+  font-size: 18px
+  font-weight: 500
+  justify-content: space-between
+  text-transform: uppercase
+
+  &:not(:first-child)
+    margin-top: 40px
+
+    @media(min-width: 1024px)
+      margin-top: 80px
+
+  &:not(:last-child)
+    margin-bottom: 40px
+
+    @media(min-width: 1024px)
+      margin-bottom: 80px
+
+  span
+    flex-shrink: 0
+    margin-right: 8px
+
+  &::after
+    align-self: center
+    border-bottom: 1px solid #d6d6d6
+    content: ''
+    width: 100%

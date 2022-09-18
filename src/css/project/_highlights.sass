@@ -1,0 +1,48 @@
+.highlights
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  max-width: 1140px
+  margin-left: auto
+  margin-right: auto
+
+  @media(max-width: 1279px)
+    justify-content: flex-start
+
+  &:not(:first-child)
+    margin-top: 40px
+
+    @media(min-width: 1024px)
+      margin-top: 80px
+
+  &:not(:last-child)
+    margin-bottom: 40px
+
+    @media(min-width: 1024px)
+      margin-bottom: 80px
+
+  &__item
+    @media(max-width: 1279px)
+      margin-right: 32px
+      margin-left: 32px
+      width: 250px
+
+  &__item-top
+    padding-left: 16px
+    margin-top: 24px
+
+  &__item-bottom
+    display: flex
+
+    .big
+      border-left: 1px solid #000
+      padding-left: 16px
+      font-size: 56px
+      font-weight: bold
+      line-height: 1em
+
+    .small
+      padding-left: 16px
+      font-size: 15px
+      align-self: flex-end
+      margin-bottom: 6px

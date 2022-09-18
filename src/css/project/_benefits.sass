@@ -1,0 +1,37 @@
+.benefits
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  align-self: center
+
+  &:not(:last-child)
+    margin-bottom: 30px
+
+    @media(min-width: 1024px)
+      margin-bottom: 60px
+
+  &:not(:first-child)
+    margin-top: 30px
+
+    @media(min-width: 1024px)
+      margin-top: 60px
+
+  &__item
+    width: 23%
+    margin-bottom: 32px
+    font-size: 15px
+
+    @media(max-width: 991px)
+      width: 100%
+
+    .title
+      font-weight: bold
+      border-left: 1px solid #000
+      padding-left: 16px
+
+    .description
+      line-height: 1.4
+      padding-left: 16px
+
+    img
+      width: 30px
